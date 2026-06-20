@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>보험한장 | 필요한 보장만 한 장으로 쉽게</title>
+  <meta name="description" content="보험한장은 운전자보험, 펫보험, 화재보험, 암·뇌·심 보험, 어린이보험을 쉽게 비교하고 상담 신청할 수 있는 보험 랜딩 페이지입니다.">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css">
+</head>
+<body>
+  <div class="site-wrap">
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="#hero" class="header__logo-link">보험한장</a>
+        </h1>
+
+        <nav class="header__nav" aria-label="주요 메뉴">
+          <a href="#pet" class="header__nav-link">펫보험</a>
+          <a href="#fire" class="header__nav-link">화재보험</a>
+          <a href="#health" class="header__nav-link">암·뇌·심</a>
+          <a href="#driver" class="header__nav-link">운전자보험</a>
+          <a href="#child" class="header__nav-link">어린이보험</a>
+        </nav>
+
+        <a href="#consult" class="header__cta">상담하기</a>
+      </div>
+    </header>
+
+    <aside class="progress-nav" aria-label="현재 섹션 이동">
+      <a href="#hero" class="progress-nav__link is-active">처음</a>
+      <a href="#pet" class="progress-nav__link">펫</a>
+      <a href="#fire" class="progress-nav__link">화재</a>
+      <a href="#health" class="progress-nav__link">건강</a>
+      <a href="#driver" class="progress-nav__link">운전자</a>
+      <a href="#child" class="progress-nav__link">어린이</a>
+      <a href="#consult" class="progress-nav__link">상담</a>
+    </aside>
+
+    <main class="main">
+      <section id="hero" class="hero section" data-section="처음">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <span class="section-label">보험한장</span>
+            <h2 class="hero__title">
+              보험,<br>
+              어렵게 설명하지 않습니다.
+            </h2>
+            <p class="hero__text">
+              당신에게 필요한 보장만<br>
+              한 장으로 쉽게.
+            </p>
+            <div class="hero__actions">
+              <a href="#consult" class="button button--primary">무료 상담받기</a>
+              <a href="#insurance" class="button button--outline">보험 둘러보기</a>
+            </div>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero-card hero-card--pet">
+              <span class="hero-card__eyebrow">PET</span>
+              <strong class="hero-card__title">펫보험</strong>
+              <span class="hero-card__text">MRI · CT · 슬개골</span>
+            </div>
+
+            <div class="hero-card hero-card--driver">
+              <span class="hero-card__eyebrow">DRIVE</span>
+              <strong class="hero-card__title">운전자보험</strong>
+              <span class="hero-card__text">벌금 · 합의 · 변호사</span>
+            </div>
+
+            <div class="hero-card hero-card--fire">
+              <span class="hero-card__eyebrow">HOME</span>
+              <strong class="hero-card__title">화재보험</strong>
+              <span class="hero-card__text">누수 · 풍수재 · 지진</span>
+            </div>
+
+            <div class="hero-card hero-card--health">
+              <span class="hero-card__eyebrow">HEALTH</span>
+              <strong class="hero-card__title">암·뇌·심</strong>
+              <span class="hero-card__text">암 · 뇌 · 심장</span>
+            </div>
+
+            <div class="hero-card hero-card--child">
+              <span class="hero-card__eyebrow">CHILD</span>
+              <strong class="hero-card__title">어린이보험</strong>
+              <span class="hero-card__text">상해 · 질병 · 입원</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="worry section" aria-labelledby="worry-title">
+        <div class="section__inner">
+          <div class="section-heading section-heading--center">
+            <span class="section-label">Start</span>
+            <h2 id="worry-title" class="section-heading__title">요즘 어떤 걱정이 가장 크신가요?</h2>
+          </div>
+
+          <div class="worry__list">
+            <a href="#driver" class="worry-card worry-card--driver">
+              <span class="worry-card__icon">🚗</span>
+              <strong class="worry-card__title">사고가 걱정돼요</strong>
+              <span class="worry-card__text">운전자보험</span>
+            </a>
+            <a href="#health" class="worry-card worry-card--health">
+              <span class="worry-card__icon">❤️</span>
+              <strong class="worry-card__title">건강이 걱정돼요</strong>
+              <span class="worry-card__text">암·뇌·심</span>
+            </a>
+            <a href="#pet" class="worry-card worry-card--pet">
+              <span class="worry-card__icon">🐶</span>
+              <strong class="worry-card__title">반려동물이 걱정돼요</strong>
+              <span class="worry-card__text">펫보험</span>
+            </a>
+            <a href="#fire" class="worry-card worry-card--fire">
+              <span class="worry-card__icon">🏠</span>
+              <strong class="worry-card__title">우리집이 걱정돼요</strong>
+              <span class="worry-card__text">화재보험</span>
+            </a>
+            <a href="#child" class="worry-card worry-card--child">
+              <span class="worry-card__icon">👶</span>
+              <strong class="worry-card__title">아이 보장이 궁금해요</strong>
+              <span class="worry-card__text">어린이보험</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="insurance" class="insurance section" aria-labelledby="insurance-title">
+        <div class="section__inner">
+          <div class="section-heading">
+            <span class="section-label">Insurance</span>
+            <h2 id="insurance-title" class="section-heading__title">필요한 보험을 쉽게 확인하세요.</h2>
+            <p class="section-heading__text">현재 받은 자료 기준으로 1차 구성했습니다. 추가 자료는 각 영역에 표시해두었습니다.</p>
+          </div>
+
+          <div class="insurance__grid">
+            <article id="pet" class="insurance-card insurance-card--large insurance-card--pet section" data-section="펫보험">
+              <div class="insurance-card__content">
+                <span class="insurance-card__label">Pet Insurance</span>
+                <h3 class="insurance-card__title">우리 아이 병원비,<br>왜 매번 다를까요?</h3>
+                <p class="insurance-card__text">같은 증상이어도 병원마다 비용이 다르고,<br> 검사 추가 시 예상보다 커질 수 있습니다.</p>
+                <ul class="tag-list" aria-label="펫보험 보장 키워드">
+                  <li class="tag-list__item">MRI</li>
+                  <li class="tag-list__item">CT</li>
+                  <li class="tag-list__item">슬개골</li>
+                  <li class="tag-list__item">치아</li>
+                </ul>
+                <a href="#consult" class="button button--pet" data-interest="pet">우리 아이 기준으로 확인하기</a>
+              </div>
+              <div class="insurance-card__media">
+                <div class="image-placeholder image-placeholder--pet">
+                  <span>강아지/고양이 실사 이미지</span>
+                </div>
+              </div>
+            </article>
+
+            <article id="fire" class="insurance-card insurance-card--fire section" data-section="화재보험">
+              <span class="insurance-card__label">Home Insurance</span>
+              <h3 class="insurance-card__title">장마가 오기 전에<br>우리 집은 준비되어 있나요?</h3>
+              <p class="insurance-card__text">누수 탐지부터 배관 수리, 복구까지 미리 확인하세요.</p>
+              <ul class="tag-list" aria-label="화재보험 보장 키워드">
+                <li class="tag-list__item">급배수</li>
+                <li class="tag-list__item">풍수재</li>
+                <li class="tag-list__item">지진</li>
+                <li class="tag-list__item">유리손해</li>
+              </ul>
+              <a href="#consult" class="button button--fire" data-interest="fire">우리집 보장 확인하기</a>
+            </article>
+
+            <article id="health" class="insurance-card insurance-card--health section" data-section="암·뇌·심">
+              <span class="insurance-card__label">Health Insurance</span>
+              <h3 class="insurance-card__title">건강은<br>미리 준비할수록 좋습니다.</h3>
+              <p class="insurance-card__text">암, 뇌, 심장 관련 보장을 쉽게 확인할 수 있도록 정리합니다.</p>
+              <ul class="tag-list" aria-label="암뇌심 보장 키워드">
+                <li class="tag-list__item">암</li>
+                <li class="tag-list__item">뇌</li>
+                <li class="tag-list__item">심장</li>
+                <li class="tag-list__item">비급여</li>
+              </ul>
+              <a href="#consult" class="button button--health" data-interest="health">건강 보장 상담하기</a>
+            </article>
+
+            <article id="driver" class="insurance-card insurance-card--driver section" data-section="운전자보험">
+              <span class="insurance-card__label">Driver Insurance</span>
+              <h3 class="insurance-card__title">사고 이후보다<br>사고 이전이 중요합니다.</h3>
+              <p class="insurance-card__text">벌금, 합의금, 변호사 비용 등 운전자에게 필요한 보장을 확인하세요.</p>
+              <ul class="tag-list" aria-label="운전자보험 보장 키워드">
+                <li class="tag-list__item">벌금</li>
+                <li class="tag-list__item">합의금</li>
+                <li class="tag-list__item">변호사비</li>
+                <li class="tag-list__item">자부상</li>
+              </ul>
+              <a href="#consult" class="button button--driver" data-interest="driver">운전자 보장 확인하기</a>
+            </article>
+
+            <article id="child" class="insurance-card insurance-card--child section" data-section="어린이보험">
+              <span class="insurance-card__label">Child Insurance</span>
+
+              <h3 class="insurance-card__title">
+                아이의 성장 과정에도<br>
+                준비가 필요합니다.
+              </h3>
+
+              <p class="insurance-card__text">
+                성장기 아이에게 필요한 보장을 미리 확인해보세요.
+              </p>
+
+              <ul class="tag-list" aria-label="어린이보험 보장 키워드">
+                <li class="tag-list__item">상해</li>
+                <li class="tag-list__item">질병</li>
+                <li class="tag-list__item">입원</li>
+                <li class="tag-list__item">수술</li>
+              </ul>
+
+              <div class="request-box">
+                <strong class="request-box__title">
+                  추가 자료 요청
+                </strong>
+
+                <ul class="request-box__list">
+                  <li>주력 어린이보험 상품</li>
+                  <li>대표 보장 내용</li>
+                  <li>실제 사례</li>
+                  <li>상담 후기</li>
+                </ul>
+              </div>
+
+              <a href="#consult" class="button button--child" data-interest="child">
+                어린이 보장 상담하기
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case section" aria-labelledby="case-title">
+        <div class="section__inner">
+          <div class="section-heading section-heading--center">
+            <span class="section-label">Real Case</span>
+            <h2 id="case-title" class="section-heading__title">예상보다 커질 수 있는 비용.</h2>
+            <p class="section-heading__text">실제 수치와 사례는 추가 자료 수급 후 교체 예정입니다.</p>
+          </div>
+
+          <div class="case__list">
+            <article class="case-card">
+              <span class="case-card__label">펫보험</span>
+              <strong class="case-card__price">MRI</strong>
+              <p class="case-card__text">검사비 사례 필요</p>
+            </article>
+            <article class="case-card">
+              <span class="case-card__label">화재보험</span>
+              <strong class="case-card__price">누수복구</strong>
+              <p class="case-card__text">복구비 사례 필요</p>
+            </article>
+            <article class="case-card">
+              <span class="case-card__label">펫보험</span>
+              <strong class="case-card__price">슬개골</strong>
+              <p class="case-card__text">수술비 사례 필요</p>
+            </article>
+          </div>
+
+          <div class="request-box">
+            <strong class="request-box__title">추가 자료 요청</strong>
+            <ul class="request-box__list">
+              <li>실제 병원비 사례</li>
+              <li>누수·복구 비용 사례</li>
+              <li>보험금 지급 사례</li>
+              <li>고객 상담 후기</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide section" aria-labelledby="guide-title">
+        <div class="section__inner">
+          <div class="section-heading">
+            <span class="section-label">Guide</span>
+            <h2 id="guide-title" class="section-heading__title">이런 상황이라면 먼저 확인해보세요.</h2>
+          </div>
+
+          <div class="guide__list">
+            <article class="guide-card guide-card--pet">
+              <span class="guide-card__question">반려동물을 키우고 있다면</span>
+              <strong class="guide-card__answer">펫보험</strong>
+            </article>
+            <article class="guide-card guide-card--fire">
+              <span class="guide-card__question">아파트에 거주하고 있다면</span>
+              <strong class="guide-card__answer">화재보험</strong>
+            </article>
+            <article class="guide-card guide-card--health">
+              <span class="guide-card__question">건강이 걱정된다면</span>
+              <strong class="guide-card__answer">암·뇌·심</strong>
+            </article>
+            <article class="guide-card guide-card--driver">
+              <span class="guide-card__question">운전을 자주 한다면</span>
+              <strong class="guide-card__answer">운전자보험</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="team section" aria-labelledby="team-title">
+        <div class="section__inner">
+          <div class="team__content">
+            <span class="section-label">Team</span>
+            <h2 id="team-title" class="section-heading__title">보험한장은 필요한 보장만 쉽게 설명합니다.</h2>
+            <p class="team__text">상담팀 소개 영역입니다. 실제 팀명, 경력, 운영 철학 자료 수급 후 구체화 예정입니다.</p>
+          </div>
+
+          <div class="request-box request-box--team">
+            <strong class="request-box__title">추가 자료 요청</strong>
+            <ul class="request-box__list">
+              <li>팀명 또는 지점명</li>
+              <li>상담 인원</li>
+              <li>상담 경력</li>
+              <li>팀 사진</li>
+              <li>상담 철학</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="consult" class="consult section" aria-labelledby="consult-title">
+        <div class="section__inner consult__inner">
+          <div class="consult__content">
+            <span class="section-label">Consulting</span>
+            <h2 id="consult-title" class="consult__title">보험이 어렵다면<br>무료 상담을 받아보세요.</h2>
+            <p class="consult__text">남겨주신 정보는 상담 목적에만 사용됩니다.</p>
+          </div>
+
+          <form class="consult-form" action="#" method="post">
+            <div class="form-field">
+              <label for="user-name" class="form-field__label">이름</label>
+              <input type="text" id="user-name" name="userName" class="form-field__input" placeholder="이름을 입력해주세요">
+            </div>
+
+            <div class="form-field">
+              <label for="user-phone" class="form-field__label">연락처</label>
+              <input type="tel" id="user-phone" name="userPhone" class="form-field__input" placeholder="010-0000-0000">
+            </div>
+
+            <div class="form-field">
+              <label for="interest" class="form-field__label">관심 보험</label>
+              <select id="interest" name="interest" class="form-field__input">
+                <option value="">선택해주세요</option>
+                <option value="pet">펫보험</option>
+                <option value="fire">화재보험</option>
+                <option value="health">암·뇌·심</option>
+                <option value="driver">운전자보험</option>
+                <option value="child">어린이보험</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="time" class="form-field__label">상담 가능 시간</label>
+              <select id="time" name="consultTime" class="form-field__input">
+                <option value="">선택해주세요</option>
+                <option value="morning">오전</option>
+                <option value="afternoon">오후</option>
+                <option value="evening">저녁</option>
+              </select>
+            </div>
+
+            <label class="form-agree">
+              <input type="checkbox" name="privacyAgree" class="form-agree__input">
+              <span class="form-agree__text">개인정보 수집 및 이용에 동의합니다.</span>
+            </label>
+
+            <button type="submit" class="button button--primary consult-form__submit">무료 상담 신청</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <a href="#consult" class="floating-cta">무료 상담받기</a>
+  </div>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
