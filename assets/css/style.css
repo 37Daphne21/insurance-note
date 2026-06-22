@@ -9,6 +9,7 @@
   --color-text: #111;
   --color-subtext: #6b7280;
   --color-line: #e5e7eb;
+  --color-line-dark: #ddd;
   --color-driver: #5579d6;
   --color-fire: #cf6a6a;
   --color-pet: #d7b44a;
@@ -508,6 +509,10 @@ img {
   font-weight: 900;
 }
 
+.tag-list.tag-list--border .tag-list__item {
+  border: 1px solid var(--color-line-dark);;
+}
+
 
 /* Case */
 .case {
@@ -548,7 +553,7 @@ img {
 }
 
 .request-box {
-  margin-top: clamp(1.5rem, 3vw, 2rem);
+  margin: clamp(1.5rem, 3vw, 2rem) 0;
   padding: 1.5rem;
   border: 1px dashed #c8c8c0;
   border-radius: var(--radius-md);
