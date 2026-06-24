@@ -13,6 +13,8 @@ const headerScrollClass = "is-scrolled";
 const activeClass = "is-active";
 const revealClass = "is-revealed";
 const hiddenClass = "is-hidden";
+const activeHeroClass = "is-active";
+const dimmedHeroClass = "is-dimmed";
 
 const setHeaderState = () => {
   if (!header) return;
@@ -86,29 +88,50 @@ const initReveal = () => {
   });
 };
 
-const initHeroMotion = () => {
+const clearHeroCards = () => {
+  heroCards.forEach((card) => {
+    card.classList.remove(activeHeroClass, dimmedHeroClass);
+  });
+};
+
+const setActiveHeroCard = (selectedCard) => {
+  heroCards.forEach((card) => {
+    const isSelected = card === selectedCard;
+
+    card.classList.toggle(activeHeroClass, isSelected);
+    card.classList.toggle(dimmedHeroClass, !isSelected);
+  });
+};
+
+const toggleHeroCard = (selectedCard) => {
+  const isActive = selectedCard.classList.contains(activeHeroClass);
+
+  if (isActive) {
+    clearHeroCards();
+    return;
+  }
+
+  setActiveHeroCard(selectedCard);
+};
+
+const initHeroCards = () => {
   if (!heroVisual || !heroCards.length) return;
 
-  heroVisual.addEventListener("mousemove", (event) => {
-    const rect = heroVisual.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - .5;
-    const y = (event.clientY - rect.top) / rect.height - .5;
-
-    heroCards.forEach((card, index) => {
-      const depth = (index + 1) * 8;
-      const moveX = x * depth;
-      const moveY = y * depth;
-
-      card.style.setProperty("--move-x", `${moveX}px`);
-      card.style.setProperty("--move-y", `${moveY}px`);
+  heroCards.forEach((card) => {
+    card.addEventListener("click", (event) => {
+      event.stopPropagation();
+      toggleHeroCard(card);
     });
   });
 
-  heroVisual.addEventListener("mouseleave", () => {
-    heroCards.forEach((card) => {
-      card.style.setProperty("--move-x", "0px");
-      card.style.setProperty("--move-y", "0px");
-    });
+  heroVisual.addEventListener("click", () => {
+    clearHeroCards();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+
+    clearHeroCards();
   });
 };
 
@@ -156,6 +179,6 @@ window.addEventListener("load", handleScroll);
 
 initInterestLinks();
 initReveal();
-initHeroMotion();
+initHeroCards();
 validateForm();
 handleScroll();
