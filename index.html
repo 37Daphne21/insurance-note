@@ -53,101 +53,114 @@
               한 장으로 쉽게 확인하세요.
             </p>
             <div class="hero__actions">
-              <a href="#consult" class="button button--primary">필요한 보장 확인하기</a>
+              <a href="#consult" class="button button--primary">필요한 보장 확인</a>
               <a href="#insurance" class="button button--outline">고민별로 보기</a>
+            </div>
+
+            <div class="hero__tabs" role="tablist" aria-label="보험 종류 선택">
+              <button type="button" id="hero-tab-pet" class="hero__tab is-active" role="tab" aria-selected="true" aria-controls="hero-panel-pet" data-hero-tab="pet">🐶<span>펫</span></button>
+              <button type="button" id="hero-tab-driver" class="hero__tab" role="tab" aria-selected="false" aria-controls="hero-panel-driver" data-hero-tab="driver">🚗<span>운전자</span></button>
+              <button type="button" id="hero-tab-fire" class="hero__tab" role="tab" aria-selected="false" aria-controls="hero-panel-fire" data-hero-tab="fire">🏠<span>화재</span></button>
+              <button type="button" id="hero-tab-health" class="hero__tab" role="tab" aria-selected="false" aria-controls="hero-panel-health" data-hero-tab="health">❤️<span>건강</span></button>
+              <button type="button" id="hero-tab-child" class="hero__tab" role="tab" aria-selected="false" aria-controls="hero-panel-child" data-hero-tab="child">👶<span>아이</span></button>
             </div>
           </div>
 
           <div class="hero__visual">
-            <button type="button" class="hero-card hero-card--pet" data-hero-card="pet" data-target="#pet">
-              <span class="hero-card__inner">
-                <span class="hero-card__face hero-card__face--front">
-                  <span class="hero-card__eyebrow">PET</span>
-                  <strong class="hero-card__title">강아지 MRI</strong>
-                  <span class="hero-card__text">병원비 얼마까지 될까요?</span>
-                  <span class="hero-card__hint">자세히 보기</span>
+            <div id="hero-panel-pet" class="hero-card-panel is-current" role="tabpanel" aria-labelledby="hero-tab-pet" data-hero-panel="pet">
+              <button type="button" class="hero-card hero-card--pet" data-hero-card="pet" data-target="#pet">
+                <span class="hero-card__inner">
+                  <span class="hero-card__face hero-card__face--front">
+                    <span class="hero-card__eyebrow">PET</span>
+                    <strong class="hero-card__title">강아지 MRI</strong>
+                    <span class="hero-card__text">병원비 얼마까지 될까요?</span>
+                    <span class="hero-card__hint">자세히 보기</span>
+                  </span>
+                  <span class="hero-card__face hero-card__face--back">
+                    <span class="hero-card__eyebrow">PET CARE</span>
+                    <span class="hero-card__benefit">✓ 병원비 부담 감소</span>
+                    <span class="hero-card__benefit">✓ 비싼 검사 걱정 완화</span>
+                    <span class="hero-card__benefit">✓ 치료 결정에 집중</span>
+                  </span>
                 </span>
+              </button>
+            </div>
 
-                <span class="hero-card__face hero-card__face--back">
-                  <span class="hero-card__eyebrow">PET CARE</span>
-                  <span class="hero-card__benefit">✓ 병원비 부담 감소</span>
-                  <span class="hero-card__benefit">✓ 비싼 검사 걱정 완화</span>
-                  <span class="hero-card__benefit">✓ 치료 결정에 집중</span>
+            <div id="hero-panel-driver" class="hero-card-panel" role="tabpanel" aria-labelledby="hero-tab-driver" data-hero-panel="driver">
+              <button type="button" class="hero-card hero-card--driver" data-hero-card="driver" data-target="#driver">
+                <span class="hero-card__inner">
+                  <span class="hero-card__face hero-card__face--front">
+                    <span class="hero-card__eyebrow">DRIVE</span>
+                    <strong class="hero-card__title">자동차 사고</strong>
+                    <span class="hero-card__text">자동차보험만으로 충분할까요?</span>
+                    <span class="hero-card__hint">자세히 보기</span>
+                  </span>
+                  <span class="hero-card__face hero-card__face--back">
+                    <span class="hero-card__eyebrow">DRIVER CARE</span>
+                    <span class="hero-card__benefit">✓ 사고 이후 부담 감소</span>
+                    <span class="hero-card__benefit">✓ 예상치 못한 비용 대비</span>
+                    <span class="hero-card__benefit">✓ 운전 불안 완화</span>
+                  </span>
                 </span>
-              </span>
-            </button>
+              </button>
+            </div>
 
-            <button type="button" class="hero-card hero-card--driver" data-hero-card="driver" data-target="#driver">
-              <span class="hero-card__inner">
-                <span class="hero-card__face hero-card__face--front">
-                  <span class="hero-card__eyebrow">DRIVE</span>
-                  <strong class="hero-card__title">자동차 사고</strong>
-                  <span class="hero-card__text">자동차보험만으로 충분할까요?</span>
-                  <span class="hero-card__hint">자세히 보기</span>
+            <div id="hero-panel-fire" class="hero-card-panel" role="tabpanel" aria-labelledby="hero-tab-fire" data-hero-panel="fire">
+              <button type="button" class="hero-card hero-card--fire" data-hero-card="fire" data-target="#fire">
+                <span class="hero-card__inner">
+                  <span class="hero-card__face hero-card__face--front">
+                    <span class="hero-card__eyebrow">HOME</span>
+                    <strong class="hero-card__title">우리집 누수</strong>
+                    <span class="hero-card__text">복구비도 보장될까요?</span>
+                    <span class="hero-card__hint">자세히 보기</span>
+                  </span>
+                  <span class="hero-card__face hero-card__face--back">
+                    <span class="hero-card__eyebrow">HOME CARE</span>
+                    <span class="hero-card__benefit">✓ 갑작스러운 복구비 대비</span>
+                    <span class="hero-card__benefit">✓ 누수 사고 부담 감소</span>
+                    <span class="hero-card__benefit">✓ 우리 집을 더 안전하게</span>
+                  </span>
                 </span>
+              </button>
+            </div>
 
-                <span class="hero-card__face hero-card__face--back">
-                  <span class="hero-card__eyebrow">DRIVER CARE</span>
-                  <span class="hero-card__benefit">✓ 사고 이후 부담 감소</span>
-                  <span class="hero-card__benefit">✓ 예상치 못한 비용 대비</span>
-                  <span class="hero-card__benefit">✓ 운전 불안 완화</span>
+            <div id="hero-panel-health" class="hero-card-panel" role="tabpanel" aria-labelledby="hero-tab-health" data-hero-panel="health">
+              <button type="button" class="hero-card hero-card--health" data-hero-card="health" data-target="#health">
+                <span class="hero-card__inner">
+                  <span class="hero-card__face hero-card__face--front">
+                    <span class="hero-card__eyebrow">HEALTH</span>
+                    <strong class="hero-card__title">암·뇌·심 치료비</strong>
+                    <span class="hero-card__text">진단비보다 치료비까지</span>
+                    <span class="hero-card__hint">자세히 보기</span>
+                  </span>
+                  <span class="hero-card__face hero-card__face--back">
+                    <span class="hero-card__eyebrow">HEALTH CARE</span>
+                    <span class="hero-card__benefit">✓ 치료비 걱정 완화</span>
+                    <span class="hero-card__benefit">✓ 장기 치료 준비</span>
+                    <span class="hero-card__benefit">✓ 건강에 집중할 시간</span>
+                  </span>
                 </span>
-              </span>
-            </button>
+              </button>
+            </div>
 
-            <button type="button" class="hero-card hero-card--fire" data-hero-card="fire" data-target="#fire">
-              <span class="hero-card__inner">
-                <span class="hero-card__face hero-card__face--front">
-                  <span class="hero-card__eyebrow">HOME</span>
-                  <strong class="hero-card__title">우리집 누수</strong>
-                  <span class="hero-card__text">복구비도 보장될까요?</span>
-                  <span class="hero-card__hint">자세히 보기</span>
+            <div id="hero-panel-child" class="hero-card-panel" role="tabpanel" aria-labelledby="hero-tab-child" data-hero-panel="child">
+              <button type="button" class="hero-card hero-card--child" data-hero-card="child" data-target="#child">
+                <span class="hero-card__inner">
+                  <span class="hero-card__face hero-card__face--front">
+                    <span class="hero-card__eyebrow">CHILD</span>
+                    <strong class="hero-card__title">아이 보장</strong>
+                    <span class="hero-card__text">성장기 보장 확인</span>
+                    <span class="hero-card__hint">자세히 보기</span>
+                  </span>
+                  <span class="hero-card__face hero-card__face--back">
+                    <span class="hero-card__eyebrow">CHILD CARE</span>
+                    <span class="hero-card__benefit">✓ 입원비 부담 대비</span>
+                    <span class="hero-card__benefit">✓ 수술비 미리 준비</span>
+                    <span class="hero-card__benefit">✓ 성장기 질병 대비</span>
+                  </span>
                 </span>
-
-                <span class="hero-card__face hero-card__face--back">
-                  <span class="hero-card__eyebrow">HOME CARE</span>
-                  <span class="hero-card__benefit">✓ 갑작스러운 복구비 대비</span>
-                  <span class="hero-card__benefit">✓ 누수 사고 부담 감소</span>
-                  <span class="hero-card__benefit">✓ 우리 집을 더 안전하게</span>
-                </span>
-              </span>
-            </button>
-
-            <button type="button" class="hero-card hero-card--health" data-hero-card="health" data-target="#health">
-              <span class="hero-card__inner">
-                <span class="hero-card__face hero-card__face--front">
-                  <span class="hero-card__eyebrow">HEALTH</span>
-                  <strong class="hero-card__title">암·뇌·심 치료비</strong>
-                  <span class="hero-card__text">진단비보다 치료비까지</span>
-                  <span class="hero-card__hint">자세히 보기</span>
-                </span>
-
-                <span class="hero-card__face hero-card__face--back">
-                  <span class="hero-card__eyebrow">HEALTH CARE</span>
-                  <span class="hero-card__benefit">✓ 치료비 걱정 완화</span>
-                  <span class="hero-card__benefit">✓ 장기 치료 준비</span>
-                  <span class="hero-card__benefit">✓ 건강에 집중할 시간</span>
-                </span>
-              </span>
-            </button>
-
-            <button type="button" class="hero-card hero-card--child" data-hero-card="child" data-target="#child">
-              <span class="hero-card__inner">
-                <span class="hero-card__face hero-card__face--front">
-                  <span class="hero-card__eyebrow">CHILD</span>
-                  <strong class="hero-card__title">아이 보장</strong>
-                  <span class="hero-card__text">성장기 보장 확인</span>
-                  <span class="hero-card__hint">자세히 보기</span>
-                </span>
-
-                <span class="hero-card__face hero-card__face--back">
-                  <span class="hero-card__eyebrow">CHILD CARE</span>
-                  <span class="hero-card__benefit">✓ 입원비 부담 대비</span>
-                  <span class="hero-card__benefit">✓ 수술비 미리 준비</span>
-                  <span class="hero-card__benefit">✓ 성장기 질병 대비</span>
-                </span>
-              </span>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </section>

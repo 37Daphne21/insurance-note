@@ -6,15 +6,18 @@ const revealTargets = document.querySelectorAll(".section-heading, .worry-card, 
 const consultForm = document.querySelector(".consult-form");
 const interestSelect = document.querySelector("#interest");
 const interestLinks = document.querySelectorAll("[data-interest]");
+const hero = document.querySelector(".hero");
 const heroVisual = document.querySelector(".hero__visual");
+const heroTabs = document.querySelectorAll(".hero__tab");
+const heroPanels = document.querySelectorAll(".hero-card-panel");
 const heroCards = document.querySelectorAll(".hero-card");
 
 const headerScrollClass = "is-scrolled";
 const activeClass = "is-active";
 const revealClass = "is-revealed";
 const hiddenClass = "is-hidden";
-const activeHeroClass = "is-active";
-const dimmedHeroClass = "is-dimmed";
+const currentClass = "is-current";
+const dimmedClass = "is-dimmed";
 
 const setHeaderState = () => {
   if (!header) return;
@@ -90,7 +93,7 @@ const initReveal = () => {
 
 const clearHeroCards = () => {
   heroCards.forEach((card) => {
-    card.classList.remove(activeHeroClass, dimmedHeroClass);
+    card.classList.remove(activeClass, dimmedClass);
   });
 };
 
@@ -98,13 +101,13 @@ const setActiveHeroCard = (selectedCard) => {
   heroCards.forEach((card) => {
     const isSelected = card === selectedCard;
 
-    card.classList.toggle(activeHeroClass, isSelected);
-    card.classList.toggle(dimmedHeroClass, !isSelected);
+    card.classList.toggle(activeClass, isSelected);
+    card.classList.toggle(dimmedClass, !isSelected);
   });
 };
 
 const toggleHeroCard = (selectedCard) => {
-  const isActive = selectedCard.classList.contains(activeHeroClass);
+  const isActive = selectedCard.classList.contains(activeClass);
 
   if (isActive) {
     clearHeroCards();
@@ -112,6 +115,56 @@ const toggleHeroCard = (selectedCard) => {
   }
 
   setActiveHeroCard(selectedCard);
+};
+
+const setCurrentHeroPanel = (key) => {
+  if (!key) return;
+
+  heroTabs.forEach((tab) => {
+    const isCurrent = tab.dataset.heroTab === key;
+
+    tab.classList.toggle(activeClass, isCurrent);
+    tab.setAttribute("aria-selected", isCurrent ? "true" : "false");
+    tab.setAttribute("tabindex", isCurrent ? "0" : "-1");
+  });
+
+  heroPanels.forEach((panel) => {
+    const isCurrent = panel.dataset.heroPanel === key;
+
+    panel.classList.toggle(currentClass, isCurrent);
+    panel.setAttribute("aria-hidden", isCurrent ? "false" : "true");
+  });
+
+  clearHeroCards();
+};
+
+const initHeroTabs = () => {
+  if (!hero || !heroTabs.length || !heroPanels.length) return;
+
+  heroTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      setCurrentHeroPanel(tab.dataset.heroTab);
+    });
+
+    tab.addEventListener("keydown", (event) => {
+      const isNext = event.key === "ArrowRight";
+      const isPrev = event.key === "ArrowLeft";
+
+      if (!isNext && !isPrev) return;
+
+      event.preventDefault();
+
+      const nextIndex = isNext ? (index + 1) % heroTabs.length : (index - 1 + heroTabs.length) % heroTabs.length;
+      const nextTab = heroTabs[nextIndex];
+
+      nextTab.focus();
+      setCurrentHeroPanel(nextTab.dataset.heroTab);
+    });
+  });
+
+  const currentTab = [...heroTabs].find((tab) => tab.classList.contains(activeClass)) || heroTabs[0];
+
+  setCurrentHeroPanel(currentTab.dataset.heroTab);
 };
 
 const initHeroCards = () => {
@@ -179,6 +232,7 @@ window.addEventListener("load", handleScroll);
 
 initInterestLinks();
 initReveal();
+initHeroTabs();
 initHeroCards();
 validateForm();
 handleScroll();
