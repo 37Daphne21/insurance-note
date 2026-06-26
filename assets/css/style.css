@@ -15,6 +15,21 @@
   --color-pet: #d7b44a;
   --color-health: #7864d9;
   --color-child: #e08c4d;
+  --color-pet-ink: #4e3b08;
+  --color-pet-surface: #f7edc9;
+  --color-pet-solid: #574114;
+  --color-driver-ink: #102a68;
+  --color-driver-surface: #dce6fb;
+  --color-driver-solid: #183872;
+  --color-fire-ink: #641f1f;
+  --color-fire-surface: #f4dddd;
+  --color-fire-solid: #6e2929;
+  --color-health-ink: #2d216b;
+  --color-health-surface: #e8e3fb;
+  --color-health-solid: #3b2d78;
+  --color-child-ink: #6b3513;
+  --color-child-surface: #fbe8da;
+  --color-child-solid: #8a4a22;
   --font-base: "SUIT", "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --inner: min(100% - clamp(2rem, 6vw, 7.5rem), 82.5rem);
   --radius-sm: 1rem;
@@ -263,7 +278,7 @@ img {
 
 .hero__inner {
   display: grid;
-  grid-template-columns: minmax(0, .7fr) minmax(26rem, 1fr);
+  grid-template-columns: minmax(0, .8fr) minmax(26rem, 1fr);
   align-items: center;
   width: var(--inner);
   min-height: calc(100svh - 4.75rem);
@@ -318,6 +333,7 @@ img {
   display: block;
   width: 100%;
   height: 100%;
+  border-radius: inherit;
   transform-style: preserve-3d;
   transition: transform .55s cubic-bezier(.2, .8, .2, 1);
 }
@@ -328,7 +344,7 @@ img {
   display: flex;
   padding: clamp(1.25rem, 2vw, 1.5rem);
   border: 1px solid var(--color-white);
-  border-radius: var(--radius-lg);
+  border-radius: inherit;
   box-shadow: var(--shadow-card);
   flex-direction: column;
   backface-visibility: hidden;
@@ -401,80 +417,80 @@ img {
   --hero-rotate: 4deg;
   top: 2%;
   right: 8%;
-  color: #4e3b08;
+  color: var(--color-pet-ink);
   transform: translateY(0) rotate(var(--hero-rotate));
 }
 
 .hero-card--pet .hero-card__face--front {
-  background: #f7edc9;
+  background: var(--color-pet-surface);
 }
 
 .hero-card--pet .hero-card__face--back {
-  background: #574114;
+  background: var(--color-pet-solid);
 }
 
 .hero-card--driver {
   --hero-rotate: -5deg;
   top: 24%;
   left: 2%;
-  color: #102a68;
+  color: var(--color-driver-ink);
   transform: translateY(0) rotate(var(--hero-rotate));
 }
 
 .hero-card--driver .hero-card__face--front {
-  background: #dce6fb;
+  background: var(--color-driver-surface);
 }
 
 .hero-card--driver .hero-card__face--back {
-  background: #183872;
+  background: var(--color-driver-solid);
 }
 
 .hero-card--fire {
   --hero-rotate: 5deg;
   left: 5%;
   bottom: 2%;
-  color: #641f1f;
+  color: var(--color-fire-ink);
   transform: translateY(0) rotate(var(--hero-rotate));
 }
 
 .hero-card--fire .hero-card__face--front {
-  background: #f4dddd;
+  background: var(--color-fire-surface);
 }
 
 .hero-card--fire .hero-card__face--back {
-  background: #6e2929;
+  background: var(--color-fire-solid);
 }
 
 .hero-card--health {
   --hero-rotate: -4deg;
   right: 0;
   bottom: 18%;
-  color: #2d216b;
+  color: var(--color-health-ink);
   transform: translateY(0) rotate(var(--hero-rotate));
 }
 
 .hero-card--health .hero-card__face--front {
-  background: #e8e3fb;
+  background: var(--color-health-surface);
 }
 
 .hero-card--health .hero-card__face--back {
-  background: #3b2d78;
+  background: var(--color-health-solid);
 }
 
 .hero-card--child {
   --hero-rotate: 3deg;
   top: 42%;
   left: 50%;
-  color: #6b3513;
+  color: var(--color-child-ink);
   transform: translateX(-50%) translateY(0) rotate(var(--hero-rotate));
 }
 
 .hero-card--child .hero-card__face--front {
-  background: #fbe8da;
+  background: var(--color-child-surface);
 }
 
 .hero-card--child .hero-card__face--back {
-  background: #8a4a22;
+  background: var(--color-child-solid);
 }
 
 
@@ -553,13 +569,13 @@ img {
 }
 
 .insurance-card--driver {
-  color: #102a68;
+  color: var(--color-driver-ink);
   background: #e2e9fb;
 }
 
 .insurance-card--child {
-  color: #6b3513;
-  background: #fbe8da;
+  color: var(--color-child-ink);
+  background: var(--color-child-surface);
 }
 
 .insurance-card__label {
@@ -977,7 +993,6 @@ img {
 
   .hero-card__face {
     padding: 1rem;
-    border-radius: var(--radius-md);
   }
 
   .hero-card__title {
