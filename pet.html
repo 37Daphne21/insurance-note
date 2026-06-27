@@ -66,15 +66,19 @@
         <span class="ins-flow__logo" aria-hidden="true"></span>
       </header>
 
-      <div class="ins-progress" role="progressbar" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1" aria-label="진행 단계" data-progress>
+      <div class="ins-progress" role="progressbar" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1" aria-label="진행 단계" data-progress>
         <svg class="icon ins-progress__item is-current"><use href="#icon-paw"></use></svg>
         <svg class="icon ins-progress__item"><use href="#icon-paw"></use></svg>
         <svg class="icon ins-progress__item"><use href="#icon-paw"></use></svg>
         <svg class="icon ins-progress__item"><use href="#icon-paw"></use></svg>
         <svg class="icon ins-progress__item"><use href="#icon-paw"></use></svg>
         <svg class="icon ins-progress__item"><use href="#icon-paw"></use></svg>
+        <svg class="icon ins-progress__item"><use href="#icon-paw"></use></svg>
+        <svg class="icon ins-progress__item"><use href="#icon-paw"></use></svg>
+        <svg class="icon ins-progress__item"><use href="#icon-paw"></use></svg>
+        <svg class="icon ins-progress__item"><use href="#icon-paw"></use></svg>
       </div>
-      <span class="sr-only" aria-live="polite" data-progress-text>1단계 / 6단계</span>
+      <span class="sr-only" aria-live="polite" data-progress-text>1단계 / 10단계</span>
 
       <div class="ins-flow__stage" data-stage>
         <!-- Step 01: Opening -->
@@ -134,8 +138,31 @@
           </div>
         </section>
 
-        <!-- Step 03: Choice -->
-        <section class="ins-step ins-step--choice" data-step="2">
+        <!-- Step 03: Empathy Case -->
+        <section class="ins-step ins-step--case" data-step="2">
+          <div class="ins-step__body">
+            <div class="ins-step__body-inner">
+              <span class="ins-eyebrow">병원비가 체감되는 순간</span>
+              <h2 class="ins-step__title">작은 진료라고<br>생각했는데,<br>계산서 앞에서<br>놀라는 경우가 많아요.</h2>
+              <div class="ins-card ins-card--stat pet-stat-card">
+                <div class="ins-card__label">예상치 못한 병원비 예시</div>
+                <div class="ins-person__chips">
+                  <span class="ins-chip"><svg class="icon"><use href="#icon-check"></use></svg>검사비</span>
+                  <span class="ins-chip"><svg class="icon"><use href="#icon-check"></use></svg>수술비</span>
+                  <span class="ins-chip"><svg class="icon"><use href="#icon-check"></use></svg>입원비</span>
+                </div>
+                <p class="ins-step__description ins-step__description--spaced">잘 뛰던 아이가 갑자기 다리를 절거나,<br>밤에 토해서 응급실을 찾는 순간처럼요.</p>
+              </div>
+              <p class="ins-step__description ins-step__description--spaced">아픈 것도 걱정인데,<br>얼마가 나올지 모른다는 게<br>더 크게 느껴질 수 있어요.</p>
+            </div>
+          </div>
+          <div class="ins-step__footer">
+            <button class="ins-button ins-button--primary" type="button" data-next>우리 아이 기준으로 보기</button>
+          </div>
+        </section>
+
+        <!-- Step 04: Choice -->
+        <section class="ins-step ins-step--choice" data-step="3">
           <div class="ins-step__body">
             <div class="ins-step__body-inner">
               <span class="ins-eyebrow">가볍게 골라주세요</span>
@@ -151,8 +178,8 @@
           </div>
         </section>
 
-        <!-- Step 04: Personalized -->
-        <section class="ins-step ins-step--personalized" data-step="3">
+        <!-- Step 05: Personalized -->
+        <section class="ins-step ins-step--personalized" data-step="4">
           <div class="ins-step__body">
             <div class="ins-step__body-inner">
               <span class="ins-eyebrow">이런 아이는</span>
@@ -165,8 +192,46 @@
           </div>
         </section>
 
-        <!-- Step 05: Person -->
-        <section class="ins-step ins-step--person" data-step="4">
+        <!-- Step 06: Coverage Check -->
+        <section class="ins-step ins-step--coverage" data-step="5">
+          <div class="ins-step__body">
+            <div class="ins-step__body-inner">
+              <span class="ins-eyebrow">그래서 볼 것은</span>
+              <h2 class="ins-step__title">펫보험은<br>가격만 보면<br>아쉬울 수 있어요.</h2>
+              <p class="ins-step__description">우리 아이에게 필요한 준비인지 보려면<br>아래 기준을 같이 봐야 해요.</p>
+              <div class="ins-choice" role="list">
+                <div class="ins-choice__button" role="listitem"><svg class="icon"><use href="#icon-check"></use></svg>내가 실제로 부담하는 금액</div>
+                <div class="ins-choice__button" role="listitem"><svg class="icon"><use href="#icon-check"></use></svg>보장되는 진료와 제외되는 항목</div>
+                <div class="ins-choice__button" role="listitem"><svg class="icon"><use href="#icon-check"></use></svg>나이와 갱신에 따른 보험료 흐름</div>
+              </div>
+            </div>
+          </div>
+          <div class="ins-step__footer">
+            <button class="ins-button ins-button--primary" type="button" data-next>어떻게 정리하는지 보기</button>
+          </div>
+        </section>
+
+        <!-- Step 07: Process -->
+        <section class="ins-step ins-step--process" data-step="6">
+          <div class="ins-step__body">
+            <div class="ins-step__body-inner">
+              <span class="ins-eyebrow">보험한장은 이렇게</span>
+              <h2 class="ins-step__title">복잡한 보험 설명보다,<br>필요한 부분만<br>한 장처럼 정리해드려요.</h2>
+              <div class="ins-choice" role="list">
+                <div class="ins-choice__button" role="listitem"><svg class="icon"><use href="#icon-paw"></use></svg>아이 나이·품종·생활 패턴 확인</div>
+                <div class="ins-choice__button" role="listitem"><svg class="icon"><use href="#icon-paw"></use></svg>수술·입원·통원 기준 체크</div>
+                <div class="ins-choice__button" role="listitem"><svg class="icon"><use href="#icon-paw"></use></svg>무리한 권유 없이 선택지만 비교</div>
+              </div>
+              <p class="ins-step__description ins-step__description--spaced">가입을 결정하기 전에,<br>준비가 필요한 상황인지부터<br>가볍게 확인해도 괜찮아요.</p>
+            </div>
+          </div>
+          <div class="ins-step__footer">
+            <button class="ins-button ins-button--primary" type="button" data-next>상담자 보기</button>
+          </div>
+        </section>
+
+        <!-- Step 08: Person -->
+        <section class="ins-step ins-step--person" data-step="7">
           <div class="ins-step__body">
             <div class="ins-step__body-inner">
               <article class="ins-person pet-person">
@@ -190,8 +255,29 @@
           </div>
         </section>
 
-        <!-- Step 06: CTA -->
-        <section class="ins-step ins-step--cta" data-step="5">
+        <!-- Step 09: FAQ -->
+        <section class="ins-step ins-step--faq" data-step="8">
+          <div class="ins-step__body">
+            <div class="ins-step__body-inner">
+              <span class="ins-eyebrow">상담 전에 많이 묻는 것</span>
+              <h2 class="ins-step__title">상담만 받아도<br>괜찮을까요?</h2>
+              <div class="ins-card ins-card--stat pet-stat-card">
+                <div class="ins-card__label">Q. 가입을 바로 결정해야 하나요?</div>
+                <p class="ins-step__description">아니요. 우리 아이에게 필요한 준비인지 확인하는 용도로 상담받으셔도 괜찮아요.</p>
+              </div>
+              <div class="ins-card ins-card--stat pet-stat-card">
+                <div class="ins-card__label">Q. 이미 아픈 적이 있어도 볼 수 있나요?</div>
+                <p class="ins-step__description">기존 병력이나 현재 상태에 따라 달라질 수 있어요. 상담 때 가능 여부와 제외될 수 있는 항목을 함께 확인해드려요.</p>
+              </div>
+            </div>
+          </div>
+          <div class="ins-step__footer">
+            <button class="ins-button ins-button--primary" type="button" data-next>마지막으로 상담하기</button>
+          </div>
+        </section>
+
+        <!-- Step 10: CTA -->
+        <section class="ins-step ins-step--cta" data-step="9">
           <div class="ins-step__body">
             <div class="ins-step__body-inner ins-step__body-inner--center">
               <div class="pet-visual pet-visual--heart">
