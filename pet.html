@@ -80,12 +80,14 @@
         <!-- Step 01: Opening -->
         <section class="ins-step ins-step--opening is-active" data-step="0">
           <div class="ins-step__body">
-            <div class="pet-visual pet-visual--question">
-              <svg class="icon"><use href="#icon-paw"></use></svg>
-              <span class="pet-visual__badge">?</span>
+            <div class="ins-step__body-inner">
+              <div class="pet-visual pet-visual--question">
+                <svg class="icon"><use href="#icon-paw"></use></svg>
+                <span class="pet-visual__badge">?</span>
+              </div>
+              <h1 class="ins-step__title">우리 아이,<br>병원비 얼마 나올지<br>아세요?</h1>
+              <p class="ins-step__description">원장님도 미리 말씀 못 드리는 경우가 많아요.</p>
             </div>
-            <h1 class="ins-step__title">우리 아이,<br>병원비 얼마 나올지<br>아세요?</h1>
-            <p class="ins-step__description">원장님도 미리 말씀 못 드리는 경우가 많아요.</p>
           </div>
           <div class="ins-step__footer">
             <button class="ins-button ins-button--primary" type="button" data-next>얼마나 나오는지 보기</button>
@@ -95,35 +97,37 @@
         <!-- Step 02: Reality -->
         <section class="ins-step ins-step--reality" data-step="1">
           <div class="ins-step__body">
-            <span class="ins-eyebrow">반려동물 치료비</span>
-            <h2 class="ins-step__title">2년 새, 거의<br>두 배가 됐어요</h2>
-            <div class="ins-card ins-card--stat pet-stat-card">
-              <div class="ins-stat">
-                <strong class="ins-stat__number">146.3</strong>
-                <span class="ins-stat__unit">만원</span>
+            <div class="ins-step__body-inner">
+              <span class="ins-eyebrow">반려동물 치료비</span>
+              <h2 class="ins-step__title">2년 새, 거의<br>두 배가 됐어요</h2>
+              <div class="ins-card ins-card--stat pet-stat-card">
+                <div class="ins-stat">
+                  <strong class="ins-stat__number">146.3</strong>
+                  <span class="ins-stat__unit">만원</span>
+                </div>
+                <p class="ins-stat__caption">2025년, 반려동물 1마리당 평균 치료비</p>
+                <div class="ins-bar">
+                  <div class="ins-bar__label">
+                    <span>2023년</span>
+                    <span>78.7만원</span>
+                  </div>
+                  <div class="ins-bar__track">
+                    <div class="ins-bar__fill ins-bar__fill--muted" style="width: 53.8%"></div>
+                  </div>
+                </div>
+                <div class="ins-bar">
+                  <div class="ins-bar__label">
+                    <span>2025년</span>
+                    <span>146.3만원</span>
+                  </div>
+                  <div class="ins-bar__track">
+                    <div class="ins-bar__fill" style="width: 100%"></div>
+                  </div>
+                </div>
               </div>
-              <p class="ins-stat__caption">2025년, 반려동물 1마리당 평균 치료비</p>
-              <div class="ins-bar">
-                <div class="ins-bar__label">
-                  <span>2023년</span>
-                  <span>78.7만원</span>
-                </div>
-                <div class="ins-bar__track">
-                  <div class="ins-bar__fill ins-bar__fill--muted" style="width: 53.8%"></div>
-                </div>
-              </div>
-              <div class="ins-bar">
-                <div class="ins-bar__label">
-                  <span>2025년</span>
-                  <span>146.3만원</span>
-                </div>
-                <div class="ins-bar__track">
-                  <div class="ins-bar__fill" style="width: 100%"></div>
-                </div>
-              </div>
+              <p class="ins-step__description ins-step__description--spaced">한 번 크게 나온 병원비는,<br>그 다음부터 계속 마음에 남습니다.</p>
+              <p class="ins-source">출처 · 2025 한국 반려동물보고서 (KB경영연구소)</p>
             </div>
-            <p class="ins-step__description ins-step__description--spaced">한 번 크게 나온 병원비는,<br>그 다음부터 계속 마음에 남습니다.</p>
-            <p class="ins-source">출처 · 2025 한국 반려동물보고서 (KB경영연구소)</p>
           </div>
           <div class="ins-step__footer">
             <button class="ins-button ins-button--primary" type="button" data-next>우리 아이는 어떤 편인지 보기</button>
@@ -133,14 +137,16 @@
         <!-- Step 03: Choice -->
         <section class="ins-step ins-step--choice" data-step="2">
           <div class="ins-step__body">
-            <span class="ins-eyebrow">가볍게 골라주세요</span>
-            <h2 class="ins-step__title">우리 아이는<br>어떤 편인가요?</h2>
-            <p class="ins-step__description">정답은 없어요. 끌리는 쪽으로 골라주세요.</p>
-            <div class="ins-choice" data-choice-list>
-              <button class="ins-choice__button" type="button" data-choice data-trait="active"><svg class="icon"><use href="#icon-paw"></use></svg>활동량이 많아요</button>
-              <button class="ins-choice__button" type="button" data-choice data-trait="curious"><svg class="icon"><use href="#icon-paw"></use></svg>호기심이 많아요</button>
-              <button class="ins-choice__button" type="button" data-choice data-trait="calm"><svg class="icon"><use href="#icon-paw"></use></svg>집에서 쉬는 걸 좋아해요</button>
-              <button class="ins-choice__button" type="button" data-choice data-trait="senior"><svg class="icon"><use href="#icon-paw"></use></svg>이제 나이가 조금 있어요</button>
+            <div class="ins-step__body-inner">
+              <span class="ins-eyebrow">가볍게 골라주세요</span>
+              <h2 class="ins-step__title">우리 아이는<br>어떤 편인가요?</h2>
+              <p class="ins-step__description">정답은 없어요. 끌리는 쪽으로 골라주세요.</p>
+              <div class="ins-choice" data-choice-list>
+                <button class="ins-choice__button" type="button" data-choice data-trait="active"><svg class="icon"><use href="#icon-paw"></use></svg>활동량이 많아요</button>
+                <button class="ins-choice__button" type="button" data-choice data-trait="curious"><svg class="icon"><use href="#icon-paw"></use></svg>호기심이 많아요</button>
+                <button class="ins-choice__button" type="button" data-choice data-trait="calm"><svg class="icon"><use href="#icon-paw"></use></svg>집에서 쉬는 걸 좋아해요</button>
+                <button class="ins-choice__button" type="button" data-choice data-trait="senior"><svg class="icon"><use href="#icon-paw"></use></svg>이제 나이가 조금 있어요</button>
+              </div>
             </div>
           </div>
         </section>
@@ -148,9 +154,11 @@
         <!-- Step 04: Personalized -->
         <section class="ins-step ins-step--personalized" data-step="3">
           <div class="ins-step__body">
-            <span class="ins-eyebrow">이런 아이는</span>
-            <h2 class="ins-step__title" data-personal-title>활동량이 많은 아이는<br>관절·인대 쪽 병원을<br>찾는 일이 잦아요.</h2>
-            <p class="ins-step__description" data-personal-description>이런 상담도 자주 받아요.</p>
+            <div class="ins-step__body-inner">
+              <span class="ins-eyebrow">이런 아이는</span>
+              <h2 class="ins-step__title" data-personal-title>활동량이 많은 아이는<br>관절·인대 쪽 병원을<br>찾는 일이 잦아요.</h2>
+              <p class="ins-step__description" data-personal-description>이런 상담도 자주 받아요.</p>
+            </div>
           </div>
           <div class="ins-step__footer">
             <button class="ins-button ins-button--primary" type="button" data-next>이야기 더 보기</button>
@@ -160,20 +168,22 @@
         <!-- Step 05: Person -->
         <section class="ins-step ins-step--person" data-step="4">
           <div class="ins-step__body">
-            <article class="ins-person pet-person">
-              <span class="ins-eyebrow">상담을 도와드릴 사람</span>
-              <div class="ins-person__photo">
-                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22720%22%20height%3D%22900%22%20viewBox%3D%220%200%20720%20900%22%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fff7df%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f4d89a%22/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%22720%22%20height%3D%22900%22%20rx%3D%2252%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Ccircle%20cx%3D%22360%22%20cy%3D%22300%22%20r%3D%22116%22%20fill%3D%22%23e8a33d%22%20opacity%3D%22.3%22/%3E%0A%3Ccircle%20cx%3D%22360%22%20cy%3D%22284%22%20r%3D%2278%22%20fill%3D%22%23fffaf0%22/%3E%0A%3Cpath%20d%3D%22M190%20710c28-134%20109-207%20170-207s142%2073%20170%20207%22%20fill%3D%22%23fffaf0%22/%3E%0A%3Ctext%20x%3D%22360%22%20y%3D%22784%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20fill%3D%22%237b5623%22%3E%EC%83%81%EB%8B%B4%EC%9E%90%20%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%9E%90%EB%A6%AC%3C/text%3E%0A%3C/svg%3E" alt="상담자 양영롱 AP 프로필">
-              </div>
-              <div class="ins-person__name">양영롱 AP</div>
-              <div class="ins-person__role">AFG 어센틱금융그룹<br>생명·손해보험 전문 컨설턴트</div>
-              <p class="ins-person__quote">보험은<br>가입보다 관리라고 생각합니다.</p>
-              <p class="ins-person__description">강요하지 않습니다.<br>기존 보험도 함께 봐드립니다.<br>궁금한 것만 물어보셔도 됩니다.</p>
-              <div class="ins-person__chips">
-                <span class="ins-chip"><svg class="icon"><use href="#icon-check"></use></svg>유지해도 되는지</span>
-                <span class="ins-chip"><svg class="icon"><use href="#icon-check"></use></svg>불필요한 부분은 없는지</span>
-              </div>
-            </article>
+            <div class="ins-step__body-inner">
+              <article class="ins-person pet-person">
+                <span class="ins-eyebrow">상담을 도와드릴 사람</span>
+                <div class="ins-person__photo">
+                  <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22720%22%20height%3D%22900%22%20viewBox%3D%220%200%20720%20900%22%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fff7df%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f4d89a%22/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%22720%22%20height%3D%22900%22%20rx%3D%2252%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Ccircle%20cx%3D%22360%22%20cy%3D%22300%22%20r%3D%22116%22%20fill%3D%22%23e8a33d%22%20opacity%3D%22.3%22/%3E%0A%3Ccircle%20cx%3D%22360%22%20cy%3D%22284%22%20r%3D%2278%22%20fill%3D%22%23fffaf0%22/%3E%0A%3Cpath%20d%3D%22M190%20710c28-134%20109-207%20170-207s142%2073%20170%20207%22%20fill%3D%22%23fffaf0%22/%3E%0A%3Ctext%20x%3D%22360%22%20y%3D%22784%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20fill%3D%22%237b5623%22%3E%EC%83%81%EB%8B%B4%EC%9E%90%20%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%9E%90%EB%A6%AC%3C/text%3E%0A%3C/svg%3E" alt="상담자 양영롱 AP 프로필">
+                </div>
+                <div class="ins-person__name">양영롱 AP</div>
+                <div class="ins-person__role">AFG 어센틱금융그룹<br>생명·손해보험 전문 컨설턴트</div>
+                <p class="ins-person__quote">보험은<br>가입보다 관리라고 생각합니다.</p>
+                <p class="ins-person__description">강요하지 않습니다.<br>기존 보험도 함께 봐드립니다.<br>궁금한 것만 물어보셔도 됩니다.</p>
+                <div class="ins-person__chips">
+                  <span class="ins-chip"><svg class="icon"><use href="#icon-check"></use></svg>유지해도 되는지</span>
+                  <span class="ins-chip"><svg class="icon"><use href="#icon-check"></use></svg>불필요한 부분은 없는지</span>
+                </div>
+              </article>
+            </div>
           </div>
           <div class="ins-step__footer">
             <button class="ins-button ins-button--primary" type="button" data-next>이야기 이어가기</button>
@@ -182,12 +192,14 @@
 
         <!-- Step 06: CTA -->
         <section class="ins-step ins-step--cta" data-step="5">
-          <div class="ins-step__body ins-step__body--center">
-            <div class="pet-visual pet-visual--heart">
-              <svg class="icon"><use href="#icon-heart"></use></svg>
+          <div class="ins-step__body">
+            <div class="ins-step__body-inner ins-step__body-inner--center">
+              <div class="pet-visual pet-visual--heart">
+                <svg class="icon"><use href="#icon-heart"></use></svg>
+              </div>
+              <h2 class="ins-step__title">우리 아이에게 맞는 준비인지,<br>같이 이야기해볼까요?</h2>
+              <p class="ins-step__description">상담은 무료이고, 강요하지 않아요.</p>
             </div>
-            <h2 class="ins-step__title">우리 아이에게 맞는 준비인지,<br>같이 이야기해볼까요?</h2>
-            <p class="ins-step__description">상담은 무료이고, 강요하지 않아요.</p>
           </div>
           <div class="ins-step__footer">
             <a class="ins-button ins-button--kakao" href="#" data-kakao><svg class="icon"><use href="#icon-chat"></use></svg>카카오톡으로 편하게 이야기하기</a>

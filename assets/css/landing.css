@@ -88,7 +88,6 @@
   position: absolute;
   inset: 0;
   display: flex;
-  overflow-y: auto;
   flex-direction: column;
   padding: var(--space-3) var(--space-5) var(--space-7);
   opacity: 0;
@@ -109,15 +108,22 @@
 }
 
 .ins-step__body {
+  overflow-y: auto;
   display: flex;
   min-height: 0;
   flex: 1 1 auto;
   flex-direction: column;
-  justify-content: center;
   padding: var(--space-4) 0;
 }
 
-.ins-step__body--center {
+.ins-step__body-inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+
+.ins-step__body-inner--center {
   align-items: center;
   text-align: center;
 }
