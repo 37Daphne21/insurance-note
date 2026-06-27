@@ -484,6 +484,14 @@ img {
   line-height: 1.35;
 }
 
+.hero-card__face--back .hero-card__eyebrow {
+  margin-bottom: auto;
+}
+
+.hero-card__face--back .hero-card__benefit:last-child {
+  margin-bottom: auto;
+}
+
 .hero-card--pet {
   --hero-rotate: 4deg;
   --hero-card-color: var(--color-pet-ink);
@@ -978,7 +986,8 @@ img {
   }
 
   .hero__visual {
-    width: min(100%, 34rem);
+    width: min(100%, 44rem);
+    aspect-ratio: 16 / 10;
     margin: 0 auto;
   }
 
@@ -1004,7 +1013,7 @@ img {
   }
 
   .hero__visual {
-    width: min(100%, 20rem);
+    width: clamp(20rem, 70vw, 30rem);
     aspect-ratio: 2 / 1;
     margin: 0 auto;
   }
@@ -1036,6 +1045,22 @@ img {
 
   .hero-card__hint {
     display: block;
+  }
+
+  .hero-card__eyebrow {
+    font-size: 2.6vw;
+  }
+
+  .hero-card__title {
+    font-size: 5.5vw;
+  }
+
+  .hero-card__text {
+    font-size: 3.2vw;
+  }
+
+  .hero-card__benefit {
+    font-size: 3vw;
   }
 
   .worry__list,

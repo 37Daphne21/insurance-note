@@ -1,415 +1,210 @@
-# insurance-note (260621)
+# Insurance Note (보험한장)
 
-## [ 프로젝트 작업 현황 ]
-### 오늘자 순서
-- main.js 고도화
-- 메인 전체 흐름 확인
-- Hero 한 섹션만 디벨롭
-- 개별 랜딩 1개 러프 제작
-- 메인 섹션별 업그레이드
+## Project Overview
 
-### JS 체크리스트
-1) 완료
-- Progress 현재 섹션 활성화 : 우측 progress nav 기준
-- Header 스크롤 상태 : header.is-scrolled
-- Floating CTA 노출/숨김 : 상단/상담 섹션에서 숨김
-- 폼 기본 검증 : 이름, 연락처, 동의 체크
-- 관심 보험 자동 선택 : 태그에 data-interest 추가 필요
+보험한장은 보험 상품을 어렵게 설명하는 기존 보험 사이트와 달리,
 
-2) 보류
-- Reveal animation : HTML 구조 확정 후 마지막에
-- Hero 카드 인터랙션 : 전체 움직임 적용 완료. 개별 움직임 여부 검토 예정.
+**"필요한 보장을 한 장으로 쉽게"**
 
-3) 미완료
-- 모바일 Progress : 모바일 구조 잡은 뒤 추가
-- 모바일 메뉴	: 헤더 모바일 작업 때 추가
-- 숫자 카운터 : 실제 사례 섹션 확정 후 추가
-- Worry 카드 active 상태 :고민 선택 UX 확정 후 추가
-- 현재 보험 섹션 강조 : 모바일 progress와 같이 처리
-- 폼 API 연동 : 추후 대표/API 또는 구글시트 결정
+라는 컨셉으로 제작하는 보험 랜딩 프로젝트입니다.
 
+광고를 통해 유입된 사용자가 자신의 상황에 맞는 보험을 쉽고 빠르게 이해하고 상담까지 자연스럽게 이어질 수 있도록 설계합니다.
 
 ---
 
+## Project Goals
 
-## [ 프로젝트 정보 ]
-* 참고 url : https://bonniepuppy.co.kr/pet-insurance
-
-### 가져와도 되는 것:
-✅ 문제 제기
-
-✅ 실제 사례
-
-✅ 통계 활용
-
-✅ FAQ
-
-✅ CTA 반복
-
-✅ 중간 신청 배너
-
-✅ 긴 랜딩 구조
-
-### 버릴 것:
-❌ 비슷한 박스 반복
-
-❌ 단조로운 레이아웃
-
-❌ 보험회사 느낌
-
-❌ 너무 많은 텍스트
-
-❌ 브랜드 경험 부재
-
-### 키워드
-✅ 쉽다
-
-✅ 빠르다
-
-✅ 읽기 쉽다
-
-✅ 믿을 수 있다
-
-✅ 보험 같지 않다
-
-✅ 핀테크 같다
-
-### 하지 않을 것
-❌ 보험회사 홈페이지 느낌
-
-❌ 너무 많은 텍스트
-
-❌ 복잡한 표
-
-❌ 전부 같은 카드 반복
-
-❌ 블루 일색 디자인
-
-❌ 올드한 보험사 UI
-
-
----
-
-
-## 메인페이지 최종 구성
-#### 01 Hero
-현재 자료 100%.
-
-#### 02 고민 선택
-현재 자료 100%.
-
-#### 03 펫보험
-현재 자료 80%.
-
-필요: 강아지 사진 / 실제 사례
-
-#### 04 병원비 사례
-현재 자료 50%.
-
-#### 05 화재보험
-현재 자료 90%.
-
-#### 06 실제 누수 사례
-현재 자료 40%.
-
-#### 07 암·뇌·심
-현재 자료 90%.
-
-(PT 자료 엄청 많음)
-
-#### 08 치료비 사례
-현재 자료 90%.
-
-#### 09 운전자보험
-현재 자료 90%.
-
-#### 10 자동차보험 VS 운전자보험
-현재 자료 100%.
-
-#### 11 상해 + 가족일배책
-현재 자료 100%.
-
-#### 12 상담 프로세스
-새로 제작.
-
-#### 13 보험한장 소개
-자료 요청.
-
-#### 14 상담 신청
-현재 가능.
-
-
----
-
-
-## [ 프로젝트 정리 노트 ]
-보험 상품을 쉽고 직관적으로 설명하는 보험 랜딩 프로젝트.
-### 프로젝트 특징
-* 메인 랜딩 + 개별 보험 랜딩 구조
-* 보험 간 교차 탐색 UX
+* 보험 같지 않은 보험 사이트
 * 모바일 광고 유입 최적화
-* Progress Navigation
-* Floating CTA
-* 상담 전환 중심 설계
-
-### 프로젝트 개요
-* 프로젝트명 : Insurance Note (보험한장)
-* 업종 : 보험
-* 목적 : 광고 유입 고객 상담 전환
-* 형태 : 랜딩 페이지 + 개별 보험 페이지
-* 반응형 : PC / Mobile 필수
-* 레포지토리 : insurance-note
-
-### 프로젝트 목표
-보험 상품을 어렵게 설명하는 기존 보험 사이트와 달리,
-"필요한 보장을 한 장으로 쉽게"
-라는 컨셉으로 누구나 쉽게 이해할 수 있는 보험 랜딩 페이지를 제작한다.
-
-최종 목표는 광고 유입 → 상담 신청 → 고객 전환이다.
-
-### 브랜드명
-보험한장
-(가칭, 추후 변경 가능)
+* 상담 전환 중심 UX
+* 보험별 개별 랜딩 + 메인 랜딩 구조
+* 쉽고 직관적인 정보 전달
 
 ---
 
-### 디자인 컨셉
-#### 키워드
-* 쉽다
-* 직관적이다
-* 핀테크스럽다
-* 광고 랜딩
-* 신뢰감
-* 높은 가독성
+## Design Concept
 
-#### 참고 비율
+### Keywords
+
+* Easy
+* Simple
+* Readable
+* Trustworthy
+* Fintech Style
+* Landing Page
+
+### Design Reference
+
 * Toss : 60%
 * Bank Salad : 20%
-* 광고 랜딩 : 20%
+* Landing Page : 20%
 
+---
 
-### 디자인 방향
-#### O
+## Design Direction
+
+### Do
+
 * 넓은 여백
 * 카드 기반 UI
 * 높은 가독성
-* 최소한의 설명
-* 감정적인 접근
-* 부드러운 컬러
-* 실사 + 카드 혼합
+* 최소한의 텍스트
+* 감성적인 접근
+* 실사 + 카드 UI 혼합
 
-#### X
+### Don't
+
 * 전형적인 보험사 홈페이지
 * 과한 그라데이션
 * 강한 그림자
 * 정보 과밀
-* 특정 문구 길이에 의존하는 디자인
+* 긴 문구에 의존하는 레이아웃
 * 올드한 보험 디자인
 
+---
 
-### 컬러 시스템
-#### 운전자보험
-* Blue
+## Color System
 
-#### 화재보험
-* Red
+| Insurance | Color  |
+| --------- | ------ |
+| Driver    | Blue   |
+| Fire      | Red    |
+| Pet       | Yellow |
+| Health    | Purple |
+| Child     | Orange |
 
-#### 펫보험
-* Yellow
-
-#### 암·뇌·심
-* Purple
-
-#### 어린이보험
-* Orange
-전체적으로 채도가 낮은 감성적인 컬러를 사용한다.
-
-
-### UX 방향
-#### 모바일 우선
-광고 유입 특성상 모바일 비중이 높다고 판단.
-
-#### Floating CTA
-하단 고정 상담 버튼 제공.
-
-#### Progress Navigation
-현재 보고 있는 보험 영역 표시.
-
-#### 교차 탐색
-개별 보험 페이지에서도 다른 보험을 확인할 수 있도록 설계.
-
-#### 보험 자동 선택
-보험 CTA 클릭 시 상담 폼의 관심 보험이 자동 선택된다.
+전체적으로 채도가 낮은 컬러를 사용하여 핀테크 서비스와 같은 분위기를 지향합니다.
 
 ---
 
-### 메인 페이지 구조
+## UX Strategy
+
+### Desktop
+
+* 정보 탐색 중심
+* 높은 정보 밀도
+* 여러 정보를 한 화면에서 비교
+
+### Mobile
+
+* Storytelling Landing
+* 카드 기반 Flow
+* 한 화면씩 자연스럽게 이어지는 경험
+* 광고 유입에 최적화된 UX
+
+---
+
+## Information Architecture
+
+### Main Landing
+
 1. Hero
-2. 고민 선택
-3. 펫보험
-4. 병원비 사례
-5. 화재보험
-6. 누수 사례
-7. 암·뇌·심
-8. 치료비 사례
-9. 운전자보험
-10. 자동차보험 VS 운전자보험
-11. 상해 + 가족일배책
-12. 보험 선택 가이드
-13. 상담 프로세스
-14. 보험한장 소개
-15. 상담 신청
+2. Worry Selection
+3. Pet Insurance
+4. Hospital Cost Case
+5. Fire Insurance
+6. Leak Case
+7. Health Insurance
+8. Treatment Cost Case
+9. Driver Insurance
+10. Driver Insurance Comparison
+11. Family Liability
+12. Insurance Guide
+13. About
+14. Consult
 
 ---
 
-### 보험 구성
-#### 펫보험
+## Insurance Categories
+
+### Pet Insurance
+
 * MRI
 * CT
-* 슬개골
-* 치아 보장
-* 입원
-* 통원
-실사 이미지 적극 활용.
+* Patella
+* Dental
+* Hospitalization
+* Outpatient
 
-#### 화재보험
-* 급배수
-* 누수
-* 풍수재
-* 지진
-* 유리손해
+### Fire Insurance
 
-#### 암·뇌·심
-* 치료비 중심
-* 비급여 치료
-* 암
-* 뇌
-* 심장
+* Water Leakage
+* Water Pipe Damage
+* Natural Disaster
+* Earthquake
+* Glass Damage
 
-#### 운전자보험
-* 벌금
-* 변호사
-* 합의금
-* 자부상
-* 교사처
-* 가족일상배상책임
+### Health Insurance
 
-#### 어린이보험
-* 상해
-* 질병
-* 입원
-* 수술
-현재 자료 요청 예정.
+* Cancer
+* Brain
+* Heart
+* Treatment Cost
 
----
+### Driver Insurance
 
-### 비주얼 전략
-#### 실사 사용
-공감이 필요한 영역.
-* 펫
-* 가족
-* 생활
+* Fine
+* Settlement
+* Lawyer Fee
+* Driver Injury
+* Family Liability
 
-#### 아이콘 사용
-빠른 인지가 필요한 영역.
-* 보장 항목
-* 기능
-* 비교
+### Child Insurance
 
-#### 카드 UI
-핵심 정보 전달.
+* Injury
+* Disease
+* Hospitalization
+* Surgery
 
 ---
 
-### 현재 확보 자료
-#### 펫보험
-* 병원비 자료
-* 광고 문구
-* 보장 내용
+## Development Principles
 
-#### 화재보험
-* 문자 자료
-* 보장 내용
-
-#### 암·뇌·심
-* PT 자료
-
-#### 운전자보험
-* PT 자료
-
-#### 어린이보험
-* 자료 요청 예정
+* Mobile First
+* Responsive Design
+* clamp() 우선 설계
+* 구조 변경 시에만 Media Query 사용
+* 구조 변경 시 내부 Typography / Padding / Spacing도 함께 조정
+* 데이터 변경을 고려한 컴포넌트 설계
+* 긴 문구와 운영 데이터를 고려한 레이아웃
+* PC와 Mobile은 동일한 레이아웃 축소가 아닌 각각의 UX를 설계
 
 ---
 
-### 추가 요청 자료
-#### 공통
-* 로고
-* 팀명
-* 회사명
+## Tech Stack
 
-### 보험 상품
-* 상품명
-* 보험사
-* 대표 플랜
-* 가입 연령
-* 추천 대상
-
-#### 후기
-* 고객 후기
-* 상담 후기
-
-#### 사례
-* 실제 지급 사례
-* 실제 비용 사례
-
-### 팀
-* 팀 사진
-* 상담 인원
-* 경력
-* 운영 철학
-
----
-
-### 기술 스택
 * HTML5
 * CSS3
 * Vanilla JavaScript
 
-API 및 DB 연동은 추후 결정한다.
-현재 단계에서는 랜딩 페이지 및 상담 폼 UI 구축을 우선한다.
+---
 
-### 레이아웃 원칙
-* 추가/삭제되는 데이터를 고려한다.
-* 특정 개수에 의존하는 레이아웃을 만들지 않는다.
-* 긴 문구에도 깨지지 않는다.
-* max-width로 줄바꿈을 제어하지 않는다.
-* 운영 프로젝트처럼 설계한다.
-* 데이터가 변경되어도 레이아웃이 유지된다.
+## Project Status
 
-### 개발 원칙
-* PC와 Mobile을 동시에 고려한다.
-* 운영 프로젝트처럼 설계한다.
-* 확장 가능한 구조를 우선한다.
-* 디자인보다 유지보수를 우선한다.
+### Completed
+
+* Project Planning
+* Design Direction
+* UX Strategy
+* Hero Section (PC / Mobile)
+* Hero Interaction
+* Hero Responsive
+* Hero Accessibility
+
+### In Progress
+
+* Individual Insurance Landing Pages
+* Main Landing Design System
+* Responsive Optimization
 
 ---
 
-### 프로젝트 상태
-#### 완료
+## Roadmap
 
-* 프로젝트 방향 확정
-* UX 방향 확정
-* 컬러 시스템 확정
-* 메인 구조 확정
-* 보험 구성 확정
-* 비주얼 전략 확정
-
-#### 진행 예정
-* 메인 디자인
-* 모바일 디자인
-* 개별 보험 랜딩
-* 퍼블리싱
-* 자료 추가 반영
-
-추후 : Tech Stack / Directory Structure / To Do 추가
+1. Pet Insurance Landing
+2. Health Insurance Landing
+3. Driver Insurance Landing
+4. Fire Insurance Landing
+5. Child Insurance Landing
+6. Main Landing
+7. Final Polish
