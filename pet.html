@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Basic -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title -->
+  <title>보험한장 · 펫보험 랜딩</title>
+
+  <!-- SEO -->
+  <meta name="description" content="보험한장 펫보험 개별 랜딩 — 모바일 스텝형 플로우와 데스크톱 정보탐색형 레이아웃">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/landing.css">
+  <link rel="stylesheet" href="./assets/css/pet.css">
+
+  <!-- JS -->
+  <script src="./assets/js/common.js" defer></script>
+  <script src="./assets/js/landing.js" defer></script>
+</head>
+<body class="pet-page">
+  <!-- Icon Sprite -->
+  <svg class="sr-only" aria-hidden="true">
+    <symbol id="icon-paw" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="16.6" rx="6.6" ry="5.1" />
+      <ellipse cx="5.6" cy="8.6" rx="2.3" ry="3" transform="rotate(-18 5.6 8.6)" />
+      <ellipse cx="10.4" cy="5.2" rx="2.3" ry="3.1" />
+      <ellipse cx="15.3" cy="5.5" rx="2.3" ry="3.1" transform="rotate(8 15.3 5.5)" />
+      <ellipse cx="18.9" cy="9.1" rx="2.1" ry="2.7" transform="rotate(26 18.9 9.1)" />
+    </symbol>
+    <symbol id="icon-tag" viewBox="0 0 24 24">
+      <path d="M3 12.2 11.8 3.4c.6-.6 1.6-.6 2.2 0l6.6 6.6c.6.6.6 1.6 0 2.2L11.8 21c-.6.6-1.6.6-2.2 0L3 14.4c-.6-.6-.6-1.6 0-2.2Z" fill="none" stroke="currentColor" stroke-width="1.6" />
+      <circle cx="15.5" cy="8.5" r="1.4" fill="currentColor" />
+    </symbol>
+    <symbol id="icon-chevron-left" viewBox="0 0 24 24">
+      <path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="icon-heart" viewBox="0 0 24 24">
+      <path d="M12 20.2 4.6 13c-2-2-2-5.2 0-7.2 2-2 5.1-2 7 .1l.4.4.4-.4c1.9-2.1 5-2.1 7-.1 2 2 2 5.2 0 7.2L12 20.2Z" fill="currentColor" />
+    </symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24">
+      <path d="M12 3.5C6.8 3.5 3 6.9 3 11.1c0 2.5 1.4 4.7 3.6 6.1l-.8 3.3 3.6-2c1 .2 2 .4 3 .4 5.2 0 9-3.4 9-7.8s-3.8-7.6-9-7.6Z" fill="currentColor" />
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <path d="M6.6 2.8 4 5.4c-.6.6-.6 1.6 0 2.6 2.6 4.6 6.6 8.6 11.2 11.2 1 .6 2 .6 2.6 0l2.6-2.6-3.7-3.7-1.6 1.6c-2-1.2-4.1-3.3-5.3-5.3l1.6-1.6L6.6 2.8Z" fill="currentColor" />
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <path d="M4 12.5 9 17.5 20 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+  </svg>
+
+  <!-- Mobile Flow -->
+  <main class="ins-flow ins-flow--mobile pet-flow" data-flow>
+    <div class="ins-flow__shell">
+      <header class="ins-flow__topbar">
+        <button class="ins-flow__back" type="button" aria-label="이전 단계로" data-back>
+          <svg class="icon"><use href="#icon-chevron-left"></use></svg>
+        </button>
+        <span class="ins-flow__logo" aria-hidden="true"></span>
+      </header>
+
+      <div class="ins-progress" role="progressbar" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1" aria-label="진행 단계" data-progress>
+        <svg class="icon ins-progress__item is-current"><use href="#icon-paw"></use></svg>
+        <svg class="icon ins-progress__item"><use href="#icon-paw"></use></svg>
+        <svg class="icon ins-progress__item"><use href="#icon-paw"></use></svg>
+        <svg class="icon ins-progress__item"><use href="#icon-paw"></use></svg>
+        <svg class="icon ins-progress__item"><use href="#icon-paw"></use></svg>
+        <svg class="icon ins-progress__item"><use href="#icon-paw"></use></svg>
+      </div>
+      <span class="sr-only" aria-live="polite" data-progress-text>1단계 / 6단계</span>
+
+      <div class="ins-flow__stage" data-stage>
+        <!-- Step 01: Opening -->
+        <section class="ins-step ins-step--opening is-active" data-step="0">
+          <div class="ins-step__body">
+            <div class="pet-visual pet-visual--question">
+              <svg class="icon"><use href="#icon-paw"></use></svg>
+              <span class="pet-visual__badge">?</span>
+            </div>
+            <h1 class="ins-step__title">우리 아이,<br>병원비 얼마 나올지<br>아세요?</h1>
+            <p class="ins-step__description">원장님도 미리 말씀 못 드리는 경우가 많아요.</p>
+          </div>
+          <div class="ins-step__footer">
+            <button class="ins-button ins-button--primary" type="button" data-next>얼마나 나오는지 보기</button>
+          </div>
+        </section>
+
+        <!-- Step 02: Reality -->
+        <section class="ins-step ins-step--reality" data-step="1">
+          <div class="ins-step__body">
+            <span class="ins-eyebrow">반려동물 치료비</span>
+            <h2 class="ins-step__title">2년 새, 거의<br>두 배가 됐어요</h2>
+            <div class="ins-card ins-card--stat pet-stat-card">
+              <div class="ins-stat">
+                <strong class="ins-stat__number">146.3</strong>
+                <span class="ins-stat__unit">만원</span>
+              </div>
+              <p class="ins-stat__caption">2025년, 반려동물 1마리당 평균 치료비</p>
+              <div class="ins-bar">
+                <div class="ins-bar__label">
+                  <span>2023년</span>
+                  <span>78.7만원</span>
+                </div>
+                <div class="ins-bar__track">
+                  <div class="ins-bar__fill ins-bar__fill--muted" style="width: 53.8%"></div>
+                </div>
+              </div>
+              <div class="ins-bar">
+                <div class="ins-bar__label">
+                  <span>2025년</span>
+                  <span>146.3만원</span>
+                </div>
+                <div class="ins-bar__track">
+                  <div class="ins-bar__fill" style="width: 100%"></div>
+                </div>
+              </div>
+            </div>
+            <p class="ins-step__description ins-step__description--spaced">한 번 크게 나온 병원비는,<br>그 다음부터 계속 마음에 남습니다.</p>
+            <p class="ins-source">출처 · 2025 한국 반려동물보고서 (KB경영연구소)</p>
+          </div>
+          <div class="ins-step__footer">
+            <button class="ins-button ins-button--primary" type="button" data-next>우리 아이는 어떤 편인지 보기</button>
+          </div>
+        </section>
+
+        <!-- Step 03: Choice -->
+        <section class="ins-step ins-step--choice" data-step="2">
+          <div class="ins-step__body">
+            <span class="ins-eyebrow">가볍게 골라주세요</span>
+            <h2 class="ins-step__title">우리 아이는<br>어떤 편인가요?</h2>
+            <p class="ins-step__description">정답은 없어요. 끌리는 쪽으로 골라주세요.</p>
+            <div class="ins-choice" data-choice-list>
+              <button class="ins-choice__button" type="button" data-choice data-trait="active"><svg class="icon"><use href="#icon-paw"></use></svg>활동량이 많아요</button>
+              <button class="ins-choice__button" type="button" data-choice data-trait="curious"><svg class="icon"><use href="#icon-paw"></use></svg>호기심이 많아요</button>
+              <button class="ins-choice__button" type="button" data-choice data-trait="calm"><svg class="icon"><use href="#icon-paw"></use></svg>집에서 쉬는 걸 좋아해요</button>
+              <button class="ins-choice__button" type="button" data-choice data-trait="senior"><svg class="icon"><use href="#icon-paw"></use></svg>이제 나이가 조금 있어요</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Step 04: Personalized -->
+        <section class="ins-step ins-step--personalized" data-step="3">
+          <div class="ins-step__body">
+            <span class="ins-eyebrow">이런 아이는</span>
+            <h2 class="ins-step__title" data-personal-title>활동량이 많은 아이는<br>관절·인대 쪽 병원을<br>찾는 일이 잦아요.</h2>
+            <p class="ins-step__description" data-personal-description>이런 상담도 자주 받아요.</p>
+          </div>
+          <div class="ins-step__footer">
+            <button class="ins-button ins-button--primary" type="button" data-next>이야기 더 보기</button>
+          </div>
+        </section>
+
+        <!-- Step 05: Person -->
+        <section class="ins-step ins-step--person" data-step="4">
+          <div class="ins-step__body">
+            <article class="ins-person pet-person">
+              <span class="ins-eyebrow">상담을 도와드릴 사람</span>
+              <div class="ins-person__photo">
+                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22720%22%20height%3D%22900%22%20viewBox%3D%220%200%20720%20900%22%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fff7df%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f4d89a%22/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%22720%22%20height%3D%22900%22%20rx%3D%2252%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Ccircle%20cx%3D%22360%22%20cy%3D%22300%22%20r%3D%22116%22%20fill%3D%22%23e8a33d%22%20opacity%3D%22.3%22/%3E%0A%3Ccircle%20cx%3D%22360%22%20cy%3D%22284%22%20r%3D%2278%22%20fill%3D%22%23fffaf0%22/%3E%0A%3Cpath%20d%3D%22M190%20710c28-134%20109-207%20170-207s142%2073%20170%20207%22%20fill%3D%22%23fffaf0%22/%3E%0A%3Ctext%20x%3D%22360%22%20y%3D%22784%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20fill%3D%22%237b5623%22%3E%EC%83%81%EB%8B%B4%EC%9E%90%20%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%9E%90%EB%A6%AC%3C/text%3E%0A%3C/svg%3E" alt="상담자 양영롱 AP 프로필">
+              </div>
+              <div class="ins-person__name">양영롱 AP</div>
+              <div class="ins-person__role">AFG 어센틱금융그룹<br>생명·손해보험 전문 컨설턴트</div>
+              <p class="ins-person__quote">보험은<br>가입보다 관리라고 생각합니다.</p>
+              <p class="ins-person__description">강요하지 않습니다.<br>기존 보험도 함께 봐드립니다.<br>궁금한 것만 물어보셔도 됩니다.</p>
+              <div class="ins-person__chips">
+                <span class="ins-chip"><svg class="icon"><use href="#icon-check"></use></svg>유지해도 되는지</span>
+                <span class="ins-chip"><svg class="icon"><use href="#icon-check"></use></svg>불필요한 부분은 없는지</span>
+              </div>
+            </article>
+          </div>
+          <div class="ins-step__footer">
+            <button class="ins-button ins-button--primary" type="button" data-next>이야기 이어가기</button>
+          </div>
+        </section>
+
+        <!-- Step 06: CTA -->
+        <section class="ins-step ins-step--cta" data-step="5">
+          <div class="ins-step__body ins-step__body--center">
+            <div class="pet-visual pet-visual--heart">
+              <svg class="icon"><use href="#icon-heart"></use></svg>
+            </div>
+            <h2 class="ins-step__title">우리 아이에게 맞는 준비인지,<br>같이 이야기해볼까요?</h2>
+            <p class="ins-step__description">상담은 무료이고, 강요하지 않아요.</p>
+          </div>
+          <div class="ins-step__footer">
+            <a class="ins-button ins-button--kakao" href="#" data-kakao><svg class="icon"><use href="#icon-chat"></use></svg>카카오톡으로 편하게 이야기하기</a>
+            <a class="ins-button ins-button--text" href="tel:000-0000-0000"><svg class="icon"><use href="#icon-phone"></use></svg>전화로 상담받기</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Desktop Landing -->
+  <div class="ins-page ins-page--desktop pet-page-desktop">
+    <header class="ins-header">
+      <div class="ins-wrap ins-header__inner">
+        <div class="ins-header__wordmark">보험한장 <span>· 펫보험</span></div>
+        <a class="ins-button ins-button--primary ins-header__button" href="#" data-kakao><svg class="icon"><use href="#icon-chat"></use></svg>카카오톡 상담하기</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="ins-hero pet-hero">
+      <div class="ins-wrap ins-hero__inner">
+        <div class="ins-hero__content">
+          <span class="ins-eyebrow">펫보험 · 보험한장</span>
+          <h1 class="ins-hero__title">우리 아이 병원비,<br>준비는 상담에서<br>가볍게 시작하세요</h1>
+          <p class="ins-hero__description">병원비 걱정을 키우는 건 비용 그 자체가 아니라, 얼마가 나올지 모른다는 점입니다. 우리 아이 기준으로 가볍게 확인해보세요.</p>
+          <div class="ins-hero__actions">
+            <a class="ins-button ins-button--kakao" href="#" data-kakao><svg class="icon"><use href="#icon-chat"></use></svg>카카오톡으로 편하게 이야기하기</a>
+            <a class="ins-button ins-button--text" href="tel:000-0000-0000"><svg class="icon"><use href="#icon-phone"></use></svg>전화 상담</a>
+          </div>
+        </div>
+        <div class="ins-card ins-card--hero-stat pet-hero__card">
+          <div class="ins-card__title">반려동물 1마리당 연간 치료비 평균</div>
+          <div class="ins-bar">
+            <div class="ins-bar__label">
+              <span>2023년</span>
+              <span>78.7만원</span>
+            </div>
+            <div class="ins-bar__track">
+              <div class="ins-bar__fill ins-bar__fill--muted" style="width: 53.8%"></div>
+            </div>
+          </div>
+          <div class="ins-bar">
+            <div class="ins-bar__label">
+              <span>2025년</span>
+              <span>146.3만원</span>
+            </div>
+            <div class="ins-bar__track">
+              <div class="ins-bar__fill" style="width: 100%"></div>
+            </div>
+          </div>
+          <p class="ins-source">출처 · 2025 한국 반려동물보고서 (KB경영연구소)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="ins-section ins-section--soft pet-stats">
+      <div class="ins-wrap">
+        <div class="ins-section__head">
+          <h2 class="ins-section__title">2년 새, 반려동물 치료비가<br>얼마나 올랐을까요</h2>
+          <p class="ins-section__description">전체 평균은 물론, 반려견과 반려묘도 함께 비교해보세요.</p>
+        </div>
+        <div class="ins-stats">
+          <article class="ins-card ins-card--stat ins-stats__item">
+            <div class="ins-card__label">전체 평균</div>
+            <div class="ins-stat">
+              <strong class="ins-stat__number">146.3</strong>
+              <span class="ins-stat__unit">만원</span>
+            </div>
+            <p class="ins-stat__caption">2025년 기준</p>
+            <div class="ins-bar">
+              <div class="ins-bar__label"><span>2023</span><span>78.7만원</span></div>
+              <div class="ins-bar__track"><div class="ins-bar__fill ins-bar__fill--muted" style="width: 53.8%"></div></div>
+            </div>
+            <div class="ins-bar">
+              <div class="ins-bar__label"><span>2025</span><span>146.3만원</span></div>
+              <div class="ins-bar__track"><div class="ins-bar__fill" style="width: 100%"></div></div>
+            </div>
+          </article>
+          <article class="ins-card ins-card--stat ins-stats__item">
+            <div class="ins-card__label">반려견 (1마리)</div>
+            <div class="ins-stat">
+              <strong class="ins-stat__number">143.3</strong>
+              <span class="ins-stat__unit">만원</span>
+            </div>
+            <p class="ins-stat__caption">2025년 기준</p>
+            <div class="ins-bar">
+              <div class="ins-bar__label"><span>2023</span><span>74.5만원</span></div>
+              <div class="ins-bar__track"><div class="ins-bar__fill ins-bar__fill--muted" style="width: 50.9%"></div></div>
+            </div>
+            <div class="ins-bar">
+              <div class="ins-bar__label"><span>2025</span><span>143.3만원</span></div>
+              <div class="ins-bar__track"><div class="ins-bar__fill" style="width: 97.9%"></div></div>
+            </div>
+          </article>
+          <article class="ins-card ins-card--stat ins-stats__item">
+            <div class="ins-card__label">반려묘 (1마리)</div>
+            <div class="ins-stat">
+              <strong class="ins-stat__number">103.2</strong>
+              <span class="ins-stat__unit">만원</span>
+            </div>
+            <p class="ins-stat__caption">2025년 기준</p>
+            <div class="ins-bar">
+              <div class="ins-bar__label"><span>2023</span><span>59.8만원</span></div>
+              <div class="ins-bar__track"><div class="ins-bar__fill ins-bar__fill--muted" style="width: 40.9%"></div></div>
+            </div>
+            <div class="ins-bar">
+              <div class="ins-bar__label"><span>2025</span><span>103.2만원</span></div>
+              <div class="ins-bar__track"><div class="ins-bar__fill" style="width: 70.5%"></div></div>
+            </div>
+          </article>
+        </div>
+        <p class="ins-source">출처 · 2025 한국 반려동물보고서 (KB경영연구소). 실제 진료비는 병원과 증상에 따라 달라질 수 있어요.</p>
+      </div>
+    </section>
+
+    <!-- Choice -->
+    <section class="ins-section pet-choice-section">
+      <div class="ins-wrap">
+        <div class="ins-section__head">
+          <h2 class="ins-section__title">우리 아이는<br>어떤 편인가요?</h2>
+          <p class="ins-section__description">정답은 없어요. 가까운 쪽을 눌러보세요.</p>
+        </div>
+        <div class="ins-choice-panel">
+          <div class="ins-choice" data-choice-list>
+            <button class="ins-choice__button" type="button" data-choice data-trait="active"><svg class="icon"><use href="#icon-paw"></use></svg>활동량이 많아요</button>
+            <button class="ins-choice__button" type="button" data-choice data-trait="curious"><svg class="icon"><use href="#icon-paw"></use></svg>호기심이 많아요</button>
+            <button class="ins-choice__button" type="button" data-choice data-trait="calm"><svg class="icon"><use href="#icon-paw"></use></svg>집에서 쉬는 걸 좋아해요</button>
+            <button class="ins-choice__button" type="button" data-choice data-trait="senior"><svg class="icon"><use href="#icon-paw"></use></svg>이제 나이가 조금 있어요</button>
+          </div>
+          <div class="ins-choice-result">
+            <div class="ins-choice-result__eyebrow">이런 아이는</div>
+            <p class="ins-choice-result__title" data-personal-title>왼쪽에서 우리 아이와 가까운 모습을 골라보세요.</p>
+            <p class="ins-choice-result__description" data-personal-description>선택에 따라 이야기가 자연스럽게 이어져요.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Person -->
+    <section class="ins-section ins-section--soft pet-person-section">
+      <div class="ins-wrap">
+        <article class="ins-person ins-person--wide pet-person">
+          <div class="ins-person__photo">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22720%22%20height%3D%22900%22%20viewBox%3D%220%200%20720%20900%22%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fff7df%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f4d89a%22/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%22720%22%20height%3D%22900%22%20rx%3D%2252%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Ccircle%20cx%3D%22360%22%20cy%3D%22300%22%20r%3D%22116%22%20fill%3D%22%23e8a33d%22%20opacity%3D%22.3%22/%3E%0A%3Ccircle%20cx%3D%22360%22%20cy%3D%22284%22%20r%3D%2278%22%20fill%3D%22%23fffaf0%22/%3E%0A%3Cpath%20d%3D%22M190%20710c28-134%20109-207%20170-207s142%2073%20170%20207%22%20fill%3D%22%23fffaf0%22/%3E%0A%3Ctext%20x%3D%22360%22%20y%3D%22784%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20fill%3D%22%237b5623%22%3E%EC%83%81%EB%8B%B4%EC%9E%90%20%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%9E%90%EB%A6%AC%3C/text%3E%0A%3C/svg%3E" alt="상담자 양영롱 AP 프로필">
+          </div>
+          <div class="ins-person__content">
+            <span class="ins-eyebrow">상담을 도와드릴 사람</span>
+            <div class="ins-person__name">양영롱 AP</div>
+            <div class="ins-person__role">AFG 어센틱금융그룹 · 생명·손해보험 전문 컨설턴트</div>
+            <p class="ins-person__quote">보험은 가입보다<br>관리라고 생각합니다.</p>
+            <p class="ins-person__description">강요하지 않습니다. 기존 보험도 함께 봐드립니다.<br>궁금한 것만 물어보셔도 됩니다.</p>
+            <div class="ins-person__chips">
+              <span class="ins-chip"><svg class="icon"><use href="#icon-check"></use></svg>유지해도 되는지</span>
+              <span class="ins-chip"><svg class="icon"><use href="#icon-check"></use></svg>불필요한 부분은 없는지</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="ins-cta pet-cta">
+      <div class="ins-wrap">
+        <h2 class="ins-cta__title">우리 아이에게 맞는 준비인지,<br>같이 이야기해볼까요?</h2>
+        <p class="ins-cta__description">상담은 무료이고, 강요하지 않아요.</p>
+        <div class="ins-cta__actions">
+          <a class="ins-button ins-button--kakao" href="#" data-kakao><svg class="icon"><use href="#icon-chat"></use></svg>카카오톡으로 편하게 이야기하기</a>
+          <a class="ins-button ins-button--text" href="tel:000-0000-0000"><svg class="icon"><use href="#icon-phone"></use></svg>전화로 상담받기</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="ins-footer">
+      <div class="ins-wrap">
+        <p>보험한장 · 상담 전 강요하지 않습니다.</p>
+        <p>본 페이지는 디자인 시안이며, 실제 보장 내용과 한도는 상담을 통해 확인해 주세요.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

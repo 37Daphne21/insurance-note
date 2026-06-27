@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/* Pet Theme */
+.pet-page {
+  --color-bg: #faf6ec;
+  --color-bg-deep: #f3ecdc;
+  --color-surface: var(--color-white);
+  --color-surface-soft: #fffcf6;
+  --color-text: #2b2622;
+  --color-text-soft: #6e6457;
+  --color-text-faint: #a79c8c;
+  --color-line: #eae0cc;
+  --color-primary: #e8a33d;
+  --color-primary-dark: #c97f1e;
+  --color-primary-soft: #fbe7c2;
+  --color-primary-ink: #3a2a12;
+  --color-accent: #e2725b;
+  --color-accent-soft: #f8dcd3;
+  --color-kakao: #fee500;
+  --color-kakao-ink: #371d1e;
+  --color-header-bg: rgba(250, 246, 236, .92);
+  --shadow-card: 0 .875rem 2.25rem -1rem rgba(58, 42, 18, .22);
+  --shadow-button: 0 .625rem 1.375rem -.625rem rgba(201, 127, 30, .55);
+  --shadow-kakao: 0 .625rem 1.375rem -.625rem rgba(254, 229, 0, .7);
+}
+
+
+/* Visual */
+.pet-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.5rem;
+  height: 7.5rem;
+  margin-bottom: var(--space-6);
+  border-radius: 50%;
+  color: var(--color-primary-dark);
+  background: radial-gradient(circle at 35% 30%, var(--color-primary-soft), var(--color-bg-deep) 75%);
+}
+
+.pet-visual .icon {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+.pet-visual__badge {
+  position: absolute;
+  top: -.25rem;
+  right: -.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.125rem;
+  height: 2.125rem;
+  border-radius: 50%;
+  color: var(--color-accent);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  font-size: .9375rem;
+  font-weight: 800;
+}
+
+.pet-visual--heart {
+  color: var(--color-accent);
+  background: radial-gradient(circle at 35% 30%, var(--color-accent-soft), var(--color-bg-deep) 75%);
+}
