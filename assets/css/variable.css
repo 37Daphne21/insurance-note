@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+:root {
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #111;
+  --color-bg: #f7f6f3;
+  --color-bg-soft: #fbfaf7;
+  --color-text: #111;
+  --color-subtext: #6b7280;
+  --color-line: #e5e7eb;
+  --color-line-dark: #ddd;
+  --color-primary-dark: var(--color-black);
+
+  /* Insurance Categories Base Colors */
+  --color-driver: #5579d6;
+  --color-fire: #cf6a6a;
+  --color-pet: #d7b44a;
+  --color-health: #7864d9;
+  --color-child: #e08c4d;
+
+  /* Pet Theme Colors */
+  --color-pet-ink: #4e3b08;
+  --color-pet-surface: #f7edc9;
+  --color-pet-solid: #574114;
+
+  /* Driver Theme Colors */
+  --color-driver-ink: #102a68;
+  --color-driver-surface: #dce6fb;
+  --color-driver-solid: #183872;
+
+  /* Fire Theme Colors */
+  --color-fire-ink: #641f1f;
+  --color-fire-surface: #f4dddd;
+  --color-fire-solid: #6e2929;
+
+  /* Health Theme Colors */
+  --color-health-ink: #2d216b;
+  --color-health-surface: #e8e3fb;
+  --color-health-solid: #3b2d78;
+
+  /* Child Theme Colors */
+  --color-child-ink: #6b3513;
+  --color-child-surface: #fbe8da;
+  --color-child-solid: #8a4a22;
+
+  /* Font Family & Layout */
+  --font-base: "Pretendard Variable", "Pretendard", -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --inner: min(100% - clamp(2rem, 6vw, 7.5rem), 82.5rem);
+
+  /* Radius System */
+  --radius-sm: 1rem;
+  --radius-md: 1.5rem;
+  --radius-lg: 2rem;
+  --radius-xl: 2.5rem;
+  --radius-pill: 999rem;
+
+  /* Spacing System */
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* Typography Scale */
+  --font-eyebrow: clamp(.8125rem, .78rem + .15vw, .875rem);
+  --font-caption: clamp(.75rem, .73rem + .1vw, .8125rem);
+  --font-body: clamp(.95rem, .92rem + .2vw, 1.0625rem);
+  --font-title: clamp(1.375rem, 1.05rem + 1.6vw, 1.875rem);
+  --font-display: clamp(1.625rem, 1.15rem + 2.6vw, 2.375rem);
+  --font-stat: clamp(1.5rem, 1.1rem + 2vw, 2.125rem);
+
+  /* Shadows */
+  --shadow-card: 0 1.5rem 4rem rgba(17, 17, 17, .06);
+}

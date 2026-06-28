@@ -22,7 +22,7 @@
   var stage = document.querySelector("[data-stage]");
   var steps = Array.prototype.slice.call(document.querySelectorAll("[data-step]"));
   var progress = document.querySelector("[data-progress]");
-  var progressItems = Array.prototype.slice.call(document.querySelectorAll(".ins-progress__item"));
+  var progressItems = Array.prototype.slice.call(document.querySelectorAll(".la-progress__item"));
   var progressText = document.querySelector("[data-progress-text]");
   var backButton = document.querySelector("[data-back]");
   var current = 0;
@@ -124,13 +124,13 @@
   }
 
   document.addEventListener("click", function (event) {
-    var desktopChoice = event.target.closest(".ins-page--desktop [data-choice]");
+    var desktopChoice = event.target.closest(".la-page--desktop [data-choice]");
 
     if (!desktopChoice) {
       return;
     }
 
-    document.querySelectorAll(".ins-page--desktop [data-choice]").forEach(function (button) {
+    document.querySelectorAll(".la-page--desktop [data-choice]").forEach(function (button) {
       button.classList.remove("is-selected");
     });
 

@@ -46,53 +46,6 @@
   color: var(--color-subtext);
 }
 
-.button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: .875rem 1.5rem;
-  line-height: 1.2;
-  border-radius: 999rem;
-  font-weight: 800;
-  transition: transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
-}
-
-.button--primary {
-  color: var(--color-white);
-  background: var(--color-black);
-}
-
-.button--outline {
-  color: var(--color-text);
-  border: 1px solid var(--color-line);
-  background: var(--color-white);
-}
-
-.button--pet {
-  color: var(--color-black);
-  background: rgba(215, 180, 74, .22);
-}
-
-.button--fire {
-  color: var(--color-white);
-  background: var(--color-fire);
-}
-
-.button--health {
-  color: var(--color-white);
-  background: var(--color-health);
-}
-
-.button--driver {
-  color: var(--color-white);
-  background: var(--color-driver);
-}
-
-.button--child {
-  color: var(--color-white);
-  background: var(--color-child);
-}
-
 
 /* Header */
 .header {
