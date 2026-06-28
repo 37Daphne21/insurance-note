@@ -392,7 +392,7 @@ button.ui-panel__item:active {
     filter: brightness(1.04);
   }
 
-  a.button.ui-panel__item:hover
+  a.ui-panel__item:hover
   button.ui-panel__item:hover {
     transform: translateX(.25rem);
   }

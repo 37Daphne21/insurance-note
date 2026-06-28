@@ -279,27 +279,12 @@ Desktop : 1024px~
     gap: var(--space-8);
   }
 
-  .la-hero__title {
-    margin: 0 0 var(--space-4);
-    color: var(--color-text);
+  .la-hero .la-section__title {
     font-size: clamp(2rem, 1.2rem + 1.8vw, 3rem);
-    font-weight: 800;
-    line-height: 1.28;
-    letter-spacing: -.01em;
   }
 
-  .la-hero__description {
-    max-width: 30rem;
-    margin: 0 0 var(--space-6);
-    color: var(--color-text-soft);
+  .la-hero .la-section__description {
     font-size: 1.0625rem;
-    line-height: 1.7;
-  }
-
-  .la-hero__actions {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
   }
 
   .la-section {
@@ -316,7 +301,6 @@ Desktop : 1024px~
   }
 
   .la-section__title {
-    margin: 0 0 var(--space-3);
     color: var(--color-text);
     font-size: clamp(1.625rem, 1.2rem + 1.6vw, 2.25rem);
     font-weight: 800;
@@ -324,9 +308,15 @@ Desktop : 1024px~
   }
 
   .la-section__description {
-    margin: 0;
+    margin-top: var(--space-3);
     color: var(--color-text-soft);
     font-size: 1.0625rem;
+  }
+
+  .la-section__actions {
+    margin-top: var(--space-5);
+    display: flex;
+    gap: var(--space-3);
   }
 
   .la-stats {
@@ -432,24 +422,10 @@ Desktop : 1024px~
     text-align: center;
   }
 
-  .la-section--contact__title {
-    margin: 0 0 var(--space-3);
-    color: var(--color-text);
-    font-size: clamp(1.875rem, 1.4rem + 1.6vw, 2.5rem);
-    font-weight: 800;
-    line-height: 1.35;
-  }
-
-  .la-section--contact__description {
-    margin: 0 0 var(--space-6);
-    color: var(--color-text-soft);
-    font-size: 1.0625rem;
-  }
-
-  .la-section--contact__actions {
+  .la-section--contact .la-wrap {
     display: flex;
-    justify-content: center;
-    gap: var(--space-3);
+    flex-direction: column;
+    align-items: center;
   }
 
   .la-footer {
