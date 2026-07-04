@@ -24,6 +24,7 @@
 * 간단한 정보 제공 → 부담 없는 상담 유도
 * 자세한 설명은 상담에서 이어지는 방향
 
+
 ### Desktop
 
 * 정보 탐색형 UX
@@ -110,12 +111,14 @@
 
 * 사용자를 읽는 사람에서 참여하는 사람으로 전환
 
+
 ### 원칙
 
 * 참여는 1회만 사용
 * 체크리스트처럼 보이지 않게 한다.
 * 보험 질문이 아니라 생활 질문으로 구성한다.
 * 선택 후 결과 버튼 없이 자연스럽게 다음 내용으로 이어진다.
+
 
 ### 예시
 
@@ -195,6 +198,7 @@ Optional Section은 제거되어도 전체 흐름이 깨지지 않아야 한다.
 * QA 기준
 * CTA 위치와 역할
 
+
 ### 보험별 변경 요소
 
 * Theme Color
@@ -207,6 +211,125 @@ Optional Section은 제거되어도 전체 흐름이 깨지지 않아야 한다.
 
 ---
 
+## Component System
+
+### 설계 원칙
+
+공통 컴포넌트는 유지보수성과 확장성을 우선으로 설계한다.
+
+디자인보다 역할(Role)을 기준으로 컴포넌트를 분리한다.
+
+불필요한 컴포넌트 추가보다 기존 컴포넌트 확장을 우선한다.
+
+동일한 목적이라면 새로운 Component보다 Modifier를 우선 검토한다.
+
+Optional Element를 고려하여 콘텐츠 추가·삭제에도 구조가 깨지지 않아야 한다.
+
+
+### ui-card
+
+Landing 전반에서 사용하는 기본 카드 컴포넌트이다.
+
+기존 ui-panel, ui-feature 등을 ui-card 중심으로 통합하였다.
+
+기본 구조는 다음과 같다.
+
+- ui-card
+- ui-card__media (Optional)
+- ui-card__content (Optional)
+- ui-card__body (Optional)
+- ui-card__title (Optional)
+- ui-card__description (Optional)
+
+Component 내부보다 Wrapper(ui-card-group)가 레이아웃과 간격을 담당한다.
+
+
+### ui-card-group
+
+여러 ui-card를 관리하는 Wrapper이다.
+
+공통 gap과 방향을 담당한다.
+
+Card 내부 margin보다 Group gap을 우선 사용한다.
+
+콘텐츠 개수 변경에도 자연스럽게 유지되는 구조를 목표로 한다.
+
+---
+
+## Naming Convention
+
+### Prefix
+
+ui-
+
+재사용 가능한 UI Component
+
+예)
+
+- ui-card
+- ui-button
+- ui-input
+
+---
+
+la-
+
+페이지 내부 공통 Layout
+
+예)
+
+- la-section
+- la-step
+
+---
+
+is-
+
+JavaScript 상태 클래스
+
+예)
+
+- is-active
+- is-selected
+- is-visible
+
+---
+
+네이밍은 디자인보다 역할과 책임을 기준으로 작성한다.
+
+특정 페이지 이름보다 공통 목적을 우선한다.
+
+---
+
+## CSS Architecture
+
+### 기본 원칙
+
+CSS는 운영 환경을 우선하여 설계한다.
+
+HTML 수정 비용이 CSS 중복보다 크다면 CSS 중복을 허용한다.
+
+공통화를 위해 미래를 예측하기보다 현재 반복되는 문제를 해결하는 구조를 우선한다.
+
+Modifier는 필요한 경우에만 사용한다.
+
+Utility는 반복성이 충분히 검증된 경우에만 도입한다.
+
+컴포넌트 내부 margin보다 부모 Layout의 gap을 우선한다.
+
+수직 여백은 margin-top 중심으로 설계한다.
+
+
+### Interaction
+
+인터랙션은 실제 인터랙티브 요소(button, a)에만 적용한다.
+
+hover, active, focus 상태는 역할에 맞게 분리하여 관리한다.
+
+JS 상태는 is-* 클래스로 관리한다.
+
+---
+
 ## QA 기준
 
 ### UX
@@ -215,21 +338,25 @@ Optional Section은 제거되어도 전체 흐름이 깨지지 않아야 한다.
 * 다음 행동이 자연스러운가?
 * 상담까지 흐름이 이어지는가?
 
+
 ### UI
 
 * 한 화면에 주인공이 하나인가?
 * 시선 흐름이 명확한가?
 * 보험 사이트처럼 과하게 보이지 않는가?
 
+
 ### Flow
 
 * 다음 단계가 궁금한가?
 * 중간에 이탈할 만한 장면이 없는가?
 
+
 ### Responsive
 
 * 다양한 화면 폭에서 자연스러운가?
 * 특정 해상도에서만 예쁜 구조가 아닌가?
+
 
 ### Accessibility
 
@@ -237,6 +364,7 @@ Optional Section은 제거되어도 전체 흐름이 깨지지 않아야 한다.
 * 포커스 상태가 있는가?
 * 명도 대비가 적절한가?
 * aria 적용이 필요한 요소를 고려했는가?
+
 
 ### Maintainability
 
@@ -260,11 +388,13 @@ Optional Section은 제거되어도 전체 흐름이 깨지지 않아야 한다.
 1. 펫보험 Reference Flow 확정
 2. 모바일 디자인 시안 확정
 3. PC 확장 설계
-4. 공통 CSS / JS 구조 설계
-5. pet.html 제작
-6. QA
-7. 최종 ZIP 생성
-8. 다른 보험 랜딩으로 확장
+4. Component System 설계
+5. 공통 CSS / JS 구조 설계
+6. Mobile Landing 제작
+7. Desktop 확장
+8. QA
+9. 다른 보험 랜딩 확장
+10. Main Landing 제작
 
 ---
 
@@ -278,6 +408,15 @@ Optional Section은 제거되어도 전체 흐름이 깨지지 않아야 한다.
 * Hero Develop 보류
 * Step 단위 Develop 진행 예정
 
+### 진행 중
+
+- Mobile Component System 구축
+- ui-card 중심 Component 통합
+- Mobile Step 단위 UI Develop 진행
+- Main Landing 보류
+- Desktop 작업 보류
+- Mobile 완료 후 Desktop 일괄 진행 예정
+
 ---
 
 ## 프로젝트 관계
@@ -286,3 +425,19 @@ Optional Section은 제거되어도 전체 흐름이 깨지지 않아야 한다.
 
 보험한장에서 확정된 디자인 시스템과 컴포넌트는
 Portfolio에도 반영될 수 있다.
+
+---
+
+## Development Philosophy
+
+프로젝트는 미래를 예측하여 구조를 만들지 않는다.
+
+현재 반복되는 문제를 해결하는 방향으로 설계한다.
+
+공통화보다 운영성을 우선한다.
+
+HTML 수정 없이 CSS만으로 대응 가능한 구조를 우선 고려한다.
+
+컴포넌트는 콘텐츠 추가와 삭제를 고려하여 Optional 구조를 기본으로 설계한다.
+
+재사용성은 실제 사용 패턴이 충분히 검증된 이후 추상화한다.
