@@ -57,40 +57,39 @@
 
 ## Mobile Flow
 
-1. Question
+1. Opening
 
-   * 병원비 질문으로 관심을 끌기
-   * 보험 이야기가 아닌 일상 질문으로 시작
+   * "우리 아이는 어떤 아이인가요?"로 시작
+   * 강아지 / 고양이 선택
+   * 선택 후 Hero 자연스럽게 등장
 
-2. Curiosity
+2. Reality
 
-   * 병원비 데이터 또는 사례 제시
-   * 다음 내용을 궁금하게 만들기
+   * 객관적인 치료비 데이터
+   * 실제 병원비 부담 인식
 
-3. Empathy
+3. Scenario
 
-   * 실제 병원비 사례
-   * 보호자의 걱정을 공감하는 단계
+   * 실제 발생할 수 있는 상황 제시
+   * 카드 기반 Story Flow
 
-4. Reality
+4. Choice
 
-   * 객관적인 데이터 제시
-   * 실제 의료비 부담을 인식시키기
+   * 우리 아이 성향 선택
+   * 보험 질문보다 생활 질문 중심
 
-5. Hope
+5. Personal
 
-   * 우리 아이 기준으로 생각해보기
-   * 미리 준비할 수 있다는 안도감 제공
+   * 선택 결과를 기반으로 자연스럽게 개인화
 
 6. Trust
 
-   * 상담 과정 소개
-   * 상담자에 대한 신뢰 형성
+   * 상담 과정
+   * 상담자 신뢰 형성
 
-7. Consultation
+7. CTA
 
    * 부담 없는 상담 유도
-   * 자연스럽게 카카오톡 상담으로 연결
 
 ---
 
@@ -118,6 +117,9 @@
 * 체크리스트처럼 보이지 않게 한다.
 * 보험 질문이 아니라 생활 질문으로 구성한다.
 * 선택 후 결과 버튼 없이 자연스럽게 다음 내용으로 이어진다.
+* 보험 진단처럼 보이지 않는다.
+* 위험도를 평가하지 않는다.
+* 사용자가 자신의 이야기를 이어가는 경험을 만든다.
 
 
 ### 예시
@@ -211,6 +213,31 @@ Optional Section은 제거되어도 전체 흐름이 깨지지 않아야 한다.
 
 ---
 
+## Landing System
+
+보험별 랜딩은 하나의 공통 Landing System을 기반으로 제작한다.
+
+### 공통 요소
+
+- Flow
+- Layout
+- Component
+- Motion
+- JavaScript 구조
+
+### 보험별 변경 요소
+
+- Theme Color
+- Hero
+- Copy
+- Image
+- Data
+- Personalization
+
+펫보험 랜딩은 Master Page 역할을 하며, 이후 다른 보험 랜딩은 공통 구조를 유지하면서 콘텐츠만 변경하는 것을 목표로 한다.
+
+---
+
 ## Component System
 
 ### 설계 원칙
@@ -248,11 +275,41 @@ Component 내부보다 Wrapper(ui-card-group)가 레이아웃과 간격을 담�
 
 여러 ui-card를 관리하는 Wrapper이다.
 
+기본적으로 ui-card는 ui-card-group 내부에서 사용하는 것을 원칙으로 한다.
+
 공통 gap과 방향을 담당한다.
 
 Card 내부 margin보다 Group gap을 우선 사용한다.
 
 콘텐츠 개수 변경에도 자연스럽게 유지되는 구조를 목표로 한다.
+
+---
+
+## SVG Sprite
+
+프로젝트의 SVG는 icon.svg Sprite 방식을 사용한다.
+
+모든 아이콘은 symbol 기반으로 관리한다.
+
+Lucide 아이콘 사용 시
+
+삭제
+
+- xmlns
+- width
+- height
+- class
+
+유지
+
+- viewBox
+- fill
+- stroke
+- stroke-width
+- stroke-linecap
+- stroke-linejoin
+
+SVG는 기존 커스텀 아이콘에 영향을 주지 않는 방향으로 관리한다.
 
 ---
 
@@ -318,6 +375,21 @@ Utility는 반복성이 충분히 검증된 경우에만 도입한다.
 컴포넌트 내부 margin보다 부모 Layout의 gap을 우선한다.
 
 수직 여백은 margin-top 중심으로 설계한다.
+
+
+### Code Style
+
+Transition, Animation, Background 등 여러 값을 갖는 속성은 한 줄 작성 원칙으로 한다.
+
+예시
+
+```css
+transition: opacity .45s ease, transform .55s ease, max-height .45s ease;
+```
+
+불필요한 min-width, min-height 사용은 지양한다.
+
+padding, gap, flex, grid, 콘텐츠 흐름으로 해결 가능한지 먼저 검토한다.
 
 
 ### Interaction
@@ -405,14 +477,16 @@ JS 상태는 is-* 클래스로 관리한다.
 * 디자인 방향은 토스식 단계 진행형 UX로 재정렬
 * Mobile Step 구조 확정
 * Conversation Map 반영 완료
-* Hero Develop 보류
-* Step 단위 Develop 진행 예정
+* Opening Step 완료
+* Reality Step 완료
+* Scenario Step 완료
+* Choice Step 진행 중
 
 ### 진행 중
 
 - Mobile Component System 구축
 - ui-card 중심 Component 통합
-- Mobile Step 단위 UI Develop 진행
+- Mobile Landing Step 개발 진행
 - Main Landing 보류
 - Desktop 작업 보류
 - Mobile 완료 후 Desktop 일괄 진행 예정

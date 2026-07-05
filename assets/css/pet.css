@@ -69,7 +69,7 @@
 
 .pet-visual--hero {
   width: min(18rem, 82vw);
-  margin: 0 auto var(--space-6);
+  margin-bottom: var(--space-6);
   background: none;
   animation: pet-hero-float 4s ease-in-out infinite;
 }

@@ -98,6 +98,13 @@
 
 
 /* Chip */
+.ui-chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--space-4);
+  gap: var(--space-2);
+}
+
 .ui-chip {
   display: inline-flex;
   align-items: center;
@@ -121,7 +128,7 @@
   display: inline-flex;
   align-items: center;
   gap: .375rem;
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
   color: var(--color-primary-dark);
   font-size: var(--font-eyebrow);
   font-weight: 700;
@@ -295,6 +302,50 @@
 
 .is-active .ui-card--emphasis {
   animation-delay: .24s;
+}
+
+.ui-card-group--scroll {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  margin-inline: calc(var(--space-page) * -1);
+  padding-inline: var(--space-page);
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.ui-card-group--scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.ui-card-group--scroll > .ui-card {
+  flex: 0 0 75vw;
+  scroll-snap-align: start;
+}
+
+.ui-card__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.ui-card__point {
+  display: flex;
+  align-items: baseline;
+  gap: .25rem;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.ui-card__point-number {
+  font-size: clamp(2rem, 9vw, 3.25rem);
+  font-weight: 900;
+}
+
+.ui-card__point-unit {
+  font-size: .9375rem;
+  font-weight: 800;
 }
 
 @keyframes ui-card-rise {

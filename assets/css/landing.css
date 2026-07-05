@@ -201,14 +201,6 @@
   line-height: 1.65;
 }
 
-.la-advisor__chips {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-top: var(--space-4);
-}
-
 .la-page--desktop {
   display: none;
 }
@@ -216,10 +208,10 @@
 
 /* Breakpoint
 --------------------------------------------------
-Mobile : ~1023px
-Desktop : 1024px~
+Mobile : ~719px
+Desktop : 720px~
 */
-@media (min-width: 1024px) {
+@media (min-width: 720px) {
   .la-wrap {
     max-width: 73.75rem;
     margin: 0 auto;
@@ -408,12 +400,6 @@ Desktop : 1024px~
     max-width: 30rem;
     font-size: 1.0625rem;
     line-height: 1.75;
-  }
-
-  .la-advisor--wide .la-advisor__chips {
-    justify-content: flex-start;
-    gap: var(--space-2);
-    margin-top: var(--space-6);
   }
 
   .la-section--contact {

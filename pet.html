@@ -128,40 +128,81 @@
           </div>
         </section>
 
-        <!-- Step 03: Empathy Case -->
-        <section class="la-step la-step--case" data-step="2">
+        <!-- Step 03: Scenario -->
+        <section class="la-step la-step--scenario" data-step="2">
           <div class="la-step__body">
             <div class="la-step__body-inner">
               <span class="ui-eyebrow">병원비가 체감되는 순간</span>
-              <h2 class="la-step__title">갑자기 아프면,<br>걱정은 하나가<br>아니더라고요.</h2>
-              <p class="la-step__description">증상도 걱정인데,<br>얼마가 나올지 모르는 마음까지 같이 와요.</p>
-              <div class="ui-card-group" role="list">
-                <article class="ui-card ui-card--info" role="listitem">
-                  <span class="ui-card__media"><em>01</em></span>
+              <h2 class="la-step__title">갑자기 아프면,<br>걱정은 하나가 아니에요</h2>
+              <p class="la-step__description">아픈 것도 걱정인데,<br>얼마가 나올지 모르는 마음까지 같이 와요.</p>
+              <div class="ui-card-group ui-card-group--scroll" role="list">
+                <article class="ui-card" role="listitem">
+                  <div class="ui-card__head">
+                    <strong class="ui-card__point">
+                      <span class="ui-card__point-number">180</span>
+                      <span class="ui-card__point-unit">만원</span>
+                    </strong>
+                    <span class="ui-card__media">
+                      <em><svg class="icon"><use href="./assets/svg/icon.svg#icon-bone"></use></svg></em>
+                    </span>
+                  </div>
                   <div class="ui-card__body">
                     <strong class="ui-card__title">갑자기 다리를 절 때</strong>
                     <p class="ui-card__desc">검사부터 처치까지 한 번에 이어질 수 있어요.</p>
                   </div>
+                  <div class="ui-chip-group">
+                    <span class="ui-chip">검사비</span>
+                    <span class="ui-chip">수술비</span>
+                    <span class="ui-chip">입원비</span>
+                  </div>
                 </article>
-                <article class="ui-card ui-card--info" role="listitem">
-                  <span class="ui-card__media"><em>02</em></span>
+
+                <article class="ui-card" role="listitem">
+                  <div class="ui-card__head">
+                    <strong class="ui-card__point">
+                      <span class="ui-card__point-number">70</span>
+                      <span class="ui-card__point-unit">만원</span>
+                    </strong>
+                    <span class="ui-card__media">
+                      <em><svg class="icon"><use href="./assets/svg/icon.svg#icon-ambulance"></use></svg></em>
+                    </span>
+                  </div>
                   <div class="ui-card__body">
                     <strong class="ui-card__title">밤에 토해서 응급실에 갈 때</strong>
                     <p class="ui-card__desc">야간 진료는 생각보다 부담이 커질 수 있어요.</p>
                   </div>
+                  <div class="ui-chip-group">
+                    <span class="ui-chip">응급진료</span>
+                    <span class="ui-chip">혈액검사</span>
+                    <span class="ui-chip">영상검사</span>
+                  </div>
                 </article>
-                <article class="ui-card ui-card--info" role="listitem">
-                  <span class="ui-card__media"><em>03</em></span>
+
+                <article class="ui-card" role="listitem">
+                  <div class="ui-card__head">
+                    <strong class="ui-card__point">
+                      <span class="ui-card__point-number">15</span>
+                      <span class="ui-card__point-unit">만원</span>
+                    </strong>
+                    <span class="ui-card__media">
+                      <em><svg class="icon"><use href="./assets/svg/icon.svg#icon-stethoscope"></use></svg></em>
+                    </span>
+                  </div>
                   <div class="ui-card__body">
-                    <strong class="ui-card__title">수술·입원이 필요하다고 들을 때</strong>
-                    <p class="ui-card__desc">결정해야 할 것도, 확인할 것도 많아져요.</p>
+                    <strong class="ui-card__title">반복 진료가 필요할 때</strong>
+                    <p class="ui-card__desc">작은 진료도 쌓이면 매달 부담이 될 수 있어요.</p>
+                  </div>
+                  <div class="ui-chip-group">
+                    <span class="ui-chip">재진</span>
+                    <span class="ui-chip">약값</span>
+                    <span class="ui-chip">정기검사</span>
                   </div>
                 </article>
               </div>
               <div class="ui-card-group">
                 <div class="ui-card ui-card--emphasis">
                   <span class="ui-card__title">그래서 펫보험은</span>
-                  <strong class="ui-card__desc">큰일이 나기 전에,<br>우리 아이 기준으로 미리 보는 게 좋아요.</strong>
+                  <strong class="ui-card__desc">아프고 난 뒤보다,<br>아프기 전에 보는 게 더 좋아요.</strong>
                 </div>
               </div>
             </div>
@@ -180,20 +221,20 @@
               <p class="la-step__description">정답은 없어요. 끌리는 쪽으로 골라주세요.</p>
               <div class="ui-card-group" data-choice-list>
                 <button class="ui-card ui-card--single" type="button" data-choice data-trait="active">
-                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-activity"></use></svg></span>
                   <div class="ui-card__content">활동량이 많아요</div>
                 </button>
                 <button class="ui-card ui-card--single" type="button" data-choice data-trait="curious">
-                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-search"></use></svg></span>
                   <div class="ui-card__content">호기심이 많아요</div>
                 </button>
                 <button class="ui-card ui-card--single" type="button" data-choice data-trait="calm">
-                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
-                  <div class="ui-card__content">집에서 쉬는 걸 좋아해요</div>
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-house-heart"></use></svg></span>
+                  <div class="ui-card__content">쉬는 걸 좋아해요</div>
                 </button>
                 <button class="ui-card ui-card--single" type="button" data-choice data-trait="senior">
-                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
-                  <div class="ui-card__content">이제 나이가 조금 있어요</div>
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg></span>
+                  <div class="ui-card__content">나이가 있어요</div>
                 </button>
               </div>
             </div>
@@ -205,7 +246,7 @@
           <div class="la-step__body">
             <div class="la-step__body-inner">
               <span class="ui-eyebrow">이런 아이는</span>
-              <h2 class="la-step__title" data-personal-title>활동량이 많은 아이는<br>관절·인대 쪽 병원을<br>찾는 일이 잦아요.</h2>
+              <h2 class="la-step__title" data-personal-title>활동량이 많은 아이는<br>관절·인대 쪽 병원을<br>찾는 일이 잦아요</h2>
               <p class="la-step__description" data-personal-description>이런 상담도 자주 받아요.</p>
             </div>
           </div>
@@ -219,7 +260,7 @@
           <div class="la-step__body">
             <div class="la-step__body-inner">
               <span class="ui-eyebrow">그래서 볼 것은</span>
-              <h2 class="la-step__title">펫보험은<br>가격만 보면<br>아쉬울 수 있어요.</h2>
+              <h2 class="la-step__title">펫보험은<br>가격만 보면<br>아쉬울 수 있어요</h2>
               <p class="la-step__description">우리 아이에게 필요한 준비인지 보려면<br>아래 기준을 같이 봐야 해요.</p>
               <div class="ui-card-group" role="list">
                 <div class="ui-card ui-card--single" role="listitem">
@@ -247,7 +288,7 @@
           <div class="la-step__body">
             <div class="la-step__body-inner">
               <span class="ui-eyebrow">보험한장은 이렇게</span>
-              <h2 class="la-step__title">복잡한 보험 설명보다,<br>필요한 부분만<br>한 장처럼 정리해드려요.</h2>
+              <h2 class="la-step__title">복잡한 보험 설명보다,<br>필요한 부분만<br>한 장처럼 정리해드려요</h2>
               <div class="ui-card-group" role="list">
                 <div class="ui-card ui-card--single" role="listitem">
                   <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
@@ -283,7 +324,7 @@
                 <div class="la-advisor__role">AFG 어센틱금융그룹<br>생명·손해보험 전문 컨설턴트</div>
                 <p class="la-advisor__quote">보험은<br>가입보다 관리라고 생각합니다.</p>
                 <p class="la-advisor__description">강요하지 않습니다.<br>기존 보험도 함께 봐드립니다.<br>궁금한 것만 물어보셔도 됩니다.</p>
-                <div class="la-advisor__chips">
+                <div class="ui-chip-group">
                   <span class="ui-chip"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg>유지해도 되는지</span>
                   <span class="ui-chip"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg>불필요한 부분은 없는지</span>
                 </div>
@@ -493,7 +534,7 @@
             <div class="la-advisor__role">AFG 어센틱금융그룹 · 생명·손해보험 전문 컨설턴트</div>
             <p class="la-advisor__quote">보험은 가입보다<br>관리라고 생각합니다.</p>
             <p class="la-advisor__description">강요하지 않습니다. 기존 보험도 함께 봐드립니다.<br>궁금한 것만 물어보셔도 됩니다.</p>
-            <div class="la-advisor__chips">
+            <div class="ui-chip-group">
               <span class="ui-chip"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg>유지해도 되는지</span>
               <span class="ui-chip"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg>불필요한 부분은 없는지</span>
             </div>
