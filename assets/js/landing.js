@@ -18,6 +18,23 @@
     }
   };
 
+  var PET_STATS = {
+    dog: {
+      before: 74.5,
+      after: 143.3,
+      beforeRate: 52,
+      afterRate: 100,
+      caption: "2025년, 반려견 1마리당 평균 치료비"
+    },
+    cat: {
+      before: 59.8,
+      after: 103.2,
+      beforeRate: 58,
+      afterRate: 100,
+      caption: "2025년, 반려묘 1마리당 평균 치료비"
+    }
+  };
+
   var flow = document.querySelector("[data-flow]");
   var stage = document.querySelector("[data-stage]");
   var steps = Array.prototype.slice.call(document.querySelectorAll("[data-step]"));
@@ -28,6 +45,7 @@
   var petOpening = document.querySelector(".pet-opening");
   var petImages = petOpening ? petOpening.querySelectorAll(".pet-visual__image") : [];
   var current = 0;
+  var selectedPetType = "dog";
 
   function renderProgress(index) {
     progressItems.forEach(function (item, itemIndex) {
@@ -80,6 +98,10 @@
     current = index;
     next.classList.add("is-active");
     renderProgress(current);
+
+    if (next.classList.contains("la-step--reality")) {
+      updatePetStat(selectedPetType);
+    }
   }
 
   function updatePersonalResult(trait) {
@@ -99,6 +121,81 @@
       description.textContent = data.sub;
     });
   }
+
+  function animateNumber(element, value) {
+    element.textContent = "0";
+    var start = 0;
+    var duration = 800;
+    var startTime = null;
+
+    function update(time) {
+      if (!startTime) {
+        startTime = time;
+      }
+
+      var progress = Math.min((time - startTime) / duration, 1);
+      var currentValue = start + (value - start) * progress;
+
+      element.textContent = currentValue.toFixed(1);
+
+      if (progress < 1) {
+        window.requestAnimationFrame(update);
+      }
+    }
+
+    window.requestAnimationFrame(update);
+  }
+
+function updatePetStat(pet) {
+  var data = PET_STATS[pet];
+
+  if (!data) {
+    return;
+  }
+
+  var number = document.querySelector("[data-stat-number]");
+  var caption = document.querySelector("[data-stat-caption]");
+  var before = document.querySelector("[data-stat-before]");
+  var after = document.querySelector("[data-stat-after]");
+  var beforeBar = document.querySelector("[data-stat-before-bar]");
+  var afterBar = document.querySelector("[data-stat-after-bar]");
+
+  if (number) {
+    animateNumber(number, data.after);
+  }
+
+  if (caption) {
+    caption.textContent = data.caption;
+  }
+
+  if (before) {
+    before.textContent = data.before + "만원";
+  }
+
+  if (after) {
+    after.textContent = data.after + "만원";
+  }
+
+  if (beforeBar) {
+    beforeBar.style.width = "0";
+  }
+
+  if (afterBar) {
+    afterBar.style.width = "0";
+  }
+
+  window.requestAnimationFrame(function () {
+    window.requestAnimationFrame(function () {
+      if (beforeBar) {
+        beforeBar.style.width = data.beforeRate + "%";
+      }
+
+      if (afterBar) {
+        afterBar.style.width = data.afterRate + "%";
+      }
+    });
+  });
+}
 
   if (flow && stage && steps.length) {
     stage.addEventListener("click", function (event) {
@@ -126,6 +223,7 @@
 
       if (petButton && petOpening) {
         var selectedPet = petButton.getAttribute("data-pet-select");
+        selectedPetType = selectedPet;
 
         petOpening.classList.remove("is-selecting");
         petOpening.classList.add("is-selected");

@@ -26,6 +26,10 @@
 
 
 /* Opening */
+.pet-page .la-step--opening:has(.is-selecting) .la-step__footer {
+  display: none;
+}
+
 .pet-opening {
   position: relative;
 }
@@ -78,7 +82,7 @@
 
 .pet-visual--hero .pet-visual__image.is-active {
   display: block;
-  animation: pet-hero-pop .15s cubic-bezier(.22, 1, .36, 1) both;
+  animation: pet-hero-pop .55s cubic-bezier(.22, 1, .36, 1) both;
 }
 
 .pet-opening__hero .la-step__title {
