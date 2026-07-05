@@ -3,7 +3,7 @@
     active: {
       eyebrow: "활동량이 많은 아이라면",
       headline: "관절·인대처럼<br>자주 움직이는 부위를<br>같이 살펴보면 좋아요.",
-      sub: "위험하다는 뜻은 아니에요. 상담할 때 이런 부분을 미리 확인하면 더 편해요.",
+      sub: "위험하다는 뜻은 아니에요.<br>상담할 때 이런 부분을 미리 확인하면 더 편해요.",
       points: [
         {
           title: "통원·검사 기준",
@@ -18,7 +18,7 @@
     curious: {
       eyebrow: "호기심이 많은 아이라면",
       headline: "예상 못 한 사고나<br>이물질·상처 진료를<br>가볍게 체크해보면 좋아요.",
-      sub: "겁을 주려는 이야기가 아니라, 자주 묻는 상황을 먼저 정리하는 단계예요.",
+      sub: "먹으면 안 되는 것을 삼키거나<br>장난치다 다치는 경우가 있어요.",
       points: [
         {
           title: "응급·사고 진료",
@@ -33,7 +33,7 @@
     calm: {
       eyebrow: "집에서 쉬는 걸 좋아한다면",
       headline: "체중 관리나<br>반복되는 생활 질환 쪽을<br>같이 살펴보면 좋아요.",
-      sub: "생활 패턴에 따라 병원비가 달라질 수 있어서, 무리 없이 볼 기준을 잡아봐요.",
+      sub: "생활 패턴에 따라 병원비가 달라질 수 있어서<br>무리 없이 볼 기준을 잡아봐요.",
       points: [
         {
           title: "반복 진료 기준",
@@ -171,7 +171,7 @@
     });
 
     descriptions.forEach(function (description) {
-      description.textContent = data.sub;
+      description.innerHTML = data.sub;
     });
 
     pointTitleFirst.forEach(function (title) {
@@ -288,6 +288,30 @@
         }, 420);
       }
 
+      var accordionButton = event.target.closest("[data-accordion-button]");
+
+      if (accordionButton) {
+        var accordion = accordionButton.closest("[data-accordion]");
+        var item = accordionButton.closest("[data-accordion-item]");
+
+        if (!accordion || !item) {
+          return;
+        }
+
+        var panel = item.querySelector("[data-accordion-panel]");
+        var isOpen = item.classList.contains("is-open");
+
+        if (!panel) {
+          return;
+        }
+
+        item.classList.toggle("is-open", !isOpen);
+        accordionButton.setAttribute("aria-expanded", isOpen ? "false" : "true");
+        panel.style.maxHeight = isOpen ? null : panel.scrollHeight + "px";
+
+        return;
+      }
+
       var petButton = event.target.closest("[data-pet-select]");
 
       if (petButton && petOpening) {
@@ -338,6 +362,9 @@
     }
 
     renderProgress(0);
+    document.querySelectorAll(".is-open [data-accordion-panel]").forEach(function (panel) {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    });
   }
 
   document.addEventListener("click", function (event) {

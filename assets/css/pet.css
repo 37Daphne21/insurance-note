@@ -103,11 +103,6 @@
   animation: pet-text-up .45s ease .38s both;
 }
 
-.pet-visual--heart {
-  color: var(--color-accent);
-  background: radial-gradient(circle at 35% 30%, var(--color-accent-soft), var(--color-bg-deep) 75%);
-}
-
 
 /* Animations */
 @keyframes pet-hero-pop {

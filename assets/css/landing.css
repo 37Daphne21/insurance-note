@@ -200,6 +200,47 @@
   line-height: 1.65;
 }
 
+.la-step--ending .la-step__visual {
+  width: 6rem;
+  margin: 0 auto 1.5rem;
+  animation: heart-beat 2.2s ease-in-out infinite;
+}
+
+.la-step--ending .la-step__visual .icon {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.la-step--ending .la-step__footer {
+  display: grid;
+  gap: .75rem;
+}
+
+@keyframes heart-beat {
+  0%,
+  45%,
+  100% {
+    transform: scale(1);
+  }
+
+  8% {
+    transform: scale(1.12);
+  }
+
+  16% {
+    transform: scale(1);
+  }
+
+  24% {
+    transform: scale(1.08);
+  }
+
+  32% {
+    transform: scale(1);
+  }
+}
+
 .la-page--desktop {
   display: none;
 }

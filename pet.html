@@ -247,7 +247,7 @@
             <div class="la-step__body-inner">
               <span class="ui-eyebrow" data-personal-eyebrow>활동량이 많은 아이라면</span>
               <h2 class="la-step__title" data-personal-title>관절·인대처럼<br>자주 움직이는 부위를<br>같이 살펴보면 좋아요</h2>
-              <p class="la-step__description" data-personal-description>위험하다는 뜻은 아니에요. 상담할 때 이런 부분을 미리 확인하면 더 편해요.</p>
+              <p class="la-step__description" data-personal-description>위험하다는 뜻은 아니에요.<br>상담할 때 이런 부분을 미리 확인하면 더 편해요.</p>
               <div class="ui-card-group" role="list">
                 <article class="ui-card ui-card--info" role="listitem">
                   <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
@@ -360,15 +360,34 @@
             <div class="la-step__body-inner">
               <span class="ui-eyebrow">상담 전에 많이 묻는 것</span>
               <h2 class="la-step__title">상담만 받아도<br>괜찮을까요?</h2>
-              <div class="ui-card-group">
-                <div class="ui-card">
-                  <div class="ui-card__label">Q. 가입을 바로 결정해야 하나요?</div>
-                  <p class="ui-card__desc">아니요. 우리 아이에게 필요한 준비인지 확인하는 용도로 상담받으셔도 괜찮아요.</p>
-                </div>
-                <div class="ui-card">
-                  <div class="ui-card__label">Q. 이미 아픈 적이 있어도 볼 수 있나요?</div>
-                  <p class="ui-card__desc">기존 병력이나 현재 상태에 따라 달라질 수 있어요. 상담 때 가능 여부와 제외될 수 있는 항목을 함께 확인해드려요.</p>
-                </div>
+              <div class="ui-card-group ui-accordion" data-accordion>
+                <article class="ui-card ui-card--accordion is-open" data-accordion-item>
+                  <button class="ui-card__button" type="button" aria-expanded="true" aria-controls="faq-answer-01" data-accordion-button>
+                    <span class="ui-card__label">Q. 가입을 바로 결정해야 하나요?</span>
+                    <span class="ui-card__arrow" aria-hidden="true"></span>
+                  </button>
+                  <div class="ui-card__body" id="faq-answer-01" data-accordion-panel>
+                    <p class="ui-card__desc">아니요. 우리 아이에게 필요한 준비인지 확인하는 용도로 상담받으셔도 괜찮아요.</p>
+                  </div>
+                </article>
+                <article class="ui-card ui-card--accordion" data-accordion-item>
+                  <button class="ui-card__button" type="button" aria-expanded="false" aria-controls="faq-answer-02" data-accordion-button>
+                    <span class="ui-card__label">Q. 이미 아픈 적이 있어도 볼 수 있나요?</span>
+                    <span class="ui-card__arrow" aria-hidden="true"></span>
+                  </button>
+                  <div class="ui-card__body" id="faq-answer-02" data-accordion-panel>
+                    <p class="ui-card__desc">기존 병력이나 현재 상태에 따라 달라질 수 있어요. 상담 때 가능 여부와 제외될 수 있는 항목을 함께 확인해드려요.</p>
+                  </div>
+                </article>
+                <article class="ui-card ui-card--accordion" data-accordion-item>
+                  <button class="ui-card__button" type="button" aria-expanded="false" aria-controls="faq-answer-03" data-accordion-button>
+                    <span class="ui-card__label">Q. 상담하면 꼭 가입 권유를 받나요?</span>
+                    <span class="ui-card__arrow" aria-hidden="true"></span>
+                  </button>
+                  <div class="ui-card__body" id="faq-answer-03" data-accordion-panel>
+                    <p class="ui-card__desc">아니요. 유지해도 되는 부분과 불필요한 부분을 먼저 확인하고, 필요한 경우에만 선택지를 안내드려요.</p>
+                  </div>
+                </article>
               </div>
             </div>
           </div>
@@ -377,20 +396,20 @@
           </div>
         </section>
 
-        <!-- Step 10: CTA -->
-        <section class="la-step la-step--cta" data-step="9">
+        <!-- Step 10: Ending -->
+        <section class="la-step la-step--ending" data-step="9">
           <div class="la-step__body">
             <div class="la-step__body-inner la-step__body-inner--center">
-              <div class="pet-visual pet-visual--heart">
-                <svg class="icon"><use href="./assets/svg/icon.svg#icon-heart"></use></svg>
+              <div class="la-step__visual">
+                <img src="./assets/images/common/heart.png" alt="양영롱 AP 프로필">
               </div>
-              <h2 class="la-step__title">우리 아이에게 맞는 준비인지,<br>같이 이야기해볼까요?</h2>
-              <p class="la-step__description">상담은 무료이고, 강요하지 않아요.</p>
+              <h2 class="la-step__title">이제는<br>우리 아이 이야기만<br>들려주세요.</h2>
+              <p class="la-step__description">편하게 이야기해도 괜찮아요.</p>
             </div>
           </div>
           <div class="la-step__footer">
-            <a class="ui-button ui-button--kakao" href="#" data-kakao><svg class="icon"><use href="./assets/svg/icon.svg#icon-chat"></use></svg>카카오톡으로 편하게 이야기하기</a>
-            <a class="ui-button ui-button--text" href="tel:000-0000-0000"><svg class="icon"><use href="./assets/svg/icon.svg#icon-phone"></use></svg>전화로 상담받기</a>
+            <a class="ui-button ui-button--kakao" href="#" data-kakao><svg class="icon"><use href="./assets/svg/icon.svg#icon-chat"></use></svg>카카오톡으로 이야기하기</a>
+            <a class="ui-button ui-button--text" href="tel:000-0000-0000"><svg class="icon"><use href="./assets/svg/icon.svg#icon-phone"></use></svg>전화 상담하기</a>
           </div>
         </section>
       </div>
