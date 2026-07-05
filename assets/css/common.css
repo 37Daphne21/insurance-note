@@ -34,6 +34,26 @@ body {
   white-space: nowrap;
 }
 
+.text-highlight {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.text-highlight::after {
+  position: absolute;
+  left: -.1em;
+  right: -.1em;
+  bottom: 0;
+  height: 100%;
+  background: var(--color-primary);
+  opacity: .15;
+  border-radius: .15em;
+  z-index: -1;
+  content: "";
+}
+
 .icon {
   display: inline-block;
   width: 1em;
