@@ -57,12 +57,28 @@
         <section class="la-step la-step--opening is-active" data-step="0">
           <div class="la-step__body">
             <div class="la-step__body-inner">
-              <div class="pet-visual pet-visual--question">
-                <svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg>
-                <span class="pet-visual__badge">?</span>
+              <div class="pet-opening is-selecting">
+                <div class="pet-opening__select">
+                  <h1 class="la-step__title">우리 아이는<br>어떤 아이인가요?</h1>
+                  <div class="ui-card-group">
+                    <button class="ui-card ui-card--single" type="button" data-pet-select="dog">
+                      <span class="ui-card__content">🐶 강아지</span>
+                    </button>
+                    <button class="ui-card ui-card--single" type="button" data-pet-select="cat">
+                      <span class="ui-card__content">🐱 고양이</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="pet-opening__hero">
+                  <div class="pet-visual pet-visual--hero">
+                    <img class="pet-visual__image" data-pet="dog" src="./assets/images/pet/dog-set.png" alt="">
+                    <img class="pet-visual__image" data-pet="cat" src="./assets/images/pet/cat-set.png" alt="">
+                  </div>
+                  <h1 class="la-step__title">우리 아이,<br>병원비 얼마 나올지<br>아세요?</h1>
+                  <p class="la-step__description">원장님도 미리 말씀 못 드리는 경우가 많아요.</p>
+                </div>
               </div>
-              <h1 class="la-step__title">우리 아이,<br>병원비 얼마 나올지<br>아세요?</h1>
-              <p class="la-step__description">원장님도 미리 말씀 못 드리는 경우가 많아요.</p>
             </div>
           </div>
           <div class="la-step__footer">

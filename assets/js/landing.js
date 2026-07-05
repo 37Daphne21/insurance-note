@@ -25,6 +25,8 @@
   var progressItems = Array.prototype.slice.call(document.querySelectorAll(".la-progress__item"));
   var progressText = document.querySelector("[data-progress-text]");
   var backButton = document.querySelector("[data-back]");
+  var petOpening = document.querySelector(".pet-opening");
+  var petImages = petOpening ? petOpening.querySelectorAll(".pet-visual__image") : [];
   var current = 0;
 
   function renderProgress(index) {
@@ -49,7 +51,14 @@
     }
 
     if (backButton) {
-      backButton.classList.toggle("is-visible", index > 0);
+      var isOpeningSelected =
+        petOpening &&
+        petOpening.classList.contains("is-selected");
+
+      backButton.classList.toggle(
+        "is-visible",
+        index > 0 || isOpeningSelected
+      );
     }
   }
 
@@ -112,10 +121,51 @@
           moveStep(current + 1);
         }, 420);
       }
+
+      var petButton = event.target.closest("[data-pet-select]");
+
+      if (petButton && petOpening) {
+        var selectedPet = petButton.getAttribute("data-pet-select");
+
+        petOpening.classList.remove("is-selecting");
+        petOpening.classList.add("is-selected");
+        petOpening.dataset.pet = selectedPet;
+
+        petImages.forEach(function (image) {
+          image.classList.toggle(
+            "is-active",
+            image.dataset.pet === selectedPet
+          );
+        });
+
+        renderProgress(current);
+
+        return;
+      }
     });
 
     if (backButton) {
       backButton.addEventListener("click", function () {
+
+        if (
+          current === 0 &&
+          petOpening &&
+          petOpening.classList.contains("is-selected")
+        ) {
+
+          petOpening.classList.remove("is-selected");
+          petOpening.classList.add("is-selecting");
+          petOpening.removeAttribute("data-pet");
+
+          petImages.forEach(function (image) {
+            image.classList.remove("is-active");
+          });
+
+          renderProgress(current);
+
+          return;
+        }
+
         moveStep(current - 1);
       });
     }
