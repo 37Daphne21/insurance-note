@@ -28,57 +28,27 @@
   <script src="./assets/js/landing.js" defer></script>
 </head>
 <body class="pet-page">
-  <!-- Icon Sprite -->
-  <svg class="sr-only" aria-hidden="true">
-    <symbol id="icon-paw" viewBox="0 0 24 24">
-      <ellipse cx="12" cy="16.6" rx="6.6" ry="5.1" />
-      <ellipse cx="5.6" cy="8.6" rx="2.3" ry="3" transform="rotate(-18 5.6 8.6)" />
-      <ellipse cx="10.4" cy="5.2" rx="2.3" ry="3.1" />
-      <ellipse cx="15.3" cy="5.5" rx="2.3" ry="3.1" transform="rotate(8 15.3 5.5)" />
-      <ellipse cx="18.9" cy="9.1" rx="2.1" ry="2.7" transform="rotate(26 18.9 9.1)" />
-    </symbol>
-    <symbol id="icon-tag" viewBox="0 0 24 24">
-      <path d="M3 12.2 11.8 3.4c.6-.6 1.6-.6 2.2 0l6.6 6.6c.6.6.6 1.6 0 2.2L11.8 21c-.6.6-1.6.6-2.2 0L3 14.4c-.6-.6-.6-1.6 0-2.2Z" fill="none" stroke="currentColor" stroke-width="1.6" />
-      <circle cx="15.5" cy="8.5" r="1.4" fill="currentColor" />
-    </symbol>
-    <symbol id="icon-chevron-left" viewBox="0 0 24 24">
-      <path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-    </symbol>
-    <symbol id="icon-heart" viewBox="0 0 24 24">
-      <path d="M12 20.2 4.6 13c-2-2-2-5.2 0-7.2 2-2 5.1-2 7 .1l.4.4.4-.4c1.9-2.1 5-2.1 7-.1 2 2 2 5.2 0 7.2L12 20.2Z" fill="currentColor" />
-    </symbol>
-    <symbol id="icon-chat" viewBox="0 0 24 24">
-      <path d="M12 3.5C6.8 3.5 3 6.9 3 11.1c0 2.5 1.4 4.7 3.6 6.1l-.8 3.3 3.6-2c1 .2 2 .4 3 .4 5.2 0 9-3.4 9-7.8s-3.8-7.6-9-7.6Z" fill="currentColor" />
-    </symbol>
-    <symbol id="icon-phone" viewBox="0 0 24 24">
-      <path d="M6.6 2.8 4 5.4c-.6.6-.6 1.6 0 2.6 2.6 4.6 6.6 8.6 11.2 11.2 1 .6 2 .6 2.6 0l2.6-2.6-3.7-3.7-1.6 1.6c-2-1.2-4.1-3.3-5.3-5.3l1.6-1.6L6.6 2.8Z" fill="currentColor" />
-    </symbol>
-    <symbol id="icon-check" viewBox="0 0 24 24">
-      <path d="M4 12.5 9 17.5 20 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
-    </symbol>
-  </svg>
-
   <!-- Mobile Flow -->
   <main class="la-flow la-flow--mobile pet-flow" data-flow>
     <div class="la-flow__shell">
       <header class="la-flow__topbar">
         <button class="la-flow__back" type="button" aria-label="이전 단계로" data-back>
-          <svg class="icon"><use href="#icon-chevron-left"></use></svg>
+          <svg class="icon"><use href="./assets/svg/icon.svg#icon-chevron-left"></use></svg>
         </button>
         <span class="la-flow__logo" aria-hidden="true"></span>
       </header>
 
       <div class="la-progress" role="progressbar" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1" aria-label="진행 단계" data-progress>
-        <svg class="icon la-progress__item is-current"><use href="#icon-paw"></use></svg>
-        <svg class="icon la-progress__item"><use href="#icon-paw"></use></svg>
-        <svg class="icon la-progress__item"><use href="#icon-paw"></use></svg>
-        <svg class="icon la-progress__item"><use href="#icon-paw"></use></svg>
-        <svg class="icon la-progress__item"><use href="#icon-paw"></use></svg>
-        <svg class="icon la-progress__item"><use href="#icon-paw"></use></svg>
-        <svg class="icon la-progress__item"><use href="#icon-paw"></use></svg>
-        <svg class="icon la-progress__item"><use href="#icon-paw"></use></svg>
-        <svg class="icon la-progress__item"><use href="#icon-paw"></use></svg>
-        <svg class="icon la-progress__item"><use href="#icon-paw"></use></svg>
+        <svg class="icon la-progress__item is-current"><use href="./assets/svg/icon.svg#icon-paw"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-paw"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-paw"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-paw"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-paw"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-paw"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-paw"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-paw"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-paw"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-paw"></use></svg>
       </div>
       <span class="sr-only" aria-live="polite" data-progress-text>1단계 / 10단계</span>
 
@@ -88,7 +58,7 @@
           <div class="la-step__body">
             <div class="la-step__body-inner">
               <div class="pet-visual pet-visual--question">
-                <svg class="icon"><use href="#icon-paw"></use></svg>
+                <svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg>
                 <span class="pet-visual__badge">?</span>
               </div>
               <h1 class="la-step__title">우리 아이,<br>병원비 얼마 나올지<br>아세요?</h1>
@@ -194,19 +164,19 @@
               <p class="la-step__description">정답은 없어요. 끌리는 쪽으로 골라주세요.</p>
               <div class="ui-card-group" data-choice-list>
                 <button class="ui-card ui-card--single" type="button" data-choice data-trait="active">
-                  <span class="ui-card__media"><svg class="icon"><use href="#icon-paw"></use></svg></span>
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
                   <div class="ui-card__content">활동량이 많아요</div>
                 </button>
                 <button class="ui-card ui-card--single" type="button" data-choice data-trait="curious">
-                  <span class="ui-card__media"><svg class="icon"><use href="#icon-paw"></use></svg></span>
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
                   <div class="ui-card__content">호기심이 많아요</div>
                 </button>
                 <button class="ui-card ui-card--single" type="button" data-choice data-trait="calm">
-                  <span class="ui-card__media"><svg class="icon"><use href="#icon-paw"></use></svg></span>
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
                   <div class="ui-card__content">집에서 쉬는 걸 좋아해요</div>
                 </button>
                 <button class="ui-card ui-card--single" type="button" data-choice data-trait="senior">
-                  <span class="ui-card__media"><svg class="icon"><use href="#icon-paw"></use></svg></span>
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
                   <div class="ui-card__content">이제 나이가 조금 있어요</div>
                 </button>
               </div>
@@ -237,15 +207,15 @@
               <p class="la-step__description">우리 아이에게 필요한 준비인지 보려면<br>아래 기준을 같이 봐야 해요.</p>
               <div class="ui-card-group" role="list">
                 <div class="ui-card ui-card--single" role="listitem">
-                  <span class="ui-card__media"><svg class="icon"><use href="#icon-check"></use></svg></span>
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
                   <div class="ui-card__content">내가 실제로 부담하는 금액</div>
                 </div>
                 <div class="ui-card ui-card--single" role="listitem">
-                  <span class="ui-card__media"><svg class="icon"><use href="#icon-check"></use></svg></span>
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
                   <div class="ui-card__content">보장되는 진료와 제외되는 항목</div>
                 </div>
                 <div class="ui-card ui-card--single" role="listitem">
-                  <span class="ui-card__media"><svg class="icon"><use href="#icon-check"></use></svg></span>
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
                   <div class="ui-card__content">나이와 갱신에 따른 보험료 흐름</div>
                 </div>
               </div>
@@ -264,15 +234,15 @@
               <h2 class="la-step__title">복잡한 보험 설명보다,<br>필요한 부분만<br>한 장처럼 정리해드려요.</h2>
               <div class="ui-card-group" role="list">
                 <div class="ui-card ui-card--single" role="listitem">
-                  <span class="ui-card__media"><svg class="icon"><use href="#icon-paw"></use></svg></span>
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
                   <div class="ui-card__content">아이 나이·품종·생활 패턴 확인</div>
                 </div>
                 <div class="ui-card ui-card--single" role="listitem">
-                  <span class="ui-card__media"><svg class="icon"><use href="#icon-paw"></use></svg></span>
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
                   <div class="ui-card__content">수술·입원·통원 기준 체크</div>
                 </div>
                 <div class="ui-card ui-card--single" role="listitem">
-                  <span class="ui-card__media"><svg class="icon"><use href="#icon-paw"></use></svg></span>
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
                   <div class="ui-card__content">무리한 권유 없이 선택지만 비교</div>
                 </div>
               </div>
@@ -298,8 +268,8 @@
                 <p class="la-advisor__quote">보험은<br>가입보다 관리라고 생각합니다.</p>
                 <p class="la-advisor__description">강요하지 않습니다.<br>기존 보험도 함께 봐드립니다.<br>궁금한 것만 물어보셔도 됩니다.</p>
                 <div class="la-advisor__chips">
-                  <span class="ui-chip"><svg class="icon"><use href="#icon-check"></use></svg>유지해도 되는지</span>
-                  <span class="ui-chip"><svg class="icon"><use href="#icon-check"></use></svg>불필요한 부분은 없는지</span>
+                  <span class="ui-chip"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg>유지해도 되는지</span>
+                  <span class="ui-chip"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg>불필요한 부분은 없는지</span>
                 </div>
               </article>
             </div>
@@ -337,15 +307,15 @@
           <div class="la-step__body">
             <div class="la-step__body-inner la-step__body-inner--center">
               <div class="pet-visual pet-visual--heart">
-                <svg class="icon"><use href="#icon-heart"></use></svg>
+                <svg class="icon"><use href="./assets/svg/icon.svg#icon-heart"></use></svg>
               </div>
               <h2 class="la-step__title">우리 아이에게 맞는 준비인지,<br>같이 이야기해볼까요?</h2>
               <p class="la-step__description">상담은 무료이고, 강요하지 않아요.</p>
             </div>
           </div>
           <div class="la-step__footer">
-            <a class="ui-button ui-button--kakao" href="#" data-kakao><svg class="icon"><use href="#icon-chat"></use></svg>카카오톡으로 편하게 이야기하기</a>
-            <a class="ui-button ui-button--text" href="tel:000-0000-0000"><svg class="icon"><use href="#icon-phone"></use></svg>전화로 상담받기</a>
+            <a class="ui-button ui-button--kakao" href="#" data-kakao><svg class="icon"><use href="./assets/svg/icon.svg#icon-chat"></use></svg>카카오톡으로 편하게 이야기하기</a>
+            <a class="ui-button ui-button--text" href="tel:000-0000-0000"><svg class="icon"><use href="./assets/svg/icon.svg#icon-phone"></use></svg>전화로 상담받기</a>
           </div>
         </section>
       </div>
@@ -357,7 +327,7 @@
     <header class="la-header">
       <div class="la-wrap la-header__inner">
         <div class="la-header__wordmark">보험한장 <span>· 펫보험</span></div>
-        <a class="ui-button ui-button--primary la-header__button" href="#" data-kakao><svg class="icon"><use href="#icon-chat"></use></svg>카카오톡 상담하기</a>
+        <a class="ui-button ui-button--primary la-header__button" href="#" data-kakao><svg class="icon"><use href="./assets/svg/icon.svg#icon-chat"></use></svg>카카오톡 상담하기</a>
       </div>
     </header>
 
@@ -369,8 +339,8 @@
           <h1 class="la-section__title">우리 아이 병원비,<br>준비는 상담에서<br>가볍게 시작하세요</h1>
           <p class="la-section__description">병원비 걱정을 키우는 건 비용 그 자체가 아니라, 얼마가 나올지 모른다는 점입니다. 우리 아이 기준으로 가볍게 확인해보세요.</p>
           <div class="la-section__actions">
-            <a class="ui-button ui-button--fit ui-button--kakao" href="#" data-kakao><svg class="icon"><use href="#icon-chat"></use></svg>카카오톡으로 편하게 이야기하기</a>
-            <a class="ui-button ui-button--text" href="tel:000-0000-0000"><svg class="icon"><use href="#icon-phone"></use></svg>전화 상담</a>
+            <a class="ui-button ui-button--fit ui-button--kakao" href="#" data-kakao><svg class="icon"><use href="./assets/svg/icon.svg#icon-chat"></use></svg>카카오톡으로 편하게 이야기하기</a>
+            <a class="ui-button ui-button--text" href="tel:000-0000-0000"><svg class="icon"><use href="./assets/svg/icon.svg#icon-phone"></use></svg>전화 상담</a>
           </div>
         </div>
         <div class="ui-card">
@@ -468,10 +438,22 @@
         </div>
         <div class="la-panel">
           <div class="ui-card-group" data-choice-list>
-            <button class="ui-card" type="button" data-choice data-trait="active"><svg class="icon"><use href="#icon-paw"></use></svg>활동량이 많아요</button>
-            <button class="ui-card" type="button" data-choice data-trait="curious"><svg class="icon"><use href="#icon-paw"></use></svg>호기심이 많아요</button>
-            <button class="ui-card" type="button" data-choice data-trait="calm"><svg class="icon"><use href="#icon-paw"></use></svg>집에서 쉬는 걸 좋아해요</button>
-            <button class="ui-card" type="button" data-choice data-trait="senior"><svg class="icon"><use href="#icon-paw"></use></svg>이제 나이가 조금 있어요</button>
+            <button class="ui-card ui-card--single" type="button" data-choice data-trait="active">
+              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
+              <div class="ui-card__content">활동량이 많아요</div>
+            </button>
+            <button class="ui-card ui-card--single" type="button" data-choice data-trait="curious">
+              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
+              <div class="ui-card__content">호기심이 많아요</div>
+            </button>
+            <button class="ui-card ui-card--single" type="button" data-choice data-trait="calm">
+              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
+              <div class="ui-card__content">집에서 쉬는 걸 좋아해요</div>
+            </button>
+            <button class="ui-card ui-card--single" type="button" data-choice data-trait="senior">
+              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
+              <div class="ui-card__content">이제 나이가 조금 있어요</div>
+            </button>
           </div>
           <div class="la-panel-result">
             <div class="la-panel-result__eyebrow">이런 아이는</div>
@@ -496,8 +478,8 @@
             <p class="la-advisor__quote">보험은 가입보다<br>관리라고 생각합니다.</p>
             <p class="la-advisor__description">강요하지 않습니다. 기존 보험도 함께 봐드립니다.<br>궁금한 것만 물어보셔도 됩니다.</p>
             <div class="la-advisor__chips">
-              <span class="ui-chip"><svg class="icon"><use href="#icon-check"></use></svg>유지해도 되는지</span>
-              <span class="ui-chip"><svg class="icon"><use href="#icon-check"></use></svg>불필요한 부분은 없는지</span>
+              <span class="ui-chip"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg>유지해도 되는지</span>
+              <span class="ui-chip"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg>불필요한 부분은 없는지</span>
             </div>
           </div>
         </article>
@@ -510,8 +492,8 @@
         <h2 class="la-section__title">우리 아이에게 맞는 준비인지,<br>같이 이야기해볼까요?</h2>
         <p class="la-section__description">상담은 무료이고, 강요하지 않아요.</p>
         <div class="la-section__actions">
-          <a class="ui-button ui-button--fit ui-button--kakao" href="#" data-kakao><svg class="icon"><use href="#icon-chat"></use></svg>카카오톡으로 편하게 이야기하기</a>
-          <a class="ui-button ui-button--text" href="tel:000-0000-0000"><svg class="icon"><use href="#icon-phone"></use></svg>전화로 상담받기</a>
+          <a class="ui-button ui-button--fit ui-button--kakao" href="#" data-kakao><svg class="icon"><use href="./assets/svg/icon.svg#icon-chat"></use></svg>카카오톡으로 편하게 이야기하기</a>
+          <a class="ui-button ui-button--text" href="tel:000-0000-0000"><svg class="icon"><use href="./assets/svg/icon.svg#icon-phone"></use></svg>전화로 상담받기</a>
         </div>
       </div>
     </section>

@@ -151,6 +151,10 @@
   margin-top: var(--space-6);
 }
 
+.ui-card-group:first-child {
+  margin-top: 0;
+}
+
 .ui-card {
   display: flex;
   flex-direction: column;
