@@ -1,20 +1,64 @@
 (function () {
   var TRAITS = {
     active: {
-      headline: "활동량이 많은 아이는<br>관절·인대 쪽 병원을<br>찾는 일이 잦아요.",
-      sub: "이런 상담도 자주 받아요."
+      eyebrow: "활동량이 많은 아이라면",
+      headline: "관절·인대처럼<br>자주 움직이는 부위를<br>같이 살펴보면 좋아요.",
+      sub: "위험하다는 뜻은 아니에요. 상담할 때 이런 부분을 미리 확인하면 더 편해요.",
+      points: [
+        {
+          title: "통원·검사 기준",
+          description: "자주 병원에 갈 때 실제로 부담하는 금액을 같이 봐요."
+        },
+        {
+          title: "수술·입원 기준",
+          description: "갑자기 큰 진료가 필요할 때 어디까지 준비되는지 확인해요."
+        }
+      ]
     },
     curious: {
-      headline: "호기심이 많은 아이는<br>작은 사고로 병원을<br>찾는 일이 종종 있어요.",
-      sub: "미리 알아두면 마음이 편해질 수 있어요."
+      eyebrow: "호기심이 많은 아이라면",
+      headline: "예상 못 한 사고나<br>이물질·상처 진료를<br>가볍게 체크해보면 좋아요.",
+      sub: "겁을 주려는 이야기가 아니라, 자주 묻는 상황을 먼저 정리하는 단계예요.",
+      points: [
+        {
+          title: "응급·사고 진료",
+          description: "갑작스러운 내원 때 보장 기준이 어떻게 잡히는지 확인해요."
+        },
+        {
+          title: "제외 항목",
+          description: "보장된다고 생각했지만 빠지는 항목이 없는지 같이 봐요."
+        }
+      ]
     },
     calm: {
-      headline: "활동이 적은 아이는<br>체중·관절 쪽을<br>신경 쓰는 보호자가 많아요.",
-      sub: "이런 상담도 자주 받아요."
+      eyebrow: "집에서 쉬는 걸 좋아한다면",
+      headline: "체중 관리나<br>반복되는 생활 질환 쪽을<br>같이 살펴보면 좋아요.",
+      sub: "생활 패턴에 따라 병원비가 달라질 수 있어서, 무리 없이 볼 기준을 잡아봐요.",
+      points: [
+        {
+          title: "반복 진료 기준",
+          description: "피부·소화·체중처럼 반복될 수 있는 진료 기준을 확인해요."
+        },
+        {
+          title: "자기부담금",
+          description: "작은 진료가 반복될 때 실제 부담액이 어떤지 같이 봐요."
+        }
+      ]
     },
     senior: {
-      headline: "나이가 있는 아이는<br>검진·관리 비용을<br>미리 챙기는 분이 많아요.",
-      sub: "미리 알아두면 마음이 편해질 수 있어요."
+      eyebrow: "나이가 조금 있는 아이라면",
+      headline: "검진·관리 비용과<br>갱신 흐름을<br>미리 같이 보면 좋아요.",
+      sub: "늦었다는 뜻은 아니에요. 지금 기준에서 가능한 선택지를 차분히 보는 단계예요.",
+      points: [
+        {
+          title: "가입 가능 나이",
+          description: "현재 나이에서 가능한 범위와 조건을 먼저 확인해요."
+        },
+        {
+          title: "갱신 보험료",
+          description: "시간이 지나며 보험료가 어떻게 달라질 수 있는지 같이 봐요."
+        }
+      ]
     }
   };
 
@@ -106,12 +150,21 @@
 
   function updatePersonalResult(trait) {
     var data = TRAITS[trait];
+    var eyebrows = document.querySelectorAll("[data-personal-eyebrow]");
     var titles = document.querySelectorAll("[data-personal-title]");
     var descriptions = document.querySelectorAll("[data-personal-description]");
+    var pointTitleFirst = document.querySelectorAll("[data-personal-point-title-1]");
+    var pointDescriptionFirst = document.querySelectorAll("[data-personal-point-description-1]");
+    var pointTitleSecond = document.querySelectorAll("[data-personal-point-title-2]");
+    var pointDescriptionSecond = document.querySelectorAll("[data-personal-point-description-2]");
 
     if (!data) {
       return;
     }
+
+    eyebrows.forEach(function (eyebrow) {
+      eyebrow.textContent = data.eyebrow;
+    });
 
     titles.forEach(function (title) {
       title.innerHTML = data.headline;
@@ -119,6 +172,22 @@
 
     descriptions.forEach(function (description) {
       description.textContent = data.sub;
+    });
+
+    pointTitleFirst.forEach(function (title) {
+      title.textContent = data.points[0].title;
+    });
+
+    pointDescriptionFirst.forEach(function (description) {
+      description.textContent = data.points[0].description;
+    });
+
+    pointTitleSecond.forEach(function (title) {
+      title.textContent = data.points[1].title;
+    });
+
+    pointDescriptionSecond.forEach(function (description) {
+      description.textContent = data.points[1].description;
     });
   }
 
@@ -146,56 +215,56 @@
     window.requestAnimationFrame(update);
   }
 
-function updatePetStat(pet) {
-  var data = PET_STATS[pet];
+  function updatePetStat(pet) {
+    var data = PET_STATS[pet];
 
-  if (!data) {
-    return;
-  }
+    if (!data) {
+      return;
+    }
 
-  var number = document.querySelector("[data-stat-number]");
-  var caption = document.querySelector("[data-stat-caption]");
-  var before = document.querySelector("[data-stat-before]");
-  var after = document.querySelector("[data-stat-after]");
-  var beforeBar = document.querySelector("[data-stat-before-bar]");
-  var afterBar = document.querySelector("[data-stat-after-bar]");
+    var number = document.querySelector("[data-stat-number]");
+    var caption = document.querySelector("[data-stat-caption]");
+    var before = document.querySelector("[data-stat-before]");
+    var after = document.querySelector("[data-stat-after]");
+    var beforeBar = document.querySelector("[data-stat-before-bar]");
+    var afterBar = document.querySelector("[data-stat-after-bar]");
 
-  if (number) {
-    animateNumber(number, data.after);
-  }
+    if (number) {
+      animateNumber(number, data.after);
+    }
 
-  if (caption) {
-    caption.textContent = data.caption;
-  }
+    if (caption) {
+      caption.textContent = data.caption;
+    }
 
-  if (before) {
-    before.textContent = data.before + "만원";
-  }
+    if (before) {
+      before.textContent = data.before + "만원";
+    }
 
-  if (after) {
-    after.textContent = data.after + "만원";
-  }
+    if (after) {
+      after.textContent = data.after + "만원";
+    }
 
-  if (beforeBar) {
-    beforeBar.style.width = "0";
-  }
+    if (beforeBar) {
+      beforeBar.style.width = "0";
+    }
 
-  if (afterBar) {
-    afterBar.style.width = "0";
-  }
+    if (afterBar) {
+      afterBar.style.width = "0";
+    }
 
-  window.requestAnimationFrame(function () {
     window.requestAnimationFrame(function () {
-      if (beforeBar) {
-        beforeBar.style.width = data.beforeRate + "%";
-      }
+      window.requestAnimationFrame(function () {
+        if (beforeBar) {
+          beforeBar.style.width = data.beforeRate + "%";
+        }
 
-      if (afterBar) {
-        afterBar.style.width = data.afterRate + "%";
-      }
+        if (afterBar) {
+          afterBar.style.width = data.afterRate + "%";
+        }
+      });
     });
-  });
-}
+  }
 
   if (flow && stage && steps.length) {
     stage.addEventListener("click", function (event) {

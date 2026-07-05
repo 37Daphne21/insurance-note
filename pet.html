@@ -124,7 +124,7 @@
             </div>
           </div>
           <div class="la-step__footer">
-            <button class="ui-button ui-button--primary" type="button" data-next>우리 아이는 어떤 편인지 보기</button>
+            <button class="ui-button ui-button--primary" type="button" data-next>어떤 상황이 생길 수 있을까요?</button>
           </div>
         </section>
 
@@ -245,13 +245,29 @@
         <section class="la-step la-step--personalized" data-step="4">
           <div class="la-step__body">
             <div class="la-step__body-inner">
-              <span class="ui-eyebrow">이런 아이는</span>
-              <h2 class="la-step__title" data-personal-title>활동량이 많은 아이는<br>관절·인대 쪽 병원을<br>찾는 일이 잦아요</h2>
-              <p class="la-step__description" data-personal-description>이런 상담도 자주 받아요.</p>
+              <span class="ui-eyebrow" data-personal-eyebrow>활동량이 많은 아이라면</span>
+              <h2 class="la-step__title" data-personal-title>관절·인대처럼<br>자주 움직이는 부위를<br>같이 살펴보면 좋아요</h2>
+              <p class="la-step__description" data-personal-description>위험하다는 뜻은 아니에요. 상담할 때 이런 부분을 미리 확인하면 더 편해요.</p>
+              <div class="ui-card-group" role="list">
+                <article class="ui-card ui-card--info" role="listitem">
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
+                  <div class="ui-card__body">
+                    <span class="ui-card__title" data-personal-point-title-1>통원·검사 기준</span>
+                    <p class="ui-card__desc" data-personal-point-description-1>자주 병원에 갈 때 실제로 부담하는 금액을 같이 봐요.</p>
+                  </div>
+                </article>
+                <article class="ui-card ui-card--info" role="listitem">
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
+                  <div class="ui-card__body">
+                    <span class="ui-card__title" data-personal-point-title-2>수술·입원 기준</span>
+                    <p class="ui-card__desc" data-personal-point-description-2>갑자기 큰 진료가 필요할 때 어디까지 준비되는지 확인해요.</p>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
           <div class="la-step__footer">
-            <button class="ui-button ui-button--primary" type="button" data-next>이야기 더 보기</button>
+            <button class="ui-button ui-button--primary" type="button" data-next>이런 부분을 함께 살펴볼게요</button>
           </div>
         </section>
 
@@ -512,10 +528,26 @@
               <div class="ui-card__content">이제 나이가 조금 있어요</div>
             </button>
           </div>
-          <div class="la-panel-result">
-            <div class="la-panel-result__eyebrow">이런 아이는</div>
-            <p class="la-panel-result__title" data-personal-title>왼쪽에서 우리 아이와 가까운 모습을 골라보세요.</p>
-            <p class="la-panel-result__description" data-personal-description>선택에 따라 이야기가 자연스럽게 이어져요.</p>
+          <div class="la-panel-result" aria-live="polite">
+            <div class="la-panel-result__eyebrow" data-personal-eyebrow>가까운 모습을 골라보면</div>
+            <p class="la-panel-result__title" data-personal-title>우리 아이 기준으로 같이 볼 부분이 정리돼요.</p>
+            <p class="la-panel-result__description" data-personal-description>진단이 아니라 상담 전에 생각해볼 기준을 가볍게 잡는 단계예요.</p>
+            <div class="ui-card-group" role="list">
+              <article class="ui-card ui-card--info" role="listitem">
+                <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
+                <div class="ui-card__body">
+                  <span class="ui-card__title" data-personal-point-title-1>생활 패턴 기준</span>
+                  <p class="ui-card__desc" data-personal-point-description-1>자주 걱정되는 상황을 먼저 확인해요.</p>
+                </div>
+              </article>
+              <article class="ui-card ui-card--info" role="listitem">
+                <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
+                <div class="ui-card__body">
+                  <span class="ui-card__title" data-personal-point-title-2>보장 확인 기준</span>
+                  <p class="ui-card__desc" data-personal-point-description-2>필요한 준비인지 부담 없이 비교해요.</p>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </div>
