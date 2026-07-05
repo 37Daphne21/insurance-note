@@ -352,70 +352,68 @@
   display: block;
   padding: 0;
   overflow: hidden;
+}
 
-  &.is-open {
-    .ui-card__arrow {
-      transform: rotate(180deg);
-    }
+.ui-card--accordion.is-open .ui-card__arrow {
+  transform: rotate(180deg);
+}
 
-    .ui-card__body {
-      opacity: 1;
-    }
-  }
+.ui-card--accordion.is-open .ui-card__body {
+  opacity: 1;
+}
 
-  .ui-card__button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    width: 100%;
-    padding: 1.125rem;
-    border: 0;
-    background: none;
-    color: inherit;
-    font: inherit;
-    text-align: left;
-    cursor: pointer;
-  }
+.ui-card--accordion .ui-card__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.125rem;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
 
-  .ui-card__arrow {
-    position: relative;
-    flex: 0 0 auto;
-    width: .75rem;
-    height: .75rem;
-    transition: transform .3s ease;
+.ui-card--accordion .ui-card__arrow {
+  position: relative;
+  flex: 0 0 auto;
+  width: .75rem;
+  height: .75rem;
+  transition: transform .3s ease;
+}
 
-    &::before,
-    &::after {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: .5rem;
-      height: .125rem;
-      border-radius: 999px;
-      background: currentColor;
-      content: "";
-    }
+.ui-card--accordion .ui-card__arrow::before,
+.ui-card--accordion .ui-card__arrow::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: .5rem;
+  height: .125rem;
+  border-radius: 999px;
+  background: currentColor;
+  content: "";
+}
 
-    &::before {
-      transform: translate(-75%, -50%) rotate(45deg);
-    }
+.ui-card--accordion .ui-card__arrow::before {
+  transform: translate(-75%, -50%) rotate(45deg);
+}
 
-    &::after {
-      transform: translate(-25%, -50%) rotate(-45deg);
-    }
-  }
+.ui-card--accordion .ui-card__arrow::after {
+  transform: translate(-25%, -50%) rotate(-45deg);
+}
 
-  .ui-card__body {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height .35s ease, opacity .25s ease;
-  }
+.ui-card--accordion .ui-card__body {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .35s ease, opacity .25s ease;
+}
 
-  .ui-card__desc {
-    padding: 0 1.125rem 1.125rem;
-  }
+.ui-card--accordion .ui-card__desc {
+  padding: 0 1.125rem 1.125rem;
 }
 
 @keyframes ui-card-rise {

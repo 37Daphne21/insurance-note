@@ -206,7 +206,7 @@
   animation: heart-beat 2.2s ease-in-out infinite;
 }
 
-.la-step--ending .la-step__visual .icon {
+.la-step--ending .la-step__visual img {
   display: block;
   width: 100%;
   height: auto;
