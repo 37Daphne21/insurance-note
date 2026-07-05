@@ -163,21 +163,27 @@
 - 디자인 시스템
 - Mobile Landing System 설계
 - Component System 구축
+- 펫보험 Mobile Landing 1차 개발
+- 펫보험 Mobile Landing 1차 검수
 
 ### 진행 중
 
-- 펫보험 Mobile Landing
-- Landing JavaScript
+- 펫보험 1차 컨펌 대기
+- Mobile 소스 정리 예정
+- 공통 Footer 버튼 리팩토링 예정
 
 ------------------------------------------------------------------------
 
 ## Roadmap
 
-1. 펫보험 Mobile Landing
-2. 펫보험 Desktop
-3. 암 · 뇌 · 심 랜딩
-4. 운전자보험 랜딩
-5. 화재보험 랜딩
-6. 어린이보험 랜딩
-7. 메인 랜딩
-8. Final Polish
+1. 펫보험 Mobile Landing 1차 컨펌
+2. 공통 Footer 버튼 리팩토링
+3. Mobile 소스 정리
+4. 펫보험 Desktop
+5. 자료가 많은 보험 랜딩부터 확장
+6. 암 · 뇌 · 심 랜딩
+7. 운전자보험 랜딩
+8. 화재보험 랜딩
+9. 어린이보험 랜딩
+10. 메인 랜딩
+11. Final Polish

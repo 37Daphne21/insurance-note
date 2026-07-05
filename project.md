@@ -475,21 +475,32 @@ JS 상태는 is-* 클래스로 관리한다.
 * 메인 페이지 보류
 * 펫보험 개별 랜딩을 Master Page로 우선 제작
 * 디자인 방향은 토스식 단계 진행형 UX로 재정렬
-* Mobile Step 구조 확정
-* Conversation Map 반영 완료
-* Opening Step 완료
-* Reality Step 완료
-* Scenario Step 완료
-* Choice Step 진행 중
+* Mobile Step 1차 개발 완료
+* Mobile 기준 1차 검수 완료
+* Desktop 작업 보류
+* Mobile 완료 후 Desktop 일괄 진행 예정
 
-### 진행 중
+### 완료
 
 - Mobile Component System 구축
 - ui-card 중심 Component 통합
-- Mobile Landing Step 개발 진행
-- Main Landing 보류
-- Desktop 작업 보류
-- Mobile 완료 후 Desktop 일괄 진행 예정
+- Opening Step 완료
+- Reality Step 완료
+- Scenario Step 완료
+- Choice Step 완료
+- Personal Step 완료
+- Coverage Check Step 완료
+- Process Step 완료
+- Advisor Step 완료
+- FAQ Step 완료
+- Ending Step 완료
+
+### 다음 작업
+
+- 1차 컨펌 대기
+- 공통 Footer 버튼 리팩토링
+- Mobile 소스 정리
+- 자료가 많은 보험 랜딩부터 확장 작업 진행
 
 ---
 
