@@ -526,3 +526,136 @@ Desktop : 720px~
     font-size: var(--font-caption);
   }
 }
+
+
+/* Desktop Development */
+@media (min-width: 720px) and (max-width: 1023px) {
+  .la-wrap {
+    padding: 0 var(--space-6);
+  }
+
+  .la-header__inner {
+    height: 4.25rem;
+  }
+
+  .la-hero {
+    padding: var(--space-10) 0;
+  }
+
+  .la-hero__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .la-hero__content {
+    max-width: 38rem;
+  }
+
+  .la-hero__inner > .ui-card {
+    max-width: 38rem;
+  }
+
+  .la-section {
+    padding: var(--space-10) 0;
+  }
+
+  .la-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .la-stats__item:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .la-panel {
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    gap: var(--space-6);
+  }
+
+  .la-panel-result {
+    min-height: 100%;
+    padding: var(--space-7);
+  }
+
+  .la-scenario-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .la-scenario-grid .ui-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .la-check-grid,
+  .la-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .la-advisor--wide {
+    grid-template-columns: minmax(15rem, .8fr) minmax(0, 1.2fr);
+    gap: var(--space-8);
+  }
+
+  .la-faq {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+@media (min-width: 1024px) {
+  .la-hero__content {
+    max-width: 34rem;
+  }
+
+  .la-hero__inner > .ui-card {
+    padding: var(--space-8);
+  }
+
+  .la-stats__item,
+  .la-scenario-grid .ui-card {
+    height: 100%;
+  }
+
+  .la-panel > .ui-card-group {
+    margin-top: 0;
+  }
+
+  .la-panel-result {
+    position: sticky;
+    top: 6.75rem;
+  }
+
+  .la-check-grid .ui-card,
+  .la-process-grid .ui-card {
+    height: 100%;
+  }
+
+  .la-faq__list {
+    align-self: start;
+  }
+}
+
+@media (hover: hover) and (min-width: 720px) {
+  .la-page--desktop .ui-button:hover {
+    transform: translateY(-.125rem);
+  }
+
+  .la-page--desktop .ui-button--text:hover {
+    color: var(--color-text);
+  }
+
+  .la-page--desktop [data-choice]:hover {
+    border-color: var(--color-primary);
+    background: var(--color-surface-soft);
+  }
+}
+
+@media (min-width: 720px) {
+  .la-page--desktop :is(a, button):focus-visible {
+    outline: .1875rem solid var(--color-primary);
+    outline-offset: .1875rem;
+  }
+
+  .la-page--desktop .ui-card--accordion .ui-card__button:focus-visible {
+    outline-offset: -.1875rem;
+  }
+}

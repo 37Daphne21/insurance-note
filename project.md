@@ -477,8 +477,8 @@ JS 상태는 is-* 클래스로 관리한다.
 * 디자인 방향은 토스식 단계 진행형 UX로 재정렬
 * Mobile Step 1차 개발 완료
 * Mobile 기준 1차 검수 완료
-* Desktop 작업 보류
-* Mobile 완료 후 Desktop 일괄 진행 예정
+* Desktop 1차 개발 진행 중
+* Mobile Master를 기준으로 Desktop 확장 진행
 
 ### 완료
 
@@ -497,9 +497,10 @@ JS 상태는 is-* 클래스로 관리한다.
 
 ### 다음 작업
 
-- 1차 컨펌 대기
+- Desktop 개발 진행
+- Desktop 디벨롭 및 QA
 - 공통 Footer 버튼 리팩토링
-- Mobile 소스 정리
+- Mobile / Desktop 소스 정리
 - 자료가 많은 보험 랜딩부터 확장 작업 진행
 
 ---
