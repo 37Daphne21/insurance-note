@@ -482,7 +482,7 @@
       <div class="la-wrap la-section__inner">
         <div class="la-section__content">
           <span class="ui-eyebrow">펫보험 · 보험한장</span>
-          <h1 class="la-section__title">우리 아이 병원비,<br>얼마가 나올지 몰라<br>더 걱정되니까</h1>
+          <h1 class="la-section__title">우리 아이 병원비,<br>얼마가 나올지 몰라 더 걱정되니까</h1>
           <p class="la-section__description">갑작스러운 진료비 앞에서 망설이지 않도록, 우리 아이에게 필요한 준비인지부터 가볍게 확인해보세요.</p>
           <div class="la-section__actions">
             <a class="ui-button ui-button--fit ui-button--kakao" href="#" data-kakao><svg class="icon"><use href="./assets/svg/icon.svg#icon-chat"></use></svg>카카오톡으로 편하게 이야기하기</a>
@@ -490,24 +490,50 @@
           </div>
         </div>
 
-        <div class="la-section__visual" aria-hidden="true">
-          <div class="la-section__pet la-section__pet--dog">
+        <div class="la-section__visual">
+          <svg class="la-section__story-line" viewBox="0 0 1100 380" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <marker id="opening-arrow" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto">
+                <path d="M0 .5L9 5L0 9.5Z"></path>
+              </marker>
+              <mask id="opening-line-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1100" height="380">
+                <path class="la-section__story-mask" pathLength="1" d="M44 220C116 175 180 182 238 226C302 274 362 272 421 225C476 181 535 184 592 230C650 276 700 250 735 210C748 195 754 181 760 170"></path>
+              </mask>
+            </defs>
+            <path class="la-section__story-path" d="M44 220C116 175 180 182 238 226C302 274 362 272 421 225C476 181 535 184 592 230C650 276 700 250 735 210C748 195 754 181 760 170" mask="url(#opening-line-mask)" marker-end="url(#opening-arrow)"></path>
+          </svg>
+
+          <div class="la-section__story-step la-section__story-step--one">
+            <div class="la-section__story-copy"><em>01</em><span>2년 새 <b>약 2배</b><br>늘어난 연간 치료비</span></div>
+            <strong class="la-section__story-number">1</strong>
+          </div>
+          <div class="la-section__story-step la-section__story-step--two">
+            <div class="la-section__story-copy"><em>02</em><span>MRI 검사비<br><b>최대 80~100만원대</b></span></div>
+            <strong class="la-section__story-number">2</strong>
+          </div>
+          <div class="la-section__story-step la-section__story-step--three">
+            <div class="la-section__story-copy"><em>03</em><span>수술·입원비<br>예고 없이 <b>커지는 부담</b></span></div>
+            <strong class="la-section__story-number">3</strong>
+          </div>
+
+          <div class="la-section__story-solution">
+            <span>✨ 그래서 미리 준비하면</span>
+            <strong>비용보다 치료 결정에<br><b>더 집중할 수 있어요</b></strong>
+          </div>
+          <div class="la-section__pet la-section__pet--dog" aria-hidden="true">
             <img src="./assets/images/pet/dog-set.png" alt="">
           </div>
-          <div class="la-section__pet la-section__pet--cat">
-            <img src="./assets/images/pet/cat-set.png" alt="">
-          </div>
-          <div class="la-section__badge la-section__badge--cost">
-            <span>2년 새</span>
-            <strong>약 1.9배</strong>
-            <small>늘어난 연간 치료비</small>
-          </div>
+
+          <a class="la-section__next" href="#desktop-reality">
+            <strong class="la-section__next-title">실제 병원비는 얼마나 나올까요?</strong>
+            <span class="la-section__next-arrow" aria-hidden="true">↓</span>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- PC Step 02: Reality -->
-    <section class="la-section la-section--reality la-section--soft">
+    <section id="desktop-reality" class="la-section la-section--reality la-section--soft">
       <div class="la-wrap">
         <div class="la-section__head">
           <h2 class="la-section__title">2년 새, 반려동물 치료비가<br>얼마나 올랐을까요</h2>
