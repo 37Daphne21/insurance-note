@@ -36,7 +36,33 @@
           <svg class="icon"><use href="./assets/svg/icon.svg#icon-chevron-left"></use></svg>
         </button>
         <span class="la-flow__logo" aria-hidden="true"></span>
+        <button class="la-flow__menu" type="button" aria-label="전체 메뉴 열기" aria-controls="mobile-navigation" aria-expanded="false" data-mobile-menu-open>
+          <svg class="icon"><use href="./assets/svg/icon.svg#icon-menu"></use></svg>
+        </button>
       </header>
+
+      <div class="ui-sheet ui-sheet--nav" id="mobile-navigation" role="dialog" aria-modal="true" aria-labelledby="mobile-navigation-title" hidden data-mobile-menu>
+        <button class="ui-sheet__backdrop" type="button" aria-label="전체 메뉴 닫기" data-mobile-menu-close></button>
+        <div class="ui-sheet__body">
+          <div class="ui-sheet__head">
+            <h2 class="ui-sheet__title" id="mobile-navigation-title">다른 보험 알아보기</h2>
+            <button class="ui-sheet__close" type="button" aria-label="전체 메뉴 닫기" data-mobile-menu-close>
+              <svg class="icon"><use href="./assets/svg/icon.svg#icon-close"></use></svg>
+            </button>
+          </div>
+          <a class="ui-sheet__link ui-sheet__link--home" href="./index.html">보험한장 홈</a>
+          <nav class="ui-sheet__menu" aria-label="보험 메뉴">
+            <a class="ui-sheet__link is-current" href="./pet.html" aria-current="page">펫보험</a>
+            <a class="ui-sheet__link" href="./driver.html">운전자보험</a>
+            <a class="ui-sheet__link" href="./fire.html">화재보험</a>
+            <a class="ui-sheet__link" href="./health.html">암·뇌·심보험</a>
+            <a class="ui-sheet__link" href="./child.html">어린이보험</a>
+          </nav>
+          <div class="ui-sheet__footer">
+            <a class="ui-button ui-button--kakao" href="#" data-kakao><svg class="icon"><use href="./assets/svg/icon.svg#icon-chat"></use></svg>카카오톡으로 상담하기</a>
+          </div>
+        </div>
+      </div>
 
       <div class="la-progress" role="progressbar" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1" aria-label="진행 단계" data-progress>
         <svg class="icon la-progress__item is-current"><use href="./assets/svg/icon.svg#icon-paw"></use></svg>
@@ -419,8 +445,35 @@
   <div class="la-page la-page--desktop">
     <header class="la-header">
       <div class="la-wrap la-header__inner">
-        <div class="la-header__wordmark">보험한장 <span>· 펫보험</span></div>
-        <a class="ui-button ui-button--primary la-header__button" href="#" data-kakao><svg class="icon"><use href="./assets/svg/icon.svg#icon-chat"></use></svg>카카오톡 상담하기</a>
+        <a class="la-header__wordmark" href="./pet.html">보험한장 <span>· 펫보험</span></a>
+
+        <div class="la-header__navigation">
+          <nav class="la-header__nav" aria-label="보험 메뉴">
+            <a class="la-header__nav-link is-current" href="./pet.html" aria-current="page">펫보험</a>
+            <a class="la-header__nav-link" href="./driver.html">운전자보험</a>
+            <a class="la-header__nav-link" href="./fire.html">화재보험</a>
+            <a class="la-header__nav-link" href="./health.html">암·뇌·심보험</a>
+            <a class="la-header__nav-link" href="./child.html">어린이보험</a>
+          </nav>
+
+          <div class="la-header__dropdown">
+            <button class="la-header__dropdown-button" type="button" aria-controls="desktop-insurance-menu" aria-expanded="false" data-insurance-menu-button>
+              다른 보험 알아보기
+              <svg class="icon"><use href="./assets/svg/icon.svg#icon-chevron-down"></use></svg>
+            </button>
+            <nav class="la-header__dropdown-menu" id="desktop-insurance-menu" aria-label="보험 메뉴" data-insurance-menu>
+              <a class="la-header__dropdown-link is-current" href="./pet.html" aria-current="page">펫보험</a>
+              <a class="la-header__dropdown-link" href="./driver.html">운전자보험</a>
+              <a class="la-header__dropdown-link" href="./fire.html">화재보험</a>
+              <a class="la-header__dropdown-link" href="./health.html">암·뇌·심보험</a>
+              <a class="la-header__dropdown-link" href="./child.html">어린이보험</a>
+            </nav>
+          </div>
+
+          <a class="la-header__home" href="./index.html">보험한장 홈</a>
+        </div>
+
+        <a class="ui-button ui-button--primary la-header__button" href="#" data-kakao><svg class="icon"><use href="./assets/svg/icon.svg#icon-chat"></use></svg>상담하기</a>
       </div>
     </header>
 

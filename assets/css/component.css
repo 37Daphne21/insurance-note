@@ -488,6 +488,119 @@
 }
 
 
+/* Sheet */
+.ui-sheet {
+  position: fixed;
+  z-index: 30;
+  inset: 0;
+}
+
+.ui-sheet__backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .38);
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+.ui-sheet__body {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: var(--space-5) var(--space-4) calc(var(--space-4) + env(safe-area-inset-bottom));
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background: var(--color-surface);
+  box-shadow: 0 -.5rem 2rem rgba(0, 0, 0, .08);
+  transform: translateY(100%);
+  transition: transform .3s cubic-bezier(.16, 1, .3, 1);
+}
+
+.ui-sheet.is-open .ui-sheet__backdrop {
+  opacity: 1;
+}
+
+.ui-sheet.is-open .ui-sheet__body {
+  transform: translateY(0);
+}
+
+.ui-sheet__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-2);
+}
+
+.ui-sheet__title {
+  color: var(--color-text);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.ui-sheet__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: var(--color-text-soft);
+}
+
+.ui-sheet__close .icon {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+.ui-sheet__menu {
+  display: grid;
+  gap: .25rem;
+  margin-top: var(--space-4);
+}
+
+.ui-sheet__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+.ui-sheet__link.is-current {
+  color: var(--color-primary-dark);
+  background: var(--color-surface-soft);
+}
+
+.ui-sheet__link.is-current::after {
+  content: "현재";
+  color: var(--color-primary-dark);
+  font-size: var(--font-caption);
+  font-weight: 700;
+}
+
+.ui-sheet__link--home {
+  margin: 0 var(--space-2);
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: .0625rem solid var(--color-line);
+  border-radius: 0;
+}
+
+.ui-sheet__link--home + .ui-sheet__menu {
+  margin-top: 0;
+  padding-top: var(--space-4);
+}
+
+.ui-sheet__footer {
+  margin-top: var(--space-4);
+}
+
+
 @media (hover: hover) and (min-width: 1024px) {
   .ui-button--primary:hover {
     filter: brightness(1.04);
@@ -497,4 +610,3 @@
     transform: translateX(.25rem);
   }
 }
-
