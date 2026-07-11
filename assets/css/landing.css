@@ -409,22 +409,22 @@ Desktop : 720px~
     font-size: .9375rem;
   }
 
-  .la-hero {
+  .la-section.la-section--opening {
     padding: var(--space-11) 0 var(--space-10);
   }
 
-  .la-hero__inner {
+  .la-section--opening .la-section__inner {
     display: grid;
     align-items: center;
     grid-template-columns: 1.1fr 1fr;
     gap: var(--space-10);
   }
 
-  .la-hero .la-section__title {
+  .la-section--opening .la-section__title {
     font-size: clamp(2rem, 1.2rem + 1.8vw, 3rem);
   }
 
-  .la-hero .la-section__description {
+  .la-section--opening .la-section__description {
     font-size: 1.0625rem;
   }
 
@@ -460,29 +460,29 @@ Desktop : 720px~
     gap: var(--space-3);
   }
 
-  .la-stats {
+  .la-section--reality .la-section__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-6);
   }
 
-  .la-stats__item {
+  .la-section--reality .la-section__item {
     padding: var(--space-8);
     background: var(--color-surface);
   }
 
-  .la-panel {
+  .la-section--choice .la-section__panel {
     display: grid;
     align-items: start;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-9);
   }
 
-  .la-panel .ui-panel {
+  .la-section--choice .la-section__panel .ui-panel {
     margin-top: 0;
   }
 
-  .la-panel-result {
+  .la-section--choice .la-section__result {
     display: flex;
     min-height: 17.5rem;
     flex-direction: column;
@@ -494,14 +494,14 @@ Desktop : 720px~
     box-shadow: var(--shadow-card);
   }
 
-  .la-panel-result__eyebrow {
+  .la-section--choice .la-section__result-eyebrow {
     margin-bottom: var(--space-3);
     color: var(--color-primary-dark);
     font-size: var(--font-caption);
     font-weight: 700;
   }
 
-  .la-panel-result__title {
+  .la-section--choice .la-section__result-title {
     margin: 0 0 var(--space-3);
     color: var(--color-text);
     font-size: 1.375rem;
@@ -509,7 +509,7 @@ Desktop : 720px~
     line-height: 1.5;
   }
 
-  .la-panel-result__description {
+  .la-section--choice .la-section__result-description {
     margin: 0;
     color: var(--color-text-soft);
     font-size: .9375rem;
@@ -565,40 +565,40 @@ Desktop : 720px~
 
 
 
-  .la-scenario-grid,
-  .la-check-grid,
-  .la-process-grid {
+  .la-section--scenario .la-section__grid,
+  .la-section--coverage .la-section__grid,
+  .la-section--process .la-section__grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-6);
   }
 
-  .la-scenario-grid .ui-card {
+  .la-section--scenario .la-section__grid .ui-card {
     padding: var(--space-7);
   }
 
-  .la-scenario-emphasis {
+  .la-section--scenario .la-section__emphasis {
     margin-top: var(--space-6);
     text-align: center;
   }
 
-  .la-check-grid .ui-card,
-  .la-process-grid .ui-card {
+  .la-section--coverage .la-section__grid .ui-card,
+  .la-section--process .la-section__grid .ui-card {
     padding: var(--space-6);
   }
 
-  .la-faq {
+  .la-section--faq .la-section__inner {
     display: grid;
     align-items: start;
     grid-template-columns: .8fr 1.2fr;
     gap: var(--space-10);
   }
 
-  .la-faq .la-section__head {
+  .la-section--faq .la-section__head {
     margin-bottom: 0;
   }
 
-  .la-faq__list {
+  .la-section--faq .la-section__list {
     margin-top: 0;
   }
 
@@ -613,13 +613,13 @@ Desktop : 720px~
     align-items: center;
   }
 
-  .la-ending__visual {
+  .la-section--ending .la-section__visual {
     width: 7rem;
     margin-bottom: var(--space-6);
     animation: heart-beat 2.2s ease-in-out infinite;
   }
 
-  .la-ending__visual img {
+  .la-section--ending .la-section__visual img {
     display: block;
     width: 100%;
     height: auto;
@@ -656,20 +656,20 @@ Desktop : 720px~
     margin-left: var(--space-3);
   }
 
-  .la-hero {
+  .la-section.la-section--opening {
     padding: var(--space-10) 0;
   }
 
-  .la-hero__inner {
+  .la-section--opening .la-section__inner {
     grid-template-columns: 1fr;
     gap: var(--space-8);
   }
 
-  .la-hero__content {
+  .la-section--opening .la-section__content {
     max-width: 38rem;
   }
 
-  .la-hero__inner > .ui-card {
+  .la-section--opening .la-section__summary {
     max-width: 38rem;
   }
 
@@ -677,34 +677,34 @@ Desktop : 720px~
     padding: var(--space-10) 0;
   }
 
-  .la-stats {
+  .la-section--reality .la-section__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .la-stats__item:first-child {
+  .la-section--reality .la-section__item:first-child {
     grid-column: 1 / -1;
   }
 
-  .la-panel {
+  .la-section--choice .la-section__panel {
     grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
     gap: var(--space-6);
   }
 
-  .la-panel-result {
+  .la-section--choice .la-section__result {
     min-height: 100%;
     padding: var(--space-7);
   }
 
-  .la-scenario-grid {
+  .la-section--scenario .la-section__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .la-scenario-grid .ui-card:last-child {
+  .la-section--scenario .la-section__grid .ui-card:last-child {
     grid-column: 1 / -1;
   }
 
-  .la-check-grid,
-  .la-process-grid {
+  .la-section--coverage .la-section__grid,
+  .la-section--process .la-section__grid {
     grid-template-columns: 1fr;
   }
 
@@ -713,7 +713,7 @@ Desktop : 720px~
     gap: var(--space-8);
   }
 
-  .la-faq {
+  .la-section--faq .la-section__inner {
     grid-template-columns: 1fr;
     gap: var(--space-8);
   }
@@ -732,34 +732,34 @@ Desktop : 720px~
     margin-left: var(--space-4);
   }
 
-  .la-hero__content {
+  .la-section--opening .la-section__content {
     max-width: 34rem;
   }
 
-  .la-hero__inner > .ui-card {
+  .la-section--opening .la-section__summary {
     padding: var(--space-8);
   }
 
-  .la-stats__item,
-  .la-scenario-grid .ui-card {
+  .la-section--reality .la-section__item,
+  .la-section--scenario .la-section__grid .ui-card {
     height: 100%;
   }
 
-  .la-panel > .ui-card-group {
+  .la-section--choice .la-section__panel > .ui-card-group {
     margin-top: 0;
   }
 
-  .la-panel-result {
+  .la-section--choice .la-section__result {
     position: sticky;
     top: 6.75rem;
   }
 
-  .la-check-grid .ui-card,
-  .la-process-grid .ui-card {
+  .la-section--coverage .la-section__grid .ui-card,
+  .la-section--process .la-section__grid .ui-card {
     height: 100%;
   }
 
-  .la-faq__list {
+  .la-section--faq .la-section__list {
     align-self: start;
   }
 }
