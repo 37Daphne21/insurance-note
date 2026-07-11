@@ -337,13 +337,11 @@
 
     if (backButton) {
       backButton.addEventListener("click", function () {
-
         if (
           current === 0 &&
           petOpening &&
           petOpening.classList.contains("is-selected")
         ) {
-
           petOpening.classList.remove("is-selected");
           petOpening.classList.add("is-selecting");
           petOpening.removeAttribute("data-pet");
@@ -362,12 +360,31 @@
     }
 
     renderProgress(0);
+
     document.querySelectorAll(".is-open [data-accordion-panel]").forEach(function (panel) {
       panel.style.maxHeight = panel.scrollHeight + "px";
     });
   }
 
   document.addEventListener("click", function (event) {
+    var desktopAccordionButton = event.target.closest(".la-page--desktop [data-accordion-button]");
+
+    if (desktopAccordionButton) {
+      var desktopAccordionItem = desktopAccordionButton.closest("[data-accordion-item]");
+      var desktopAccordionPanel = desktopAccordionItem ? desktopAccordionItem.querySelector("[data-accordion-panel]") : null;
+      var isDesktopAccordionOpen = desktopAccordionItem && desktopAccordionItem.classList.contains("is-open");
+
+      if (!desktopAccordionItem || !desktopAccordionPanel) {
+        return;
+      }
+
+      desktopAccordionItem.classList.toggle("is-open", !isDesktopAccordionOpen);
+      desktopAccordionButton.setAttribute("aria-expanded", isDesktopAccordionOpen ? "false" : "true");
+      desktopAccordionPanel.style.maxHeight = isDesktopAccordionOpen ? null : desktopAccordionPanel.scrollHeight + "px";
+
+      return;
+    }
+
     var desktopChoice = event.target.closest(".la-page--desktop [data-choice]");
 
     if (!desktopChoice) {

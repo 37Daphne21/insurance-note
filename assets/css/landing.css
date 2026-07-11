@@ -453,6 +453,68 @@ Desktop : 720px~
     align-items: center;
   }
 
+
+
+  .la-scenario-grid,
+  .la-check-grid,
+  .la-process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  .la-scenario-grid .ui-card {
+    padding: var(--space-7);
+  }
+
+  .la-scenario-emphasis {
+    margin-top: var(--space-6);
+    text-align: center;
+  }
+
+  .la-check-grid .ui-card,
+  .la-process-grid .ui-card {
+    padding: var(--space-6);
+  }
+
+  .la-faq {
+    display: grid;
+    align-items: start;
+    grid-template-columns: .8fr 1.2fr;
+    gap: var(--space-10);
+  }
+
+  .la-faq .la-section__head {
+    margin-bottom: 0;
+  }
+
+  .la-faq__list {
+    margin-top: 0;
+  }
+
+  .la-section--ending {
+    text-align: center;
+    background: var(--color-surface-soft);
+  }
+
+  .la-section--ending .la-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .la-ending__visual {
+    width: 7rem;
+    margin-bottom: var(--space-6);
+    animation: heart-beat 2.2s ease-in-out infinite;
+  }
+
+  .la-ending__visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   .la-footer {
     padding: var(--space-8) 0;
     border-top: .0625rem solid var(--color-line);
