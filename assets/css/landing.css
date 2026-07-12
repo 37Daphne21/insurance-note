@@ -899,8 +899,8 @@ Desktop : 720px~
   .la-section--faq .la-section__inner {
     display: grid;
     align-items: start;
-    grid-template-columns: .8fr 1.2fr;
-    gap: var(--space-10);
+    grid-template-columns: .72fr 1.28fr;
+    gap: var(--space-11);
   }
 
   .la-section--faq .la-section__head {
@@ -908,7 +908,12 @@ Desktop : 720px~
   }
 
   .la-section--faq .la-section__list {
+    gap: var(--space-4);
     margin-top: 0;
+  }
+
+  .la-section--faq .ui-card__media em {
+    font-size: .875rem;
   }
 
   .la-section--ending {
@@ -939,10 +944,31 @@ Desktop : 720px~
     border-top: .0625rem solid var(--color-line);
   }
 
-  .la-footer p {
-    margin: .25rem 0;
+  .la-footer__inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-8);
+  }
+
+  .la-footer__title {
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .la-footer__message,
+  .la-footer__notice {
+    margin-top: var(--space-2);
     color: var(--color-text-faint);
     font-size: var(--font-caption);
+    line-height: 1.6;
+  }
+
+  .la-footer__notice {
+    max-width: 32rem;
+    margin-top: 0;
+    text-align: right;
   }
 
 
@@ -1059,6 +1085,16 @@ Desktop : 720px~
     grid-template-columns: 1fr;
     gap: var(--space-8);
   }
+
+  .la-footer__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .la-footer__notice {
+    text-align: left;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1083,13 +1119,13 @@ Desktop : 720px~
     margin-top: 0;
   }
 
-  .la-section--choice .la-section__result {
-    position: sticky;
-    top: 6.75rem;
-  }
-
   .la-section--faq .la-section__list {
     align-self: start;
+  }
+
+  .la-section--faq .la-section__head {
+    position: sticky;
+    top: 7rem;
   }
 }
 
