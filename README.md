@@ -129,8 +129,11 @@
 3. Scenario
 4. Choice
 5. Personal
-6. Trust
-7. CTA
+6. Coverage Check
+7. Process
+8. Advisor
+9. FAQ
+10. Ending
 
 ------------------------------------------------------------------------
 
@@ -163,27 +166,24 @@
 - 디자인 시스템
 - Mobile Landing System 설계
 - Component System 구축
-- 펫보험 Mobile Landing 1차 개발
-- 펫보험 Mobile Landing 1차 검수
+- 펫보험 Mobile Landing 개발 완료
+- 펫보험 Desktop Landing 개발 완료
+- 펫보험 Mobile / Desktop QA 완료
 
 ### 진행 중
 
-- 펫보험 1차 컨펌 대기
-- Mobile 소스 정리 예정
-- 공통 Footer 버튼 리팩토링 예정
+- 카카오톡 채널 연동
+- 보험별 랜딩 제작
+- Main Landing 제작
 
 ------------------------------------------------------------------------
 
 ## Roadmap
 
-1. 펫보험 Mobile Landing 1차 컨펌
-2. 공통 Footer 버튼 리팩토링
-3. Mobile 소스 정리
-4. 펫보험 Desktop
-5. 자료가 많은 보험 랜딩부터 확장
-6. 암 · 뇌 · 심 랜딩
-7. 운전자보험 랜딩
-8. 화재보험 랜딩
-9. 어린이보험 랜딩
-10. 메인 랜딩
-11. Final Polish
+1. 카카오톡 채널 연동
+2. 운전자보험 랜딩
+3. 화재보험 랜딩
+4. 암 · 뇌 · 심 랜딩
+5. 어린이보험 랜딩
+6. 메인 랜딩
+7. Final Polish

@@ -12,6 +12,10 @@
 * PC / Mobile 반응형
 * Mobile 우선 설계
 
+### 개발 순서
+
+펫보험(Master Page) → 보험별 랜딩 확장 → Main Landing(index.html)
+
 ---
 
 ## 최종 방향
@@ -472,13 +476,14 @@ JS 상태는 is-* 클래스로 관리한다.
 
 ## 현재 상태
 
-* 메인 페이지 보류
-* 펫보험 개별 랜딩을 Master Page로 우선 제작
+* 메인 랜딩(index.html)은 프로젝트에 포함되지만, 보험별 랜딩 페이지 개발 완료 후 마지막 단계에서 진행한다.
+* 펫보험 개별 랜딩을 Master Page로 우선 제작한다.
+* 이후 다른 보험 랜딩을 동일한 구조로 확장한 뒤 Main Landing을 제작한다.
 * 디자인 방향은 토스식 단계 진행형 UX로 재정렬
 * Mobile Step 1차 개발 완료
 * Mobile 기준 1차 검수 완료
-* Desktop 1차 개발 진행 중
-* Mobile Master를 기준으로 Desktop 확장 진행
+* Desktop 1차 개발 진행 완료
+* Mobile / Desktop Master Page 완료
 
 ### 완료
 
@@ -494,14 +499,24 @@ JS 상태는 is-* 클래스로 관리한다.
 - Advisor Step 완료
 - FAQ Step 완료
 - Ending Step 완료
+- Desktop Header Navigation 완료
+- Desktop Hero 완료
+- Desktop Reality 완료
+- Desktop Scenario 완료
+- Desktop Choice 완료
+- Desktop Coverage Check 완료
+- Desktop Process 완료
+- Desktop Advisor 완료
+- Desktop FAQ 완료
+- Desktop Ending 완료
+- Footer 완료
+- Mobile / Desktop QA 완료
 
 ### 다음 작업
 
-- Desktop 개발 진행
-- Desktop 디벨롭 및 QA
-- 공통 Footer 버튼 리팩토링
-- Mobile / Desktop 소스 정리
-- 자료가 많은 보험 랜딩부터 확장 작업 진행
+- 카카오톡 채널 연동
+- 보험별 랜딩 확장
+- Main Landing 제작
 
 ---
 
