@@ -4,7 +4,6 @@
 .pet-page {
   --color-bg: #faf6ec;
   --color-bg-deep: #f3ecdc;
-  --color-surface: var(--color-white);
   --color-surface-soft: #fffcf6;
   --color-text: #2b2622;
   --color-text-soft: #6e6457;
@@ -16,12 +15,9 @@
   --color-primary-ink: #3a2a12;
   --color-accent: #e2725b;
   --color-accent-soft: #f8dcd3;
-  --color-kakao: #fee500;
-  --color-kakao-ink: #371d1e;
   --color-header-bg: rgba(250, 246, 236, .92);
   --shadow-card: 0 .875rem 2.25rem -1rem rgba(58, 42, 18, .22);
   --shadow-button: 0 .625rem 1.375rem -.625rem rgba(201, 127, 30, .55);
-  --shadow-kakao: 0 .625rem 1.375rem -.625rem rgba(254, 229, 0, .7);
 }
 
 

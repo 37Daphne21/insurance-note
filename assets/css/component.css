@@ -203,8 +203,7 @@
   min-width: 0;
 }
 
-.ui-card__label,
-.ui-card__title {
+.ui-card__label {
   display: block;
   color: var(--color-text-soft);
   font-size: var(--font-caption);
@@ -212,6 +211,7 @@
 }
 
 .ui-card__title {
+  display: block;
   color: var(--color-text);
   font-size: .9375rem;
   font-weight: 800;

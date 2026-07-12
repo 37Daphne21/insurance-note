@@ -830,17 +830,6 @@ Desktop : 720px~
     line-height: 1.75;
   }
 
-  .la-section--contact {
-    padding: var(--space-8) 0;
-    text-align: center;
-  }
-
-  .la-section--contact .la-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .la-section--scenario .la-section__grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
