@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Basic -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title -->
+  <title>보험한장 · 암·뇌·심보험 랜딩</title>
+
+  <!-- SEO -->
+  <meta name="description" content="보험한장 암·뇌·심보험 개별 랜딩 — 모바일 스텝형 플로우와 데스크톱 정보탐색형 레이아웃">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/variable.css">
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/component.css">
+  <link rel="stylesheet" href="./assets/css/landing.css">
+  <link rel="stylesheet" href="./assets/css/health.css">
+
+  <!-- JS -->
+  <script src="./assets/js/common.js" defer></script>
+  <script src="./assets/js/health.js" defer></script>
+</head>
+<body class="health-page">
+  <!-- Mobile Flow -->
+  <main class="la-flow la-flow--mobile health-flow" data-flow>
+    <div class="la-flow__shell">
+      <header class="la-flow__topbar">
+        <button class="la-flow__back" type="button" aria-label="이전 단계로" data-back>
+          <svg class="icon"><use href="./assets/svg/icon.svg#icon-chevron-left"></use></svg>
+        </button>
+        <span class="la-flow__logo" aria-hidden="true"></span>
+        <button class="la-flow__menu" type="button" aria-label="전체 메뉴 열기" aria-controls="mobile-navigation" aria-expanded="false" data-mobile-menu-open>
+          <svg class="icon"><use href="./assets/svg/icon.svg#icon-menu"></use></svg>
+        </button>
+      </header>
+
+      <div class="ui-sheet ui-sheet--nav" id="mobile-navigation" role="dialog" aria-modal="true" aria-labelledby="mobile-navigation-title" hidden data-mobile-menu>
+        <button class="ui-sheet__backdrop" type="button" aria-label="전체 메뉴 닫기" data-mobile-menu-close></button>
+        <div class="ui-sheet__body">
+          <div class="ui-sheet__head">
+            <h2 class="ui-sheet__title" id="mobile-navigation-title">다른 보험 알아보기</h2>
+            <button class="ui-sheet__close" type="button" aria-label="전체 메뉴 닫기" data-mobile-menu-close>
+              <svg class="icon"><use href="./assets/svg/icon.svg#icon-close"></use></svg>
+            </button>
+          </div>
+          <a class="ui-sheet__link ui-sheet__link--home" href="./index.html">보험한장 홈</a>
+          <nav class="ui-sheet__menu" aria-label="보험 메뉴">
+            <a class="ui-sheet__link" href="./pet.html">펫보험</a>
+            <a class="ui-sheet__link" href="./driver.html">운전자보험</a>
+            <a class="ui-sheet__link" href="./fire.html">화재보험</a>
+            <a class="ui-sheet__link is-current" href="./health.html" aria-current="page">암·뇌·심보험</a>
+            <a class="ui-sheet__link" href="./child.html">어린이보험</a>
+          </nav>
+          <div class="ui-sheet__footer">
+            <a class="ui-button ui-button--kakao" href="#" data-kakao><svg class="icon"><use href="./assets/svg/icon.svg#icon-chat"></use></svg>카카오톡으로 상담하기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="la-progress" role="progressbar" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1" aria-label="진행 단계" data-progress>
+        <svg class="icon la-progress__item is-current"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg>
+        <svg class="icon la-progress__item"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg>
+      </div>
+      <span class="sr-only" aria-live="polite" data-progress-text>1단계 / 10단계</span>
+
+      <div class="la-flow__stage" data-stage>
+        <!-- MO Step 01: Opening -->
+        <section class="la-step la-step--opening is-active" data-step="0">
+          <div class="la-step__body">
+            <div class="la-step__body-inner">
+              <div class="health-opening">
+                <span class="ui-eyebrow">암·뇌·심 치료비 플랜</span>
+                <h1 class="la-step__title">진단금보다<br>치료비가 더 중요해졌어요</h1>
+                <p class="la-step__description">치료는 한 번으로 끝나지 않으니까요.<br>복잡한 내용은 쉽게 정리해드릴게요.</p>
+                <div class="ui-card-group">
+                  <article class="ui-card ui-card--info">
+                    <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg></span>
+                    <div class="ui-card__body">
+                      <span class="ui-card__title">반복되는 치료까지</span>
+                      <p class="ui-card__desc">수술·약물·방사선처럼 이어지는 치료비를 함께 봐요.</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="la-step__footer">
+            <button class="ui-button ui-button--primary" type="button" data-next>왜 치료비가 중요해졌는지 보기</button>
+          </div>
+        </section>
+
+        <!-- MO Step 02: Reality -->
+        <section class="la-step la-step--reality" data-step="1">
+          <div class="la-step__body">
+            <div class="la-step__body-inner">
+              <span class="ui-eyebrow">치료비의 변화</span>
+              <h2 class="la-step__title">진단 이후에도<br>치료비는 계속될 수 있어요</h2>
+              <p class="la-step__description">수술 한 번으로 끝나는 게 아니라<br>약물·방사선 치료가 이어질 수 있어요.</p>
+              <div class="ui-card-group" role="list">
+                <article class="ui-card ui-card--info" role="listitem">
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-stethoscope"></use></svg></span>
+                  <div class="ui-card__body">
+                    <span class="ui-card__title">암 치료</span>
+                    <p class="ui-card__desc">수술·항암약물·방사선처럼 치료 방법별 비용을 함께 살펴봐요.</p>
+                  </div>
+                </article>
+                <article class="ui-card ui-card--info" role="listitem">
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg></span>
+                  <div class="ui-card__body">
+                    <span class="ui-card__title">뇌·심장 치료</span>
+                    <p class="ui-card__desc">한 번의 진단금보다 반복되는 수술과 치료 기준이 중요해요.</p>
+                  </div>
+                </article>
+              </div>
+              <p class="ui-source">보장 금액과 지급 조건은 상품별로 달라질 수 있어요.</p>
+            </div>
+          </div>
+          <div class="la-step__footer">
+            <button class="ui-button ui-button--primary" type="button" data-next>어떤 치료가 이어지는지 보기</button>
+          </div>
+        </section>
+
+        <!-- MO Step 03: Scenario -->
+        <section class="la-step la-step--scenario" data-step="2">
+          <div class="la-step__body">
+            <div class="la-step__body-inner">
+              <span class="ui-eyebrow">치료비가 체감되는 순간</span>
+              <h2 class="la-step__title">진단을 받으면,<br>치료는 한 가지가 아니에요</h2>
+              <p class="la-step__description">진단도 걱정인데,<br>수술 이후 이어질 치료비까지 함께 생각해야 해요.</p>
+              <div class="ui-card-group ui-card-group--scroll" role="list">
+                <article class="ui-card" role="listitem">
+                  <div class="ui-card__head">
+                    <strong class="ui-card__point"><span class="ui-card__point-number">180</span><span class="ui-card__point-unit">만원</span></strong>
+                    <span class="ui-card__media"><em><svg class="icon"><use href="./assets/svg/icon.svg#icon-activity"></use></svg></em></span>
+                  </div>
+                  <div class="ui-card__body">
+                    <strong class="ui-card__title">암 수술이 필요할 때</strong>
+                    <p class="ui-card__desc">수술 이후 항암치료와 회복 과정이 이어질 수 있어요.</p>
+                  </div>
+                  <div class="ui-chip-group">
+                    <span class="ui-chip">수술</span>
+                    <span class="ui-chip">항암약물</span>
+                    <span class="ui-chip">방사선</span>
+                  </div>
+                </article>
+
+                <article class="ui-card" role="listitem">
+                  <div class="ui-card__head">
+                    <strong class="ui-card__point"><span class="ui-card__point-number">70</span><span class="ui-card__point-unit">만원</span></strong>
+                    <span class="ui-card__media"><em><svg class="icon"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg></em></span>
+                  </div>
+                  <div class="ui-card__body">
+                    <strong class="ui-card__title">뇌·심장 치료가 필요할 때</strong>
+                    <p class="ui-card__desc">응급 치료와 수술 이후 관리까지 함께 확인해야 해요.</p>
+                  </div>
+                  <div class="ui-chip-group">
+                    <span class="ui-chip">뇌 수술</span>
+                    <span class="ui-chip">심장 수술</span>
+                    <span class="ui-chip">혈전용해</span>
+                  </div>
+                </article>
+
+                <article class="ui-card" role="listitem">
+                  <div class="ui-card__head">
+                    <strong class="ui-card__point"><span class="ui-card__point-number">15</span><span class="ui-card__point-unit">만원</span></strong>
+                    <span class="ui-card__media"><em><svg class="icon"><use href="./assets/svg/icon.svg#icon-stethoscope"></use></svg></em></span>
+                  </div>
+                  <div class="ui-card__body">
+                    <strong class="ui-card__title">치료가 반복될 때</strong>
+                    <p class="ui-card__desc">약물·방사선 치료가 길어지면 부담도 이어질 수 있어요.</p>
+                  </div>
+                  <div class="ui-chip-group">
+                    <span class="ui-chip">재진</span>
+                    <span class="ui-chip">약물치료</span>
+                    <span class="ui-chip">정기검사</span>
+                  </div>
+                </article>
+              </div>
+              <div class="ui-card-group">
+                <div class="ui-card ui-card--emphasis">
+                  <span class="ui-card__title">그래서 암·뇌·심보험은</span>
+                  <strong class="ui-card__desc">진단금만 보기보다,<br>반복되는 치료비까지 함께 보는 게 좋아요.</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="la-step__footer">
+            <button class="ui-button ui-button--primary" type="button" data-next>내 걱정 기준으로 보기</button>
+          </div>
+        </section>
+
+        <!-- MO Step 04: Choice -->
+        <section class="la-step la-step--choice" data-step="3">
+          <div class="la-step__body">
+            <div class="la-step__body-inner">
+              <span class="ui-eyebrow">가볍게 골라주세요</span>
+              <h2 class="la-step__title">치료를 준비할 때<br>무엇이 가장 걱정되나요?</h2>
+              <p class="la-step__description">지금 가장 마음에 걸리는 부분을 하나 골라주세요.</p>
+              <div class="ui-card-group" data-choice-list>
+                <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="active">
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-activity"></use></svg></span>
+                  <div class="ui-card__content">수술비가 걱정돼요</div>
+                </button>
+                <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="curious">
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-search"></use></svg></span>
+                  <div class="ui-card__content">항암치료가 걱정돼요</div>
+                </button>
+                <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="calm">
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg></span>
+                  <div class="ui-card__content">뇌·심장 치료가 걱정돼요</div>
+                </button>
+                <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="senior">
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
+                  <div class="ui-card__content">보험료가 걱정돼요</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- MO Step 05: Personalized -->
+        <section class="la-step la-step--personalized" data-step="4">
+          <div class="la-step__body">
+            <div class="la-step__body-inner">
+              <span class="ui-eyebrow" data-personal-eyebrow>수술비가 가장 걱정된다면</span>
+              <h2 class="la-step__title" data-personal-title>암·뇌·심 수술비가<br>수술할 때마다 준비되는지<br>먼저 살펴보면 좋아요.</h2>
+              <p class="la-step__description" data-personal-description>진단금과 별개로 실제 치료 과정에서 반복 지급되는 구조인지 확인해요.</p>
+              <div class="ui-card-group" role="list">
+                <article class="ui-card ui-card--info" role="listitem">
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
+                  <div class="ui-card__body">
+                    <span class="ui-card__title" data-personal-point-title-1>수술 반복 보장</span>
+                    <p class="ui-card__desc" data-personal-point-description-1>질병별·수술별 지급 기준과 횟수를 같이 확인해요.</p>
+                  </div>
+                </article>
+                <article class="ui-card ui-card--info" role="listitem">
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
+                  <div class="ui-card__body">
+                    <span class="ui-card__title" data-personal-point-title-2>급여·비급여 범위</span>
+                    <p class="ui-card__desc" data-personal-point-description-2>치료 방법에 따라 빠지는 항목이 없는지 살펴봐요.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="la-step__footer">
+            <button class="ui-button ui-button--primary" type="button" data-next>비교 기준 보기</button>
+          </div>
+        </section>
+
+        <!-- MO Step 06: Coverage Check -->
+        <section class="la-step la-step--coverage" data-step="5">
+          <div class="la-step__body">
+            <div class="la-step__body-inner">
+              <span class="ui-eyebrow">함께 살펴볼 부분</span>
+              <h2 class="la-step__title">내 치료 계획에<br>맞는 준비인지<br>보장 범위부터 살펴봐요</h2>
+              <p class="la-step__description">상담에서는 어렵게 비교하기보다<br>아래 세 가지를 한 번에 정리해요.</p>
+              <div class="ui-card-group" role="list">
+                <div class="ui-card ui-card--single" role="listitem">
+                  <span class="ui-card__media"><em>01</em></span>
+                  <div class="ui-card__content">진단 후 실제 치료비가 어디까지 이어지는지</div>
+                </div>
+                <div class="ui-card ui-card--single" role="listitem">
+                  <span class="ui-card__media"><em>02</em></span>
+                  <div class="ui-card__content">암·뇌·심 수술과 반복 치료를 함께 보는지</div>
+                </div>
+                <div class="ui-card ui-card--single" role="listitem">
+                  <span class="ui-card__media"><em>03</em></span>
+                  <div class="ui-card__content">갱신과 보험료가 어떻게 달라지는지</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="la-step__footer">
+            <button class="ui-button ui-button--primary" type="button" data-next>한 장으로 정리하는 방법 보기</button>
+          </div>
+        </section>
+
+        <!-- MO Step 07: Process -->
+        <section class="la-step la-step--process" data-step="6">
+          <div class="la-step__body">
+            <div class="la-step__body-inner">
+              <span class="ui-eyebrow">상담은 이렇게 진행돼요</span>
+              <h2 class="la-step__title">복잡한 보험 설명보다,<br>내게 필요한 내용만<br>함께 정리해드려요.</h2>
+              <div class="ui-card-group" role="list">
+                <div class="ui-card ui-card--single" role="listitem">
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
+                  <div class="ui-card__content">현재 보장과 걱정되는 치료를 먼저 들어요</div>
+                </div>
+                <div class="ui-card ui-card--single" role="listitem">
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
+                  <div class="ui-card__content">진단금과 치료비의 균형을 함께 살펴봐요</div>
+                </div>
+                <div class="ui-card ui-card--single" role="listitem">
+                  <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
+                  <div class="ui-card__content">천천히 비교하고 편하게 결정하세요</div>
+                </div>
+              </div>
+              <p class="la-step__description la-step__description--spaced">가입을 서두르기보다<br>내게 필요한 준비인지<br>함께 이야기해봐요.</p>
+            </div>
+          </div>
+          <div class="la-step__footer">
+            <button class="ui-button ui-button--primary" type="button" data-next>누가 함께하는지 보기</button>
+          </div>
+        </section>
+
+        <!-- MO Step 08: Advisor -->
+        <section class="la-step la-step--advisor" data-step="7">
+          <div class="la-step__body">
+            <div class="la-step__body-inner">
+              <article class="la-advisor">
+                <span class="ui-eyebrow">함께 이야기할 사람입니다</span>
+                <div class="la-advisor__photo">
+                  <img src="./assets/images/common/advisor.png" alt="양영롱 AP 프로필">
+                </div>
+                <div class="la-advisor__name">양영롱 AP</div>
+                <div class="la-advisor__role">AFG 어센틱금융그룹<br>생명·손해보험 전문 컨설턴트</div>
+                <p class="la-advisor__quote">보험은 바꾸는 것보다<br><b class="text-highlight">“안 바꿔도 되는지”</b><br>확인하는게 먼저입니다.</p>
+                <p class="la-advisor__description">가입을 권하기보다<br>내게 필요한 준비인지부터<br>함께 살펴봐드릴게요.</p>
+                <div class="ui-chip-group">
+                  <span class="ui-chip"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg>유지해도 되는지</span>
+                  <span class="ui-chip"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg>불필요한 부분은 없는지</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="la-step__footer">
+            <button class="ui-button ui-button--primary" type="button" data-next>편하게 이야기하기</button>
+          </div>
+        </section>
+
+        <!-- MO Step 09: FAQ -->
+        <section class="la-step la-step--faq" data-step="8">
+          <div class="la-step__body">
+            <div class="la-step__body-inner">
+              <span class="ui-eyebrow">상담 전에 많이 묻는 것</span>
+              <h2 class="la-step__title">상담만 받아도<br>괜찮을까요?</h2>
+              <div class="ui-card-group ui-accordion" data-accordion>
+                <article class="ui-card ui-card--accordion is-open" data-accordion-item>
+                  <button class="ui-card__button" type="button" aria-expanded="true" aria-controls="faq-answer-01" data-accordion-button>
+                    <span class="ui-card__label">Q. 가입을 바로 결정해야 하나요?</span>
+                    <span class="ui-card__arrow" aria-hidden="true"></span>
+                  </button>
+                  <div class="ui-card__body" id="faq-answer-01" data-accordion-panel>
+                    <p class="ui-card__desc">아니요. 내게 필요한 준비인지 확인하는 용도로 상담받으셔도 괜찮아요.</p>
+                  </div>
+                </article>
+                <article class="ui-card ui-card--accordion" data-accordion-item>
+                  <button class="ui-card__button" type="button" aria-expanded="false" aria-controls="faq-answer-02" data-accordion-button>
+                    <span class="ui-card__label">Q. 기존 보험이 있어도 같이 볼 수 있나요?</span>
+                    <span class="ui-card__arrow" aria-hidden="true"></span>
+                  </button>
+                  <div class="ui-card__body" id="faq-answer-02" data-accordion-panel>
+                    <p class="ui-card__desc">네. 기존 보장을 유지할지, 부족한 부분만 보완할지 함께 확인해드려요.</p>
+                  </div>
+                </article>
+                <article class="ui-card ui-card--accordion" data-accordion-item>
+                  <button class="ui-card__button" type="button" aria-expanded="false" aria-controls="faq-answer-03" data-accordion-button>
+                    <span class="ui-card__label">Q. 상담하면 꼭 가입 권유를 받나요?</span>
+                    <span class="ui-card__arrow" aria-hidden="true"></span>
+                  </button>
+                  <div class="ui-card__body" id="faq-answer-03" data-accordion-panel>
+                    <p class="ui-card__desc">아니요. 유지해도 되는 부분과 불필요한 부분을 먼저 확인하고, 필요한 경우에만 선택지를 안내드려요.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="la-step__footer">
+            <button class="ui-button ui-button--primary" type="button" data-next>마지막으로 상담하기</button>
+          </div>
+        </section>
+
+        <!-- MO Step 10: Ending -->
+        <section class="la-step la-step--ending" data-step="9">
+          <div class="la-step__body">
+            <div class="la-step__body-inner la-step__body-inner--center">
+              <div class="la-step__visual">
+                <img src="./assets/images/common/heart.png" alt="하트 이미지">
+              </div>
+              <span class="ui-eyebrow">부담 없이 시작해보세요</span>
+              <h2 class="la-step__title">이제는<br>내 치료 걱정만<br>들려주세요.</h2>
+              <p class="la-step__description">가입을 결정하는 상담이 아니어도 괜찮아요.<br>궁금한 것부터 편하게 이야기해보세요.</p>
+            </div>
+          </div>
+          <div class="la-step__footer">
+            <a class="ui-button ui-button--kakao" href="#" data-kakao><svg class="icon"><use href="./assets/svg/icon.svg#icon-chat"></use></svg>카카오톡으로 이야기하기</a>
+            <a class="ui-button ui-button--text" href="tel:000-0000-0000"><svg class="icon"><use href="./assets/svg/icon.svg#icon-phone"></use></svg>전화 상담하기</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Desktop Landing -->
+  <div class="la-page la-page--desktop">
+    <header class="la-header">
+      <div class="la-wrap la-header__inner">
+        <a class="la-header__wordmark" href="./health.html">보험한장 <span>· 암·뇌·심보험</span></a>
+
+        <div class="la-header__navigation">
+          <nav class="la-header__nav" aria-label="보험 메뉴">
+            <a class="la-header__nav-link" href="./pet.html">펫보험</a>
+            <a class="la-header__nav-link" href="./driver.html">운전자보험</a>
+            <a class="la-header__nav-link" href="./fire.html">화재보험</a>
+            <a class="la-header__nav-link is-current" href="./health.html" aria-current="page">암·뇌·심보험</a>
+            <a class="la-header__nav-link" href="./child.html">어린이보험</a>
+          </nav>
+
+          <div class="la-header__dropdown">
+            <button class="la-header__dropdown-button" type="button" aria-controls="desktop-insurance-menu" aria-expanded="false" data-insurance-menu-button>
+              다른 보험 알아보기
+              <svg class="icon"><use href="./assets/svg/icon.svg#icon-chevron-down"></use></svg>
+            </button>
+            <nav class="la-header__dropdown-menu" id="desktop-insurance-menu" aria-label="보험 메뉴" data-insurance-menu>
+              <a class="la-header__dropdown-link" href="./pet.html">펫보험</a>
+              <a class="la-header__dropdown-link" href="./driver.html">운전자보험</a>
+              <a class="la-header__dropdown-link" href="./fire.html">화재보험</a>
+              <a class="la-header__dropdown-link is-current" href="./health.html" aria-current="page">암·뇌·심보험</a>
+              <a class="la-header__dropdown-link" href="./child.html">어린이보험</a>
+            </nav>
+          </div>
+
+          <a class="la-header__home" href="./index.html">보험한장 홈</a>
+        </div>
+
+        <a class="ui-button ui-button--primary la-header__button" href="#" data-kakao><svg class="icon"><use href="./assets/svg/icon.svg#icon-chat"></use></svg>상담하기</a>
+      </div>
+    </header>
+
+    <!-- PC Step 01: Opening -->
+    <section id="desktop-opening" class="la-section la-section--opening">
+      <div class="la-wrap la-section__inner">
+        <div class="la-section__content">
+          <span class="ui-eyebrow">암·뇌·심보험 · 보험한장</span>
+          <h1 class="la-section__title">진단금만으로는 부족할 수 있으니까,<br>반복되는 치료비까지 함께 준비해요</h1>
+          <p class="la-section__description">갑작스러운 치료비 앞에서 망설이지 않도록, 내게 필요한 준비인지부터 가볍게 확인해보세요.</p>
+          <div class="la-section__actions">
+            <a class="ui-button ui-button--fit ui-button--kakao" href="#" data-kakao><svg class="icon"><use href="./assets/svg/icon.svg#icon-chat"></use></svg>카카오톡으로 편하게 이야기하기</a>
+            <a class="ui-button ui-button--text" href="tel:000-0000-0000"><svg class="icon"><use href="./assets/svg/icon.svg#icon-phone"></use></svg>전화 상담</a>
+          </div>
+        </div>
+
+        <div class="la-section__visual">
+          <svg class="la-section__story-line" viewBox="0 0 1100 380" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <marker id="opening-arrow" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto">
+                <path d="M0 .5L9 5L0 9.5Z"></path>
+              </marker>
+              <mask id="opening-line-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1100" height="380">
+                <path class="la-section__story-mask" pathLength="1" d="M44 220C116 175 180 182 238 226C302 274 362 272 421 225C476 181 535 184 592 230C650 276 700 250 735 210C748 195 754 181 760 170"></path>
+              </mask>
+            </defs>
+            <path class="la-section__story-path" d="M44 220C116 175 180 182 238 226C302 274 362 272 421 225C476 181 535 184 592 230C650 276 700 250 735 210C748 195 754 181 760 170" mask="url(#opening-line-mask)" marker-end="url(#opening-arrow)"></path>
+          </svg>
+
+          <div class="la-section__story-step la-section__story-step--one">
+            <div class="la-section__story-copy"><em>01</em><span>진단 이후에도<br><b>이어지는 치료</b></span></div>
+            <strong class="la-section__story-number">1</strong>
+          </div>
+          <div class="la-section__story-step la-section__story-step--two">
+            <div class="la-section__story-copy"><em>02</em><span>수술·약물·방사선<br><b>다양해진 치료 방법</b></span></div>
+            <strong class="la-section__story-number">2</strong>
+          </div>
+          <div class="la-section__story-step la-section__story-step--three">
+            <div class="la-section__story-copy"><em>03</em><span>한 번으로 끝나지 않는<br><b>반복 치료비 부담</b></span></div>
+            <strong class="la-section__story-number">3</strong>
+          </div>
+
+          <div class="la-section__story-solution">
+            <span>✨ 그래서 미리 준비하면</span>
+            <strong>비용보다 치료 결정에<br><b>더 집중할 수 있어요</b></strong>
+          </div>
+        </div>
+      </div>
+      <a class="la-section__next" href="#desktop-reality">
+        <strong class="la-section__next-title">치료비는 어떻게 이어질까요?</strong>
+        <span class="la-section__next-arrow" aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <!-- PC Step 02: Reality -->
+    <section id="desktop-reality" class="la-section la-section--reality la-section--soft">
+      <div class="la-wrap">
+        <div class="la-section__head">
+          <span class="ui-eyebrow">치료비의 변화</span>
+          <h2 class="la-section__title">진단금보다<br>치료비가 더 중요해졌어요</h2>
+          <p class="la-section__description">수술·방사선·약물치료처럼 진단 이후 이어지는 비용을 함께 봐야 해요.</p>
+        </div>
+        <div class="la-section__grid">
+          <article class="ui-card la-section__item">
+            <div class="la-section__item-head">
+              <div class="ui-card__label">암 치료</div>
+              <span class="ui-chip">반복 치료</span>
+            </div>
+            <div class="ui-stat">
+              <strong class="ui-stat__number" data-reality-number="3">3</strong>
+              <span class="ui-stat__unit">가지</span>
+            </div>
+            <p class="ui-card__caption">함께 확인할 주요 치료</p>
+            <div class="ui-bar">
+              <div class="ui-bar__label"><span>수술</span><span>진단 이후</span></div>
+              <div class="ui-bar__track"><div class="ui-bar__fill ui-bar__fill--muted" data-reality-bar style="--bar-width: 54%"></div></div>
+            </div>
+            <div class="ui-bar">
+              <div class="ui-bar__label"><span>약물·방사선</span><span>반복 가능</span></div>
+              <div class="ui-bar__track"><div class="ui-bar__fill" data-reality-bar style="--bar-width: 100%"></div></div>
+            </div>
+          </article>
+          <article class="ui-card la-section__item">
+            <div class="la-section__item-head">
+              <div class="ui-card__label">뇌 치료</div>
+              <span class="ui-chip">응급 대응</span>
+            </div>
+            <div class="ui-stat">
+              <strong class="ui-stat__number" data-reality-number="2">2</strong>
+              <span class="ui-stat__unit">단계</span>
+            </div>
+            <p class="ui-card__caption">수술과 응급 치료</p>
+            <div class="ui-bar">
+              <div class="ui-bar__label"><span>응급 치료</span><span>초기</span></div>
+              <div class="ui-bar__track"><div class="ui-bar__fill ui-bar__fill--muted" data-reality-bar style="--bar-width: 62%"></div></div>
+            </div>
+            <div class="ui-bar">
+              <div class="ui-bar__label"><span>수술·회복</span><span>이후</span></div>
+              <div class="ui-bar__track"><div class="ui-bar__fill" data-reality-bar style="--bar-width: 92%"></div></div>
+            </div>
+          </article>
+          <article class="ui-card la-section__item">
+            <div class="la-section__item-head">
+              <div class="ui-card__label">심장 치료</div>
+              <span class="ui-chip">지속 관리</span>
+            </div>
+            <div class="ui-stat">
+              <strong class="ui-stat__number" data-reality-number="2">2</strong>
+              <span class="ui-stat__unit">기준</span>
+            </div>
+            <p class="ui-card__caption">수술과 반복 관리</p>
+            <div class="ui-bar">
+              <div class="ui-bar__label"><span>수술</span><span>치료 시</span></div>
+              <div class="ui-bar__track"><div class="ui-bar__fill ui-bar__fill--muted" data-reality-bar style="--bar-width: 58%"></div></div>
+            </div>
+            <div class="ui-bar">
+              <div class="ui-bar__label"><span>추적 관리</span><span>치료 후</span></div>
+              <div class="ui-bar__track"><div class="ui-bar__fill" data-reality-bar style="--bar-width: 86%"></div></div>
+            </div>
+          </article>
+        </div>
+        <p class="ui-source">보장 범위와 지급 조건은 보험사 및 상품에 따라 달라질 수 있어요.</p>
+        <p class="la-section__insight">진단 이후의 치료 흐름까지 봐야 <strong>준비가 선명해져요.</strong></p>
+      </div>
+      <a class="la-section__next" href="#desktop-scenario">
+        <strong class="la-section__next-title">치료비가 커지는 순간을 살펴볼까요?</strong>
+        <span class="la-section__next-arrow" aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <!-- PC Step 03: Scenario -->
+    <section id="desktop-scenario" class="la-section la-section--scenario">
+      <div class="la-wrap">
+        <div class="la-section__head">
+          <span class="ui-eyebrow">치료비가 체감되는 순간</span>
+          <h2 class="la-section__title">진단을 받으면,<br>치료는 한 가지가 아니에요</h2>
+          <p class="la-section__description">진단도 걱정인데, 수술 이후 이어질 치료비까지 함께 생각해야 해요.</p>
+        </div>
+        <div class="la-section__grid" role="list">
+          <article class="ui-card" role="listitem">
+            <div class="ui-card__head">
+              <strong class="ui-card__point"><span class="ui-card__point-unit">약</span><span class="ui-card__point-number">180</span><span class="ui-card__point-unit">만원</span></strong>
+              <span class="ui-card__media"><em><svg class="icon"><use href="./assets/svg/icon.svg#icon-activity"></use></svg></em></span>
+            </div>
+            <div class="ui-card__body">
+              <strong class="ui-card__title">암 수술이 필요할 때</strong>
+              <p class="ui-card__desc">수술 이후 항암치료와 회복 과정이 이어질 수 있어요.</p>
+            </div>
+            <div class="ui-chip-group">
+              <span class="ui-chip">수술</span>
+              <span class="ui-chip">항암약물</span>
+              <span class="ui-chip">방사선</span>
+            </div>
+          </article>
+          <article class="ui-card" role="listitem">
+            <div class="ui-card__head">
+              <strong class="ui-card__point"><span class="ui-card__point-unit">약</span><span class="ui-card__point-number">70</span><span class="ui-card__point-unit">만원</span></strong>
+              <span class="ui-card__media"><em><svg class="icon"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg></em></span>
+            </div>
+            <div class="ui-card__body">
+              <strong class="ui-card__title">뇌·심장 치료가 필요할 때</strong>
+              <p class="ui-card__desc">응급 치료와 수술 이후 관리까지 함께 확인해야 해요.</p>
+            </div>
+            <div class="ui-chip-group">
+              <span class="ui-chip">뇌 수술</span>
+              <span class="ui-chip">심장 수술</span>
+              <span class="ui-chip">혈전용해</span>
+            </div>
+          </article>
+          <article class="ui-card" role="listitem">
+            <div class="ui-card__head">
+              <strong class="ui-card__point"><span class="ui-card__point-unit">약</span><span class="ui-card__point-number">15</span><span class="ui-card__point-unit">만원</span></strong>
+              <span class="ui-card__media"><em><svg class="icon"><use href="./assets/svg/icon.svg#icon-stethoscope"></use></svg></em></span>
+            </div>
+            <div class="ui-card__body">
+              <strong class="ui-card__title">치료가 반복될 때</strong>
+              <p class="ui-card__desc">약물·방사선 치료가 길어지면 부담도 이어질 수 있어요.</p>
+            </div>
+            <div class="ui-chip-group">
+              <span class="ui-chip">재진</span>
+              <span class="ui-chip">약물치료</span>
+              <span class="ui-chip">정기검사</span>
+            </div>
+          </article>
+        </div>
+        <p class="ui-source">금액은 상황 이해를 돕기 위한 예시이며 실제 비용은 치료 방법과 의료기관에 따라 달라질 수 있어요.</p>
+        <div class="ui-card ui-card--emphasis la-section__emphasis">
+          <span class="ui-card__title">그래서 암·뇌·심보험은</span>
+          <strong class="ui-card__desc">진단금만 보기보다, 반복되는 치료비까지 함께 보는 게 좋아요.</strong>
+        </div>
+      </div>
+      <a class="la-section__next" href="#desktop-choice">
+        <strong class="la-section__next-title">내 걱정 기준으로 확인해볼까요?</strong>
+        <span class="la-section__next-arrow" aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <!-- PC Step 04: Choice / Personalized -->
+    <section id="desktop-choice" class="la-section la-section--choice">
+      <div class="la-wrap">
+        <div class="la-section__head">
+          <span class="ui-eyebrow">가볍게 골라주세요</span>
+          <h2 class="la-section__title">치료를 준비할 때<br>무엇이 가장 걱정되나요?</h2>
+          <p class="la-section__description">지금 가장 마음에 걸리는 부분을 하나 골라주세요.</p>
+        </div>
+        <div class="la-section__panel">
+          <div class="ui-card-group" data-choice-list>
+            <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="active">
+              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-activity"></use></svg></span>
+              <div class="ui-card__content">수술비가 걱정돼요</div>
+            </button>
+            <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="curious">
+              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-search"></use></svg></span>
+              <div class="ui-card__content">항암치료가 걱정돼요</div>
+            </button>
+            <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="calm">
+              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg></span>
+              <div class="ui-card__content">뇌·심장 치료가 걱정돼요</div>
+            </button>
+            <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="senior">
+              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
+              <div class="ui-card__content">보험료가 걱정돼요</div>
+            </button>
+          </div>
+          <div class="la-section__result" aria-live="polite">
+            <div class="la-section__result-eyebrow" data-personal-eyebrow>가까운 걱정을 골라보면</div>
+            <p class="la-section__result-title" data-personal-title>내 기준으로 같이 볼 부분이 정리돼요.</p>
+            <p class="la-section__result-description" data-personal-description>상담 전에 생각해볼 기준을 가볍게 잡는 단계예요.</p>
+            <ul class="ui-info-list">
+              <li class="ui-info-list__item">
+                <span class="ui-info-list__media" aria-hidden="true"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
+                <div>
+                  <strong data-personal-point-title-1>치료 기준</strong>
+                  <p data-personal-point-description-1>걱정되는 치료를 먼저 확인해요.</p>
+                </div>
+              </li>
+              <li class="ui-info-list__item">
+                <span class="ui-info-list__media" aria-hidden="true"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
+                <div>
+                  <strong data-personal-point-title-2>보장 확인 기준</strong>
+                  <p data-personal-point-description-2>필요한 준비인지 부담 없이 비교해요.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a class="la-section__next" href="#desktop-coverage">
+        <strong class="la-section__next-title">무엇을 먼저 살펴봐야 할까요?</strong>
+        <span class="la-section__next-arrow" aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <!-- PC Step 05: Coverage Check / Process -->
+    <section id="desktop-coverage" class="la-section la-section--coverage la-section--soft">
+      <div class="la-wrap">
+        <div class="la-section__head">
+          <span class="ui-eyebrow">함께 살펴볼 부분</span>
+          <h2 class="la-section__title">내 치료 계획에 맞는 준비인지<br>세 가지 기준으로 함께 살펴봐요</h2>
+          <p class="la-section__description">현재 보장과 걱정되는 치료를 먼저 듣고, 필요한 부분만 차근차근 정리해드려요.</p>
+        </div>
+        <div class="la-section__coverage-layout">
+          <div class="la-section__coverage-group">
+            <h3 class="la-section__coverage-title"><svg class="icon" aria-hidden="true"><use href="./assets/svg/icon.svg#icon-check"></use></svg>먼저 확인하는 세 가지 기준</h3>
+            <ul class="ui-info-list">
+              <li class="ui-info-list__item">
+                <span class="ui-info-list__media" aria-hidden="true"><em>01</em></span>
+                <strong>진단 후 실제 치료비가 어디까지 이어지는지</strong>
+              </li>
+              <li class="ui-info-list__item">
+                <span class="ui-info-list__media" aria-hidden="true"><em>02</em></span>
+                <strong>암·뇌·심 수술과 반복 치료를 함께 보는지</strong>
+              </li>
+              <li class="ui-info-list__item">
+                <span class="ui-info-list__media" aria-hidden="true"><em>03</em></span>
+                <strong>갱신과 보험료가 어떻게 달라지는지</strong>
+              </li>
+            </ul>
+          </div>
+          <div class="la-section__coverage-group la-section__coverage-group--process">
+            <h3 class="la-section__coverage-title"><svg class="icon" aria-hidden="true"><use href="./assets/svg/icon.svg#icon-check"></use></svg>상담은 이렇게 진행돼요</h3>
+            <ol class="ui-info-list ui-info-list--step">
+              <li class="ui-info-list__item">
+                <span class="ui-info-list__media" aria-hidden="true"><em>01</em></span>
+                <strong>현재 보장과 걱정되는 치료를 먼저 들어요</strong>
+              </li>
+              <li class="ui-info-list__item">
+                <span class="ui-info-list__media" aria-hidden="true"><em>02</em></span>
+                <strong>진단금과 치료비의 균형을 함께 살펴봐요</strong>
+              </li>
+              <li class="ui-info-list__item">
+                <span class="ui-info-list__media" aria-hidden="true"><em>03</em></span>
+                <strong>천천히 비교하고 편하게 결정하세요</strong>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <a class="la-section__next" href="#desktop-advisor">
+        <strong class="la-section__next-title">누가 함께하는지 확인해보세요</strong>
+        <span class="la-section__next-arrow" aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <!-- PC Step 06: Advisor -->
+    <section id="desktop-advisor" class="la-section la-section--advisor la-section--soft">
+      <div class="la-wrap">
+        <article class="la-advisor la-advisor--wide health-advisor">
+          <div class="la-advisor__photo">
+            <img src="./assets/images/common/advisor-full.png" alt="양영롱 AP 프로필">
+          </div>
+          <div class="la-advisor__content">
+            <span class="ui-eyebrow">함께 이야기할 사람입니다</span>
+            <div class="la-advisor__name">양영롱 AP</div>
+            <div class="la-advisor__role">AFG 어센틱금융그룹 · 생명·손해보험 전문 컨설턴트</div>
+            <p class="la-advisor__quote">보험은 바꾸는 것보다<br><b class="text-highlight">“안 바꿔도 되는지”</b><br>확인하는게 먼저입니다.</p>
+            <p class="la-advisor__description">가입을 권하기보다<br>내게 필요한 준비인지부터 함께 살펴봐드릴게요.</p>
+            <div class="ui-chip-group">
+              <span class="ui-chip"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg>유지해도 되는지</span>
+              <span class="ui-chip"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg>불필요한 부분은 없는지</span>
+            </div>
+          </div>
+        </article>
+      </div>
+      <a class="la-section__next" href="#desktop-faq">
+        <strong class="la-section__next-title">상담 전에 궁금한 점을 확인해보세요</strong>
+        <span class="la-section__next-arrow" aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <!-- PC Step 07: FAQ -->
+    <section id="desktop-faq" class="la-section la-section--faq">
+      <div class="la-wrap la-section__inner">
+        <div class="la-section__head">
+          <span class="ui-eyebrow">상담 전에 많이 묻는 것</span>
+          <h2 class="la-section__title">상담만 받아도<br>괜찮을까요?</h2>
+        </div>
+        <div class="ui-card-group ui-accordion la-section__list" data-accordion>
+          <article class="ui-card ui-card--accordion is-open" data-accordion-item>
+            <button class="ui-card__button" type="button" aria-expanded="true" aria-controls="desktop-faq-answer-01" data-accordion-button>
+              <span class="ui-card__label"><span class="ui-card__media"><em>Q</em></span>가입을 바로 결정해야 하나요?</span>
+              <span class="ui-card__arrow" aria-hidden="true"></span>
+            </button>
+            <div class="ui-card__body" id="desktop-faq-answer-01" data-accordion-panel>
+              <p class="ui-card__desc">아니요. 내게 필요한 준비인지 확인하는 용도로 상담받으셔도 괜찮아요.</p>
+            </div>
+          </article>
+          <article class="ui-card ui-card--accordion" data-accordion-item>
+            <button class="ui-card__button" type="button" aria-expanded="false" aria-controls="desktop-faq-answer-02" data-accordion-button>
+              <span class="ui-card__label"><span class="ui-card__media"><em>Q</em></span>기존 보험이 있어도 같이 볼 수 있나요?</span>
+              <span class="ui-card__arrow" aria-hidden="true"></span>
+            </button>
+            <div class="ui-card__body" id="desktop-faq-answer-02" data-accordion-panel>
+              <p class="ui-card__desc">네. 기존 보장을 유지할지, 부족한 부분만 보완할지 함께 확인해드려요.</p>
+            </div>
+          </article>
+          <article class="ui-card ui-card--accordion" data-accordion-item>
+            <button class="ui-card__button" type="button" aria-expanded="false" aria-controls="desktop-faq-answer-03" data-accordion-button>
+              <span class="ui-card__label"><span class="ui-card__media"><em>Q</em></span>상담하면 꼭 가입 권유를 받나요?</span>
+              <span class="ui-card__arrow" aria-hidden="true"></span>
+            </button>
+            <div class="ui-card__body" id="desktop-faq-answer-03" data-accordion-panel>
+              <p class="ui-card__desc">아니요. 유지해도 되는 부분과 불필요한 부분을 먼저 확인하고, 필요한 경우에만 선택지를 안내드려요.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <a class="la-section__next" href="#desktop-ending">
+        <strong class="la-section__next-title">부담 없이 이야기해보세요</strong>
+        <span class="la-section__next-arrow" aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <!-- PC Step 08: Ending -->
+    <section id="desktop-ending" class="la-section la-section--ending">
+      <div class="la-wrap la-section__inner">
+        <div class="la-section__visual">
+          <img src="./assets/images/common/heart.png" alt="하트 이미지">
+        </div>
+        <div class="la-section__content">
+          <span class="ui-eyebrow">부담 없이 시작해보세요</span>
+          <h2 class="la-section__title">이제는<br>내 치료 걱정만 들려주세요.</h2>
+          <p class="la-section__description">가입을 결정하는 상담이 아니어도 괜찮아요.<br>궁금한 것부터 편하게 이야기해보세요.</p>
+          <div class="la-section__actions">
+            <a class="ui-button ui-button--fit ui-button--kakao" href="#" data-kakao><svg class="icon"><use href="./assets/svg/icon.svg#icon-chat"></use></svg>카카오톡으로 이야기하기</a>
+            <a class="ui-button ui-button--text" href="tel:000-0000-0000"><svg class="icon"><use href="./assets/svg/icon.svg#icon-phone"></use></svg>전화 상담하기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="la-footer">
+      <div class="la-wrap la-footer__inner">
+        <div class="la-footer__brand">
+          <strong class="la-footer__title">보험한장</strong>
+          <p class="la-footer__message">상담 전 강요하지 않습니다.</p>
+        </div>
+        <p class="la-footer__notice">보장 내용과 가입 조건은 보험사 및 상품에 따라 달라질 수 있습니다.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

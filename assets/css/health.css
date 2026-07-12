@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/* Health Theme */
+.health-page {
+  --color-bg: #f7f9ff;
+  --color-bg-deep: #edf1fb;
+  --color-surface: var(--color-white);
+  --color-surface-soft: #fbfcff;
+  --color-text: #202536;
+  --color-text-soft: #626a7e;
+  --color-text-faint: #989fb0;
+  --color-line: #e1e6f0;
+  --color-primary: #2854d7;
+  --color-primary-dark: #17389f;
+  --color-primary-soft: #dfe7ff;
+  --color-primary-ink: #152452;
+  --color-accent: #6e5bd8;
+  --color-accent-soft: #e8e3fb;
+  --color-kakao: #fee500;
+  --color-kakao-ink: #371d1e;
+  --color-header-bg: rgba(247, 249, 255, .92);
+  --shadow-card: 0 .875rem 2.25rem -1rem rgba(21, 36, 82, .18);
+  --shadow-button: 0 .625rem 1.375rem -.625rem rgba(40, 84, 215, .45);
+  --shadow-kakao: 0 .625rem 1.375rem -.625rem rgba(254, 229, 0, .7);
+}
