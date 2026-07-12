@@ -440,6 +440,18 @@ Desktop : 720px~
     font-size: 1.0625rem;
   }
 
+  .la-section__insight {
+    margin-top: var(--space-6);
+    color: var(--color-text-soft);
+    font-size: 1.125rem;
+    text-align: center;
+  }
+
+  .la-section__insight strong {
+    color: var(--color-text);
+    background: linear-gradient(transparent 72%, var(--color-primary-soft) 72%);
+  }
+
   .la-section__actions {
     margin-top: var(--space-6);
     display: flex;
@@ -713,8 +725,32 @@ Desktop : 720px~
   }
 
   .la-section--reality .la-section__item {
-    padding: var(--space-8);
+    padding: var(--space-7);
     background: var(--color-surface);
+  }
+
+  .la-section--reality .la-section__item-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
+
+  .la-section--reality .la-section__item-head .ui-chip {
+    padding: .375rem .75rem;
+    white-space: nowrap;
+  }
+
+  .la-section--reality [data-reality-bar] {
+    width: var(--bar-width);
+  }
+
+  .la-section--reality.is-reality-ready:not(.is-visible) [data-reality-bar] {
+    width: 0;
+  }
+
+  .la-section--reality.is-reality-ready.is-visible [data-reality-bar] {
+    width: var(--bar-width);
   }
 
   .la-section--choice .la-section__panel {
