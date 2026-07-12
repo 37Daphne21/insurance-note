@@ -841,9 +841,7 @@ Desktop : 720px~
     align-items: center;
   }
 
-  .la-section--scenario .la-section__grid,
-  .la-section--coverage .la-section__grid,
-  .la-section--process .la-section__grid {
+  .la-section--scenario .la-section__grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-6);
@@ -871,9 +869,31 @@ Desktop : 720px~
     text-align: center;
   }
 
-  .la-section--coverage .la-section__grid .ui-card,
-  .la-section--process .la-section__grid .ui-card {
-    padding: var(--space-6);
+  .la-section--coverage .la-section__coverage-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-10);
+    align-items: center;
+  }
+
+  .la-section--coverage .la-section__coverage-group--process {
+    padding-left: var(--space-10);
+    border-left: .0625rem solid var(--color-line);
+  }
+
+  .la-section--coverage .la-section__coverage-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin: 0;
+    color: var(--color-text);
+    font-size: 1.125rem;
+  }
+
+  .la-section--coverage .la-section__coverage-title .icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    color: var(--color-primary-dark);
   }
 
   .la-section--faq .la-section__inner {
@@ -1018,9 +1038,16 @@ Desktop : 720px~
     grid-column: 1 / -1;
   }
 
-  .la-section--coverage .la-section__grid,
-  .la-section--process .la-section__grid {
+  .la-section--coverage .la-section__coverage-layout {
     grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+
+  .la-section--coverage .la-section__coverage-group--process {
+    padding-top: var(--space-7);
+    padding-left: 0;
+    border-top: .0625rem solid var(--color-line);
+    border-left: 0;
   }
 
   .la-advisor--wide {
@@ -1059,11 +1086,6 @@ Desktop : 720px~
   .la-section--choice .la-section__result {
     position: sticky;
     top: 6.75rem;
-  }
-
-  .la-section--coverage .la-section__grid .ui-card,
-  .la-section--process .la-section__grid .ui-card {
-    height: 100%;
   }
 
   .la-section--faq .la-section__list {
