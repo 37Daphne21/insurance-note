@@ -411,11 +411,11 @@ Desktop : 720px~
 
   .la-section {
     display: flex;
-    min-height: calc(100svh - var(--space-8));
+    min-height: calc(100svh - var(--space-9));
     flex-direction: column;
     justify-content: center;
     padding: var(--space-9) 0;
-    scroll-margin-top: var(--space-8);
+    scroll-margin-top: var(--space-9);
   }
 
   .la-section > .la-wrap {
@@ -760,10 +760,6 @@ Desktop : 720px~
     gap: var(--space-9);
   }
 
-  .la-section--choice .la-section__panel .ui-panel {
-    margin-top: 0;
-  }
-
   .la-section--choice .la-section__result {
     display: flex;
     min-height: 17.5rem;
@@ -855,6 +851,19 @@ Desktop : 720px~
 
   .la-section--scenario .la-section__grid .ui-card {
     padding: var(--space-7);
+  }
+
+  .la-section--scenario .ui-card__title {
+    font-size: 1.125rem;
+  }
+
+  .la-section--scenario .ui-card__desc {
+    font-size: .9375rem;
+  }
+
+  .la-section--scenario .ui-chip-group {
+    margin-top: auto;
+    padding-top: var(--space-3);
   }
 
   .la-section--scenario .la-section__emphasis {

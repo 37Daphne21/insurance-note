@@ -244,21 +244,21 @@
             <div class="la-step__body-inner">
               <span class="ui-eyebrow">가볍게 골라주세요</span>
               <h2 class="la-step__title">우리 아이는<br>어떤 편인가요?</h2>
-              <p class="la-step__description">정답은 없어요. 끌리는 쪽으로 골라주세요.</p>
+              <p class="la-step__description">정답은 없어요. 우리 아이와 가까운 쪽을 골라주세요.</p>
               <div class="ui-card-group" data-choice-list>
-                <button class="ui-card ui-card--single" type="button" data-choice data-trait="active">
+                <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="active">
                   <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-activity"></use></svg></span>
                   <div class="ui-card__content">활동량이 많아요</div>
                 </button>
-                <button class="ui-card ui-card--single" type="button" data-choice data-trait="curious">
+                <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="curious">
                   <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-search"></use></svg></span>
                   <div class="ui-card__content">호기심이 많아요</div>
                 </button>
-                <button class="ui-card ui-card--single" type="button" data-choice data-trait="calm">
+                <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="calm">
                   <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-house-heart"></use></svg></span>
                   <div class="ui-card__content">쉬는 걸 좋아해요</div>
                 </button>
-                <button class="ui-card ui-card--single" type="button" data-choice data-trait="senior">
+                <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="senior">
                   <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg></span>
                   <div class="ui-card__content">나이가 있어요</div>
                 </button>
@@ -618,7 +618,7 @@
         <div class="la-section__grid" role="list">
           <article class="ui-card" role="listitem">
             <div class="ui-card__head">
-              <strong class="ui-card__point"><span class="ui-card__point-number">180</span><span class="ui-card__point-unit">만원</span></strong>
+              <strong class="ui-card__point"><span class="ui-card__point-unit">약</span><span class="ui-card__point-number">180</span><span class="ui-card__point-unit">만원</span></strong>
               <span class="ui-card__media"><em><svg class="icon"><use href="./assets/svg/icon.svg#icon-bone"></use></svg></em></span>
             </div>
             <div class="ui-card__body">
@@ -633,7 +633,7 @@
           </article>
           <article class="ui-card" role="listitem">
             <div class="ui-card__head">
-              <strong class="ui-card__point"><span class="ui-card__point-number">70</span><span class="ui-card__point-unit">만원</span></strong>
+              <strong class="ui-card__point"><span class="ui-card__point-unit">약</span><span class="ui-card__point-number">70</span><span class="ui-card__point-unit">만원</span></strong>
               <span class="ui-card__media"><em><svg class="icon"><use href="./assets/svg/icon.svg#icon-ambulance"></use></svg></em></span>
             </div>
             <div class="ui-card__body">
@@ -648,7 +648,7 @@
           </article>
           <article class="ui-card" role="listitem">
             <div class="ui-card__head">
-              <strong class="ui-card__point"><span class="ui-card__point-number">15</span><span class="ui-card__point-unit">만원</span></strong>
+              <strong class="ui-card__point"><span class="ui-card__point-unit">약</span><span class="ui-card__point-number">15</span><span class="ui-card__point-unit">만원</span></strong>
               <span class="ui-card__media"><em><svg class="icon"><use href="./assets/svg/icon.svg#icon-stethoscope"></use></svg></em></span>
             </div>
             <div class="ui-card__body">
@@ -662,6 +662,7 @@
             </div>
           </article>
         </div>
+        <p class="ui-source">진료비는 증상과 병원, 검사·처치 범위에 따라 달라질 수 있으며 위 금액은 상황 이해를 돕기 위한 예시예요.</p>
         <div class="ui-card ui-card--emphasis la-section__emphasis">
           <span class="ui-card__title">그래서 펫보험은</span>
           <strong class="ui-card__desc">아프고 난 뒤보다, 아프기 전에 보는 게 더 좋아요.</strong>
@@ -677,25 +678,26 @@
     <section id="desktop-choice" class="la-section la-section--choice">
       <div class="la-wrap">
         <div class="la-section__head">
+          <span class="ui-eyebrow">가볍게 골라주세요</span>
           <h2 class="la-section__title">우리 아이는<br>어떤 편인가요?</h2>
-          <p class="la-section__description">정답은 없어요. 가까운 쪽을 눌러보세요.</p>
+          <p class="la-section__description">정답은 없어요. 우리 아이와 가까운 쪽을 골라주세요.</p>
         </div>
         <div class="la-section__panel">
           <div class="ui-card-group" data-choice-list>
-            <button class="ui-card ui-card--single" type="button" data-choice data-trait="active">
-              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
+            <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="active">
+              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-activity"></use></svg></span>
               <div class="ui-card__content">활동량이 많아요</div>
             </button>
-            <button class="ui-card ui-card--single" type="button" data-choice data-trait="curious">
-              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
+            <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="curious">
+              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-search"></use></svg></span>
               <div class="ui-card__content">호기심이 많아요</div>
             </button>
-            <button class="ui-card ui-card--single" type="button" data-choice data-trait="calm">
-              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
+            <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="calm">
+              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-house-heart"></use></svg></span>
               <div class="ui-card__content">집에서 쉬는 걸 좋아해요</div>
             </button>
-            <button class="ui-card ui-card--single" type="button" data-choice data-trait="senior">
-              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-paw"></use></svg></span>
+            <button class="ui-card ui-card--single" type="button" aria-pressed="false" data-choice data-trait="senior">
+              <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-heart-pulse"></use></svg></span>
               <div class="ui-card__content">이제 나이가 조금 있어요</div>
             </button>
           </div>
@@ -703,22 +705,22 @@
             <div class="la-section__result-eyebrow" data-personal-eyebrow>가까운 모습을 골라보면</div>
             <p class="la-section__result-title" data-personal-title>우리 아이 기준으로 같이 볼 부분이 정리돼요.</p>
             <p class="la-section__result-description" data-personal-description>진단이 아니라 상담 전에 생각해볼 기준을 가볍게 잡는 단계예요.</p>
-            <div class="ui-card-group" role="list">
-              <article class="ui-card ui-card--info" role="listitem">
-                <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
-                <div class="ui-card__body">
-                  <span class="ui-card__title" data-personal-point-title-1>생활 패턴 기준</span>
-                  <p class="ui-card__desc" data-personal-point-description-1>자주 걱정되는 상황을 먼저 확인해요.</p>
+            <ul class="ui-info-list">
+              <li class="ui-info-list__item">
+                <span class="ui-info-list__media" aria-hidden="true"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
+                <div>
+                  <strong data-personal-point-title-1>생활 패턴 기준</strong>
+                  <p data-personal-point-description-1>자주 걱정되는 상황을 먼저 확인해요.</p>
                 </div>
-              </article>
-              <article class="ui-card ui-card--info" role="listitem">
-                <span class="ui-card__media"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
-                <div class="ui-card__body">
-                  <span class="ui-card__title" data-personal-point-title-2>보장 확인 기준</span>
-                  <p class="ui-card__desc" data-personal-point-description-2>필요한 준비인지 부담 없이 비교해요.</p>
+              </li>
+              <li class="ui-info-list__item">
+                <span class="ui-info-list__media" aria-hidden="true"><svg class="icon"><use href="./assets/svg/icon.svg#icon-check"></use></svg></span>
+                <div>
+                  <strong data-personal-point-title-2>보장 확인 기준</strong>
+                  <p data-personal-point-description-2>필요한 준비인지 부담 없이 비교해요.</p>
                 </div>
-              </article>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

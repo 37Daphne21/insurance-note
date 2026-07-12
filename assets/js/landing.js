@@ -236,6 +236,21 @@
     }
   }
 
+  function setSelectedChoice(selectedChoice) {
+    var choiceList = selectedChoice.closest("[data-choice-list]");
+
+    if (!choiceList) {
+      return;
+    }
+
+    choiceList.querySelectorAll("[data-choice]").forEach(function (choice) {
+      var isSelected = choice === selectedChoice;
+
+      choice.classList.toggle("is-selected", isSelected);
+      choice.setAttribute("aria-pressed", isSelected ? "true" : "false");
+    });
+  }
+
   function updatePersonalResult(trait) {
     var data = TRAITS[trait];
     var eyebrows = document.querySelectorAll("[data-personal-eyebrow]");
@@ -419,11 +434,7 @@
       }
 
       if (choiceButton) {
-        stage.querySelectorAll("[data-choice]").forEach(function (button) {
-          button.classList.remove("is-selected");
-        });
-
-        choiceButton.classList.add("is-selected");
+        setSelectedChoice(choiceButton);
         updatePersonalResult(choiceButton.getAttribute("data-trait"));
 
         window.setTimeout(function () {
@@ -536,11 +547,7 @@
       return;
     }
 
-    document.querySelectorAll(".la-page--desktop [data-choice]").forEach(function (button) {
-      button.classList.remove("is-selected");
-    });
-
-    desktopChoice.classList.add("is-selected");
+    setSelectedChoice(desktopChoice);
     updatePersonalResult(desktopChoice.getAttribute("data-trait"));
   });
 })();
