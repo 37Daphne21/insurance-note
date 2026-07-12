@@ -1119,10 +1119,6 @@ Desktop : 720px~
     margin-top: 0;
   }
 
-  .la-section--faq .la-section__list {
-    align-self: start;
-  }
-
   .la-section--faq .la-section__head {
     position: sticky;
     top: 7rem;
@@ -1150,7 +1146,6 @@ Desktop : 720px~
 
   .la-header__nav-link,
   .la-header__dropdown-button,
-  .la-header__dropdown-link,
   .la-header__home {
     transition: color .3s ease;
   }
