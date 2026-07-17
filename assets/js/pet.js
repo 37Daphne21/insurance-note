@@ -83,7 +83,7 @@
   var petImages = petOpening ? petOpening.querySelectorAll(".pet-visual__image") : [];
   var selectedPetType = "dog";
 
-  function updatePetStat(pet, animateNumber) {
+  function updatePetStat(pet) {
     var data = PET_STATS[pet];
 
     if (!data) {
@@ -98,7 +98,7 @@
     var afterBar = document.querySelector("[data-stat-after-bar]");
 
     if (number) {
-      animateNumber(number, data.after);
+      number.textContent = data.after.toFixed(1);
     }
 
     if (caption) {
@@ -139,9 +139,9 @@
     isBackVisible: function (index) {
       return index > 0 || Boolean(petOpening && petOpening.classList.contains("is-selected"));
     },
-    onStepChange: function (next, api) {
+    onStepChange: function (next) {
       if (next.classList.contains("la-step--reality")) {
-        updatePetStat(selectedPetType, api.animateNumber);
+        updatePetStat(selectedPetType);
       }
     },
     onStageClick: function (event, api) {
