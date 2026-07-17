@@ -1,4 +1,4 @@
-# 보험한장 MD 최신화
+# 보험한장 프로젝트 문서
 
 ## 프로젝트 개요
 
@@ -11,10 +11,12 @@
 * 회사형 홈페이지보다 개인 브랜딩 + 상담 유도형 랜딩에 가깝다.
 * PC / Mobile 반응형
 * Mobile 우선 설계
+* 펫보험(`pet.html`)을 Master Page로 사용
+* 암·뇌·심보험(`health.html`) 1차 확장 완료
 
 ### 개발 순서
 
-펫보험(Master Page) → 보험별 랜딩 확장 → Main Landing(index.html)
+펫보험(Master Page) → 암·뇌·심보험 → 보험별 랜딩 확장 → Main Landing(`index.html`)
 
 ---
 
@@ -34,6 +36,24 @@
 * 정보 탐색형 UX
 * 보험별 정보 비교와 신뢰 요소 확인 중심
 * Mobile Flow를 그대로 늘리는 것이 아니라 PC에 맞게 재구성
+
+---
+
+## 보험별 테마
+
+| 보험 | Primary Theme | 상태 |
+| --- | --- | --- |
+| 펫보험 | Yellow | 확정 |
+| 암·뇌·심보험 | Purple | 확정 |
+| 운전자보험 | Blue | 확정 방향 |
+| 화재보험 | Red | 확정 방향 |
+| 어린이보험 | Orange | 확장 예정 |
+
+* 암·뇌·심보험의 기준색은 Purple이며, Blue는 운전자보험에 사용한다.
+* 의뢰 자료의 참고색은 Purple `#7C3AED`, Blue `#2563EB`, Orange `#F97316`이다.
+* 펫보험 Yellow와 화재보험 Red의 세부 토큰은 각 페이지에서 확정된 테마 변수를 따른다.
+* Green은 보험별 Primary Theme가 아니라 성공·완료처럼 의미가 필요한 경우에만 보조적으로 사용한다.
+* 광고 제작용 프롬프트의 흰 배경·플랫 UI·무그라데이션 규칙은 참고 방향이다. 랜딩에는 이미 확정된 공통 컴포넌트와 모션을 우선하되, 한 영역에서 Primary Color를 과도하게 혼합하지 않는다.
 
 ---
 
@@ -59,41 +79,20 @@
 
 ---
 
-## Mobile Flow
+## Insurance Landing Flow
 
-1. Opening
+1. Opening: 보험 가입보다 사용자의 상황과 고민으로 시작
+2. Reality: 객관적인 데이터로 실제 비용 부담 인식
+3. Scenario: 발생 가능한 상황을 짧은 카드 흐름으로 제시
+4. Choice: 보험 질문보다 생활·치료 고민을 기준으로 1회 참여
+5. Personal: 선택 결과를 바탕으로 문장과 확인 항목 개인화
+6. Coverage Check: 보장 여부를 판단하지 않고 확인할 기준 안내
+7. Process: 상담과 점검이 진행되는 순서 설명
+8. Advisor: 상담자의 태도와 신뢰 형성
+9. FAQ: 상담 전 장벽이 되는 질문 해소
+10. Ending: 카카오톡 중심의 부담 없는 CTA
 
-   * "우리 아이는 어떤 아이인가요?"로 시작
-   * 강아지 / 고양이 선택
-   * 선택 후 Hero 자연스럽게 등장
-
-2. Reality
-
-   * 객관적인 치료비 데이터
-   * 실제 병원비 부담 인식
-
-3. Scenario
-
-   * 실제 발생할 수 있는 상황 제시
-   * 카드 기반 Story Flow
-
-4. Choice
-
-   * 우리 아이 성향 선택
-   * 보험 질문보다 생활 질문 중심
-
-5. Personal
-
-   * 선택 결과를 기반으로 자연스럽게 개인화
-
-6. Trust
-
-   * 상담 과정
-   * 상담자 신뢰 형성
-
-7. CTA
-
-   * 부담 없는 상담 유도
+펫보험과 암·뇌·심보험은 같은 Flow를 공유하되, 질문·데이터·카피·이미지는 보험별 맥락에 맞게 변경한다.
 
 ---
 
@@ -192,31 +191,6 @@ Optional Section은 제거되어도 전체 흐름이 깨지지 않아야 한다.
 
 ---
 
-## 공통 Landing System 방향
-
-### 고정 요소
-
-* Flow 구조
-* Typography Scale
-* Spacing System
-* Component 구조
-* Motion Rule
-* QA 기준
-* CTA 위치와 역할
-
-
-### 보험별 변경 요소
-
-* Theme Color
-* Hero Copy
-* 이미지
-* 선택 질문
-* 개인화 문장
-* 사례 데이터
-* CTA 세부 문구
-
----
-
 ## Landing System
 
 보험별 랜딩은 하나의 공통 Landing System을 기반으로 제작한다.
@@ -228,6 +202,11 @@ Optional Section은 제거되어도 전체 흐름이 깨지지 않아야 한다.
 - Component
 - Motion
 - JavaScript 구조
+- Typography Scale
+- Spacing System
+- QA 기준
+- CTA 위치와 역할
+
 
 ### 보험별 변경 요소
 
@@ -237,8 +216,43 @@ Optional Section은 제거되어도 전체 흐름이 깨지지 않아야 한다.
 - Image
 - Data
 - Personalization
+- CTA 세부 문구
 
 펫보험 랜딩은 Master Page 역할을 하며, 이후 다른 보험 랜딩은 공통 구조를 유지하면서 콘텐츠만 변경하는 것을 목표로 한다.
+
+---
+
+## 암·뇌·심보험 기준
+
+### 핵심 메시지
+
+* 진단금 자체보다 수술·약물·방사선 등 실제 치료 과정과 반복되는 치료비에 초점을 둔다.
+* 실손이나 공적 지원만으로 모든 치료비가 해결된다고 단정하지 않는다.
+* 복잡한 특약 설명보다 사용자가 확인해야 할 치료 범위를 쉽게 정리한다.
+
+
+### 참고 자료에서 확인할 범위
+
+* 암: 수술, 항암약물, 항암방사선, 표적항암, 면역항암, 양성자·중입자 치료
+* 뇌·심장: 수술, 혈전제거, 혈전용해 등 치료 흐름
+* 확장 범위: 간·폐·췌장 주요 수술과 양성종양 관련 항목
+* 지급 방식: 1회성 진단금과 반복·회당·연간 보장의 차이
+
+
+### 데이터 사용 원칙
+
+* 참고 이미지의 보장금액, 월 보험료, 갱신 한도는 특정 상품·연령·가입 조건에 따른 예시로 취급한다.
+* `10억 의료비 통장`, `월 2~4만원대` 같은 표현은 근거 상품과 조건이 확인되기 전 일반적인 사실처럼 사용하지 않는다.
+* 보장금액을 노출할 때는 가입 시기, 선택 특약, 연령과 플랜에 따라 달라질 수 있다는 조건을 함께 검토한다.
+* 객관적인 의료비·제도 데이터는 출처와 기준 연도를 함께 표기한다.
+* 랜딩에서는 핵심 흐름만 보여주고 상품별 상세 조건은 상담에서 확인하도록 연결한다.
+
+
+### 현재 구현 판단
+
+* `health.html`은 공통 Flow와 컴포넌트를 활용한 Mobile·Desktop 1차 구조가 반영되어 있다.
+* 치료 범위는 참고 자료를 단순화해 반영했으며, 상품별 금액표를 그대로 복제하지 않은 현재 방향을 유지한다.
+* health.css에 Purple 중심 테마가 적용되어 있으며, 다음 개발에서는 실제 화면의 색 균형과 섹션별 문구·근거 표현을 하나씩 검수한다.
 
 ---
 
@@ -476,46 +490,26 @@ JS 상태는 is-* 클래스로 관리한다.
 
 ## 현재 상태
 
-* 메인 랜딩(index.html)은 프로젝트에 포함되지만, 보험별 랜딩 페이지 개발 완료 후 마지막 단계에서 진행한다.
-* 펫보험 개별 랜딩을 Master Page로 우선 제작한다.
-* 이후 다른 보험 랜딩을 동일한 구조로 확장한 뒤 Main Landing을 제작한다.
-* 디자인 방향은 토스식 단계 진행형 UX로 재정렬
-* Mobile Step 1차 개발 완료
-* Mobile 기준 1차 검수 완료
-* Desktop 1차 개발 진행 완료
-* Mobile / Desktop Master Page 완료
+* 메인 랜딩(`index.html`)은 프로젝트에 포함되어 있지만 보험별 랜딩 개발 후 마지막에 진행한다.
+* 펫보험 Mobile·Desktop Master Page와 1차 QA가 완료되었다.
+* 암·뇌·심보험 Mobile·Desktop 1차 구조가 추가되었다.
+* 공통 Landing JavaScript와 보험별 JavaScript가 분리되어 있다.
+* 현재 우선순위는 암·뇌·심보험의 Purple Theme 시각 QA와 콘텐츠 검수다.
 
 ### 완료
 
-- Mobile Component System 구축
-- ui-card 중심 Component 통합
-- Opening Step 완료
-- Reality Step 완료
-- Scenario Step 완료
-- Choice Step 완료
-- Personal Step 완료
-- Coverage Check Step 완료
-- Process Step 완료
-- Advisor Step 완료
-- FAQ Step 완료
-- Ending Step 완료
-- Desktop Header Navigation 완료
-- Desktop Hero 완료
-- Desktop Reality 완료
-- Desktop Scenario 완료
-- Desktop Choice 완료
-- Desktop Coverage Check 완료
-- Desktop Process 완료
-- Desktop Advisor 완료
-- Desktop FAQ 완료
-- Desktop Ending 완료
-- Footer 완료
-- Mobile / Desktop QA 완료
+- 공통 Component System과 `ui-card` 중심 구조
+- 공통 Landing Flow 및 JavaScript 엔진
+- 펫보험 Mobile·Desktop 전 섹션과 1차 QA
+- 암·뇌·심보험 Mobile·Desktop 1차 구현
+
 
 ### 다음 작업
 
-- 카카오톡 채널 연동
-- 보험별 랜딩 확장
+- 암·뇌·심보험 Purple Theme 시각 QA
+- 암·뇌·심보험 섹션별 카피·데이터·반응형 검수
+- 카카오톡 채널과 전화 상담 연결
+- 운전자·화재·어린이보험 랜딩 확장
 - Main Landing 제작
 
 ---
@@ -526,19 +520,3 @@ JS 상태는 is-* 클래스로 관리한다.
 
 보험한장에서 확정된 디자인 시스템과 컴포넌트는
 Portfolio에도 반영될 수 있다.
-
----
-
-## Development Philosophy
-
-프로젝트는 미래를 예측하여 구조를 만들지 않는다.
-
-현재 반복되는 문제를 해결하는 방향으로 설계한다.
-
-공통화보다 운영성을 우선한다.
-
-HTML 수정 없이 CSS만으로 대응 가능한 구조를 우선 고려한다.
-
-컴포넌트는 콘텐츠 추가와 삭제를 고려하여 Optional 구조를 기본으로 설계한다.
-
-재사용성은 실제 사용 패턴이 충분히 검증된 이후 추상화한다.
